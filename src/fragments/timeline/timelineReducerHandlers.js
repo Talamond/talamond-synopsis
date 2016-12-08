@@ -69,25 +69,25 @@ function findTimelineRows(elems) {
   _.forEach(elems, (elem, i) => {
     newElems.push(elem);
     if (spans.length === 0) {
-      spans.push({start: elem.startDate, end: elem.endDate});
+      spans.push([{startDate: elem.startDate, endDate: elem.endDate}]);
       newElems[i].row = 0;
     } else {
       let found = false;
       for (let x = 0; x < spans.length; x++) {
-        if (moment(spans[x].end).isBefore(elem.start)) { // TODO is this syntax right?
-          spans[x] = {start: elem.startDate, end: elem.endDate}; // overwrite this span
+        if (moment(spans[x][spans[x].length - 1].endDate).isBefore(elem.startDate)) { // TODO is this syntax right?
+          spans[x].push({startDate: elem.startDate, endDate: elem.endDate}); // overwrite this span
           newElems[i].row = x;
           found = true;
           break;
         }
       }
       if (!found) {
-        spans.push({start: elem.startDate, end: elem.endDate});
+        spans.push([{startDate: elem.startDate, endDate: elem.endDate}]);
         newElems[i].row = spans.length - 1;
       }
     }
   });
-  return newElems;
+  return {newElems, timelineSpans: spans};
 }
 
 function createDate(date) {
@@ -97,11 +97,13 @@ function createDate(date) {
 export function getInitialState() {
   const now = moment().format(format);
   const then = moment().subtract(displayedMonths, 'months').format(format);
+  const rowsObj = findTimelineRows(sampleTimelineElements);
   return {
     displayStartDate: then,
     displayEndDate: now,
     timelineElements: sampleTimelineElements,
-    timelineRows: findTimelineRows(sampleTimelineElements)
+    timelineRows: rowsObj.newElems,
+    timelineSpans: rowsObj.timelineSpans
   };
 };
 

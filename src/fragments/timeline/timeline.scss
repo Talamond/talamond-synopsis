@@ -13,7 +13,7 @@
 }
 
 .timeline-elem-wrapper {
-  position: relative;
+  position: absolute;
   display: inline-block;
   top: 30%;
 }
@@ -44,10 +44,15 @@
   }
 }
 
-.timeline-span {
+.timeline-span-row {
   position: relative;
-  height: 4px;
-  border-bottom: 2px solid darkred;
+  height: 10px;
+  .timeline-span {
+    display: inline-block;
+    position: absolute;
+    height: 4px;
+    border-bottom: 2px solid darkred;
+  }
 }
 
 .timeline-elem-big {
@@ -68,6 +73,7 @@
 }
 
 .timeline-root {
+  position: relative;
   height: 100%;
   width: 22000px;
 }

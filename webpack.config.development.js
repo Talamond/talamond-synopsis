@@ -14,7 +14,7 @@ const GLOBALS = {
 module.exports = merge(config, {
   debug: true,
   cache: true,
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   entry: {
     application: [
       'webpack-hot-middleware/client',
