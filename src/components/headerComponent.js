@@ -1,14 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import './header.scss';
-/*
- headers:[
-   {
-     label
-     onClick
-   }
- ]
-*/
 
 function renderHeaders(headers) {
   const headerDivs = [];

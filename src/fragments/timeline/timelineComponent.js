@@ -56,6 +56,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
 
       return (
         <div className="timeline-root">
+          <div className="timeline-line"/>
           {this.renderTimelines()}
         </div>
       );

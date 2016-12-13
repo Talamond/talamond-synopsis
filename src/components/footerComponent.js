@@ -1,16 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import './footer.scss';
-/*
- footers:[
- {
- label
- onClick
- }
- ]
- */
 
-/* eslint-disable */
 function renderFooters(footers) {
   return [];
 }

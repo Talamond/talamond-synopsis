@@ -25,7 +25,10 @@ const sampleTimelineElements = [
     startDate: createDate('2007-09-01'),
     endDate: createDate('2007-12-31'),
     content: 'Second coop term, Java Programmer at Ministry of Education.',
-    color: '#99A3A4'
+    color: '#99A3A4',
+    skills: [{label: 'JSP', weight: 7}, {label: 'J2EE', weight: 4}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10}, {label: 'OO', weight: 4},
+       {label: 'Web', weight: 8}
+    ]
   },
   {
     id: 4,

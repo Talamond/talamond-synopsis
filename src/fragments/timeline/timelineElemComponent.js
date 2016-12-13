@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {calculateLeft} from './timelineHelper.js';
+import {TagCloud} from '../../components/tagCloudComponent.js';
 
 export class TimelineElem extends Component {
   static propTypes = {
@@ -20,10 +21,10 @@ export class TimelineElem extends Component {
       return (
         <div className="timeline-elem-wrapper" style={{left: calculateLeft(timelineElem.startDate)}}>
           <div className="timeline-elem grow"
-               onMouseOut={() => this.onExit(timelineElem)}
                onClick={() => onClick(timelineElem)}>
             <div className="timeline-elem-date">{timelineElem.startDate.format('YYYY-MM-DD')}</div>
             <div className="timeline-elem-content">{timelineElem.content}</div>
+            <TagCloud width={100} height={75} words={timelineElem.skills} className="timeline-tag-cloud"/>
           </div>
         </div>
       );
@@ -31,7 +32,6 @@ export class TimelineElem extends Component {
     return (
       <div className="timeline-elem-wrapper" style={{left: calculateLeft(timelineElem.startDate)}}>
         <div className="timeline-elem"
-             onMouseOver={() => this.onHover(timelineElem)}
              onClick={() => onClick(timelineElem)}
              style={{backgroundColor: timelineElem.color}}
         >
