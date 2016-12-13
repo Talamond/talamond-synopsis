@@ -11,54 +11,63 @@ const sampleTimelineElements = [
     startDate: createDate('2006-09-01'),
     endDate: createDate('2011-04-30'),
     content: 'Bachelor of Computer Science/Software Engineering Option - Co-operative Program, University of Waterloo',
+    color: '#F1C40F'
   },
   {
     id: 2,
     startDate: createDate('2007-01-01'),
     endDate: createDate('2007-04-30'),
-    content: 'First coop term, Quality Assurance Functional Analyst at Parlay Entertainment.'
+    content: 'First coop term, Quality Assurance Functional Analyst at Parlay Entertainment.',
+    color: '#7D3C98'
   },
   {
     id: 3,
     startDate: createDate('2007-09-01'),
     endDate: createDate('2007-12-31'),
-    content: 'Second coop term, Java Programmer at Ministry of Education.'
+    content: 'Second coop term, Java Programmer at Ministry of Education.',
+    color: '#99A3A4'
   },
   {
     id: 4,
     startDate: createDate('2008-05-01'),
     endDate: createDate('2008-08-31'),
-    content: 'Third coop term, Java Programmer at SQL Power Group Inc.'
+    content: 'Third coop term, Java Programmer at SQL Power Group Inc.',
+    color: '#229954'
   },
   {
     id: 5,
     startDate: createDate('2009-01-01'),
     endDate: createDate('2009-04-30'),
-    content: 'Forth coop term, Java Programmer at N8Identity.'
+    content: 'Forth coop term, Java Programmer at N8Identity.',
+    color: '#D35400'
   },
   {
     id: 6,
     startDate: createDate('2009-09-01'),
     endDate: createDate('2009-12-31'),
-    content: 'Fifth coop term, Java Programmer at N8Identity.'
+    content: 'Fifth coop term, Java Programmer at N8Identity.',
+    color: '#D35400'
   },
   {
     id: 7,
     startDate: createDate('2010-05-01'),
     endDate: createDate('2010-08-31'),
-    content: 'Sixth coop term, Java Programmer at N8Identity.'
+    content: 'Sixth coop term, Java Programmer at N8Identity.',
+    color: '#D35400'
   },
   {
     id: 8,
     startDate: createDate('2011-05-01'),
     endDate: createDate('2012-12-15'),
-    content: 'Full time position, Java Programmer at N8Identity.'
+    content: 'Full time position, Java Programmer at N8Identity.',
+    color: '#D35400'
   },
   {
     id: 9,
     startDate: createDate('2013-01-01'),
     endDate: createDate('2017-01-01'),   // todo get current date and use that
-    content: 'Full time position, IBM.'
+    content: 'Full time position, IBM.',
+    color: '#3498DB'
   },
 ];
 
@@ -69,20 +78,20 @@ function findTimelineRows(elems) {
   _.forEach(elems, (elem, i) => {
     newElems.push(elem);
     if (spans.length === 0) {
-      spans.push([{startDate: elem.startDate, endDate: elem.endDate}]);
+      spans.push([{startDate: elem.startDate, endDate: elem.endDate, color: elem.color}]);
       newElems[i].row = 0;
     } else {
       let found = false;
       for (let x = 0; x < spans.length; x++) {
         if (moment(spans[x][spans[x].length - 1].endDate).isBefore(elem.startDate)) { // TODO is this syntax right?
-          spans[x].push({startDate: elem.startDate, endDate: elem.endDate}); // overwrite this span
+          spans[x].push({startDate: elem.startDate, endDate: elem.endDate, color: elem.color}); // overwrite this span
           newElems[i].row = x;
           found = true;
           break;
         }
       }
       if (!found) {
-        spans.push([{startDate: elem.startDate, endDate: elem.endDate}]);
+        spans.push([{startDate: elem.startDate, endDate: elem.endDate, color: elem.color}]);
         newElems[i].row = spans.length - 1;
       }
     }

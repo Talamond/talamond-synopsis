@@ -1,6 +1,5 @@
 .timeline-elem {
   position: relative;
-  top: 50px;
   border-radius: 100%;
   border: 2px solid #777777;
   height: 7px;
@@ -15,12 +14,10 @@
 .timeline-elem-wrapper {
   position: absolute;
   display: inline-block;
-  top: 30%;
 }
 
 .timeline-elem-display-date {
   position: relative;
-  top: 50px;
   right: 23px;
   font-size: 12px;
   color: grey;
@@ -47,11 +44,15 @@
 .timeline-span-row {
   position: relative;
   height: 10px;
+  top: 30px;
+  margin-top: 3px;
   .timeline-span {
     display: inline-block;
     position: absolute;
-    height: 4px;
-    border-bottom: 2px solid darkred;
+    height: 8px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #888888;
   }
 }
 
@@ -76,4 +77,5 @@
   position: relative;
   height: 100%;
   width: 22000px;
+  top: 47%;
 }

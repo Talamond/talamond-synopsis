@@ -7,6 +7,8 @@ import _ from 'lodash';
 import './timeline.scss';
 import {calculateLeft, calculateLength} from './timelineHelper.js';
 
+
+
 export function createTimelineComponent(selectState, prefix, urls) {
   @connect(store => ({
     timeline: selectState(store)
@@ -30,7 +32,8 @@ export function createTimelineComponent(selectState, prefix, urls) {
         elems.push(<div key={'tlrs-' + i + '-' + rowIndex} className="timeline-span"
                         style={{
                           width: elemLength + 'px',
-                          left: elemLeft + 'px'
+                          left: elemLeft + 'px',
+                          "backgroundColor": span.color
                         }}/>);
       });
       return elems;
@@ -41,14 +44,6 @@ export function createTimelineComponent(selectState, prefix, urls) {
       const timeSpans = []
       _.forEach(this.props.timeline.timelineElements, (elem) => {
         elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)}/>);
-        // if (elem.startDate && elem.endDate) {
-        //   timeSpans.push(<div className="timeline-span"
-        //                       style={{
-        //                         width: calculateLength(elem.startDate, elem.endDate) + 'px',
-        //                         top: (elem.row * 10 + 50) + 'px',
-        //                         left: calculateLeft(elem.startDate)
-        //                       }}/>);
-        // }
       });
       _.forEach(this.props.timeline.timelineSpans, (tSpan, i) => {
         elems.push(<div className="timeline-span-row" key={'tlr-' + i}>{this.renderSpans(tSpan, i)}</div>);
