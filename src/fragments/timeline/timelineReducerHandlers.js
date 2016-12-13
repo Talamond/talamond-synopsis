@@ -18,7 +18,7 @@ const sampleTimelineElements = [
     startDate: createDate('2007-01-01'),
     endDate: createDate('2007-04-30'),
     content: 'First coop term, Quality Assurance Functional Analyst at Parlay Entertainment.',
-    color: '#7D3C98'
+    color: '#BF5FFF'
   },
   {
     id: 3,

@@ -1,10 +1,15 @@
 .timeline-elem {
   position: relative;
   border-radius: 100%;
-  border: 2px solid #777777;
+  border: 2px solid black;
   height: 7px;
   width: 7px;
   cursor: default;
+  top: 0px;
+  left: 0px;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
   &:hover {
     background: #5bc0de;
     border-color: #3b10be;
@@ -24,17 +29,17 @@
 }
 
 .grow {
-  -webkit-transition-duration: 1s;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
+  height: 200px;
+  width: 200px;
+  z-index: 10;
+  top: -100px;
+  left: -100px;
   text-align: center;
   background: white;
   color: black;
   border-radius: 100%;
-  height: 200px;
-  width: 200px;
   overflow: hidden;
-  z-index: 10;
+
   &:hover {
     background: white;
     border-color: #777777;
