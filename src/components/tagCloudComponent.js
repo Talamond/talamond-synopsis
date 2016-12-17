@@ -1,5 +1,5 @@
 import React from 'react';
-import './tagCloud.scss';
+import '../fragments/tagCloud/tagCloud.scss';
 import _ from 'lodash';
 
 function renderWords(words, width, height) {

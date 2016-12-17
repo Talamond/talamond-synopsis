@@ -6,7 +6,8 @@ import {TimelineElem} from './timelineElemComponent.js';
 import _ from 'lodash';
 import './timeline.scss';
 import {calculateLeft, calculateLength} from './timelineHelper.js';
-
+import {createTagCloudComponent} from '../tagCloud/tagCloudComponent.js';
+import {getTagCloudPrefix} from './timelineHelper.js';
 
 
 export function createTimelineComponent(selectState, prefix, urls) {
@@ -22,6 +23,20 @@ export function createTimelineComponent(selectState, prefix, urls) {
       goToDate: PropTypes.func,
       clickElem: PropTypes.func
     };
+
+    componentWillMount() {
+      // todo make a tagCloud component for each element that needs one
+      // each needs different prefix
+      // TODO fragment helper?
+      this.TagClouds = {};
+      _.forEach(this.props.timeline.timelineElements, (elem, index) => {
+        const tcPrefix = getTagCloudPrefix(prefix, elem.id);
+        this.TagClouds[elem.id] = createTagCloudComponent((s) => {
+          return selectState(s).fragments[tcPrefix];
+        }, tcPrefix, {});
+      });
+
+    }
 
     renderSpans(spans, rowIndex) {
       const elems = [];
@@ -43,7 +58,9 @@ export function createTimelineComponent(selectState, prefix, urls) {
       const elems = [];
       const timeSpans = []
       _.forEach(this.props.timeline.timelineElements, (elem) => {
-        elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)}/>);
+        const TagCloud = this.TagClouds[elem.id];
+        const tcElem = <TagCloud/>;
+        elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)} tagCloud={tcElem}/>);
       });
       _.forEach(this.props.timeline.timelineSpans, (tSpan, i) => {
         elems.push(<div className="timeline-span-row" key={'tlr-' + i}>{this.renderSpans(tSpan, i)}</div>);

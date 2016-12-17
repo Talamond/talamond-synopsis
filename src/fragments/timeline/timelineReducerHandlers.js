@@ -1,10 +1,14 @@
 import * as TimelineActionTypes from './timelineActionTypes.js';
+import {getInitialState as getTagCloudInitialState, createHandlers as createTagCloudHandlers} from '../tagCloud/tagCloudReducerHandlers.js';
 import moment from 'moment';
+import * as ReducerHelper from '../../utils/reducerHelper';
 import _ from 'lodash';
+import {getTagCloudPrefix} from './timelineHelper.js';
 
 const format = 'YYYY-MM-DD';
 const displayedMonths = 3;
 
+// TODO, make this come from node server
 const sampleTimelineElements = [
   {
     id: 1,
@@ -74,6 +78,20 @@ const sampleTimelineElements = [
   },
 ];
 
+// TODO, ReducerHelper function?
+
+const fragments = (prefix) => {
+  const frags = {};
+  _.forEach(sampleTimelineElements, (elem) => {
+    const tagPrefix = getTagCloudPrefix(prefix, elem.id);
+    frags[tagPrefix] = {
+      initialState: getTagCloudInitialState(),
+      handlers: createTagCloudHandlers(tagPrefix)
+    };
+  });
+  return frags;
+};
+
 function findTimelineRows(elems) {
   // TODO sort elements
   const newElems = [];
@@ -106,17 +124,17 @@ function createDate(date) {
   return moment(date, format);
 }
 
-export function getInitialState() {
+export function getInitialState(prefix) {
   const now = moment().format(format);
   const then = moment().subtract(displayedMonths, 'months').format(format);
   const rowsObj = findTimelineRows(sampleTimelineElements);
-  return {
+  return ReducerHelper.createState({
     displayStartDate: then,
     displayEndDate: now,
     timelineElements: sampleTimelineElements,
     timelineRows: rowsObj.newElems,
     timelineSpans: rowsObj.timelineSpans
-  };
+  }, fragments(prefix));
 };
 
 /* eslint-disable no-param-reassign */ // the newState is passed in to avoid having to create a new state on each function
@@ -135,5 +153,5 @@ export const createHandlers = (prefix) => {
 		return newState;
 	};
 
-	return handlers;
+	return ReducerHelper.addFragmentsHandlers(handlers, fragments(prefix));
 };
