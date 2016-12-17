@@ -8,7 +8,7 @@ const actionTypes = createActionTypes(prefix);
 const fragments = {
 	timeline: {
 		initialState: {
-			...TimelineReducerHandlers.getInitialState()
+			...TimelineReducerHandlers.getInitialState(prefix)
 		},
 		handlers: {
 			...TimelineReducerHandlers.createHandlers(prefix)
