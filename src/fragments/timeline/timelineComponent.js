@@ -59,7 +59,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
       const timeSpans = []
       _.forEach(this.props.timeline.timelineElements, (elem) => {
         const TagCloud = this.TagClouds[elem.id];
-        const tcElem = <TagCloud/>;
+        const tcElem = <TagCloud data={elem.skills}/>;
         elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)} tagCloud={tcElem}/>);
       });
       _.forEach(this.props.timeline.timelineSpans, (tSpan, i) => {

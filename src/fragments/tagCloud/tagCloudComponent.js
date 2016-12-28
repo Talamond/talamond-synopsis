@@ -20,6 +20,7 @@ export function createTagCloudComponent(selectState, prefix, urls) {
     };
 
     componentWillMount() {
+      // TODO fetch tags from node
       this.props.initialize(this.props.data);
     }
 

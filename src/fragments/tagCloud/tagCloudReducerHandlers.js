@@ -2,7 +2,7 @@ import * as TagCloudActionTypes from './tagCloudActionTypes.js';
 
 export function getInitialState() {
   return {
-    data: {}
+    elements: []
   };
 };
 
@@ -13,6 +13,7 @@ export const createHandlers = (prefix) => {
 
   handlers[actionTypes.INITIALIZE_CLOUD] = (newState) => {
     // do some sorting and algortim
+    newState.elements = payload.data;
     return newState;
   };
 
