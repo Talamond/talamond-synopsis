@@ -7,14 +7,18 @@ import { NAVIGATION } from '../constants/navigation.js';
 import './appContentContainer.scss';
 
 const headerElems = [
-  {
-    label: 'Timeline',
-    onClick: (e) => navigate(e, NAVIGATION.TIMELINE.PATH)
-  },
-  {
-    label: 'Resume',
-    onClick: (e) => navigate(e, NAVIGATION.RESUME.PATH)
-  }
+	{
+		label: 'Timeline',
+		onClick: (e) => navigate(e, NAVIGATION.TIMELINE.PATH)
+	},
+	{
+		label: 'Resume',
+		onClick: (e) => navigate(e, NAVIGATION.RESUME.PATH)
+	},
+	{
+		label: 'Blog',
+		onClick: (e) => navigate(e, NAVIGATION.BLOG.PATH)
+	}
 ];
 
 @connect(state => ({

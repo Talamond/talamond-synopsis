@@ -30,8 +30,8 @@ const sampleTimelineElements = [
     endDate: createDate('2007-12-31'),
     content: 'Second coop term, Java Programmer at Ministry of Education.',
     color: '#99A3A4',
-    skills: [{label: 'JSP', weight: 7}, {label: 'J2EE', weight: 4}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10}, {label: 'OO', weight: 4},
-       {label: 'Web', weight: 8}
+    skills: [{label: 'JSP', weight: 7}, {label: 'J2EE', weight: 4}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
+        {label: 'OO', weight: 4}, {label: 'Web', weight: 8}
     ]
   },
   {
@@ -39,14 +39,21 @@ const sampleTimelineElements = [
     startDate: createDate('2008-05-01'),
     endDate: createDate('2008-08-31'),
     content: 'Third coop term, Java Programmer at SQL Power Group Inc.',
-    color: '#229954'
+    color: '#229954',
+      skills: [{label: 'Swing', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
+          {label: 'OO', weight: 4}
+      ]
   },
   {
     id: 5,
     startDate: createDate('2009-01-01'),
     endDate: createDate('2009-04-30'),
     content: 'Forth coop term, Java Programmer at N8Identity.',
-    color: '#D35400'
+    color: '#D35400',
+      skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
+          {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
+          {label: 'Agile', weight: 7}
+      ]
   },
   {
     id: 6,
