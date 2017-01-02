@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {createActionCreators} from './tagCloudActionCreator.js';
 import {createActionTypes} from './tagCloudActionTypes.js';
-import _ from 'lodash';
+import { D3TagCloud } from './d3TagCloud.js';
 import './tagCloud.scss';
 
 export function createTagCloudComponent(selectState, prefix, urls) {
@@ -30,7 +30,7 @@ export function createTagCloudComponent(selectState, prefix, urls) {
 
       return (
         <div className="tagcloud-root">
-          TagCloud
+          <D3TagCloud />
         </div>
       );
     }

@@ -11,7 +11,7 @@ export const createHandlers = (prefix) => {
   const actionTypes = TagCloudActionTypes.createActionTypes(prefix);
   const handlers = {};
 
-  handlers[actionTypes.INITIALIZE_CLOUD] = (newState) => {
+  handlers[actionTypes.INITIALIZE_CLOUD] = (newState, payload) => {
     // do some sorting and algortim
     newState.elements = payload.data;
     return newState;
