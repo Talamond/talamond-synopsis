@@ -26,11 +26,10 @@ export function createTagCloudComponent(selectState, prefix, urls) {
 
     render() {
       // TODO, seems reducer isnt properly hooked up
-      // const {tagCloud: {elements}} = this.props;
 
       return (
         <div className="tagcloud-root">
-          <D3TagCloud />
+          <D3TagCloud degrees={0} words={this.props.data}/>
         </div>
       );
     }

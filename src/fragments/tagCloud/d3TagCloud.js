@@ -10,7 +10,8 @@ import './tagCloud.scss';
 export class D3TagCloud extends React.Component {
 
     static propTypes = {
-        words: PropTypes.array
+        words: PropTypes.array,
+        degrees: PropTypes.number
     };
 
     draw(words) {
@@ -39,16 +40,12 @@ export class D3TagCloud extends React.Component {
     }
 
     componentDidMount() {
-
+        const { degrees, words } = this.props;
         this.layout = cloud()
             .size([100, 100])
-            .words([
-                "Hello", "world", "normally", "you", "want", "more", "words",
-                "than", "this"].map(function(d) {
-                return {text: d, size: 10 + Math.random(), test: "haha"};
-            }))
-            .padding(5)
-            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .words(words.map((w) => {return {text: w.label, size: 2 * w.weight};}))
+            .padding(0)
+            .rotate(() => ~~(Math.random() * 2) * degrees)
             .font("Impact")
             .fontSize(function(d) { return d.size; })
             .on("end", (words) => this.draw(words));
@@ -59,7 +56,6 @@ export class D3TagCloud extends React.Component {
     render() {
         return (
             <div className="d3tagcloud-root">
-                TagCloud
             </div>
         );
     }
