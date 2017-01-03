@@ -6,7 +6,6 @@ import {TimelineElem} from './timelineElemComponent.js';
 import _ from 'lodash';
 import './timeline.scss';
 import {calculateLeft, calculateLength} from './timelineHelper.js';
-import {createTagCloudComponent} from '../tagCloud/tagCloudComponent.js';
 import {getTagCloudPrefix} from './timelineHelper.js';
 
 
@@ -51,11 +50,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
       const elems = [];
       const timeSpans = []
       _.forEach(this.props.timeline.timelineElements, (elem) => {
-        const TagCloud = this.props.timeline.TagClouds[elem.id];
-        if (TagCloud) {
-          const tcElem = <TagCloud id={elem.id} data={elem.skills} height={100} width={100}/>;
-          elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)} tagCloud={tcElem}/>);
-        }
+        elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)}/>);
       });
       _.forEach(this.props.timeline.timelineSpans, (tSpan, i) => {
         elems.push(<div className="timeline-span-row" key={'tlr-' + i}>{this.renderSpans(tSpan, i)}</div>);
@@ -64,8 +59,6 @@ export function createTimelineComponent(selectState, prefix, urls) {
     }
 
     render() {
-      const {timeline, goToDate} = this.props;
-
       return (
         <div className="timeline-root">
           <div className="timeline-line"/>

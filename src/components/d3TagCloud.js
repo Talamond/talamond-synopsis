@@ -1,11 +1,8 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {createActionCreators} from './tagCloudActionCreator.js';
-import {createActionTypes} from './tagCloudActionTypes.js';
 import cloud from 'd3-cloud';
 import * as d3 from "d3";
 import _ from 'lodash';
-import './tagCloud.scss';
 
 export class D3TagCloud extends React.Component {
 
