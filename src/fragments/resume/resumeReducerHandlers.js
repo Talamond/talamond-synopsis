@@ -6,7 +6,8 @@ export function getInitialState() {
   return {
     jobData: [],
     educationData: [],
-    expandedSections: {}
+    expandedSections: {},
+    skillMap: {}
   };
 }
 
@@ -22,6 +23,16 @@ export const createHandlers = (prefix) => {
         newState.educationData.push(elem);
       } else {
         newState.jobData.push(elem);
+      }
+      if (elem.skills) {
+        _.forEach(elem.skills, (skill) => {
+          // todo, can I get rid of this if?
+          if (newState.skillMap[skill.label]) {
+            newState.skillMap[skill.label] += skill.weight;
+          } else {
+            newState.skillMap[skill.label] = skill.weight;
+          }
+        });
       }
     });
     return newState;
