@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
-import { createTimelineComponent } from '../fragments/timeline/timelineComponent.js';
-import { prefix } from '../reducers/timelineReducer.js';
+import { createResumeComponent } from '../fragments/resume/resumeComponent.js';
+import { prefix } from '../reducers/resumeReducer.js';
 
 @connect(state => ({
 	resume: state.resume
@@ -19,16 +19,14 @@ export class ResumeContainer extends React.Component {
 	};
 
 	componentWillMount() {
-		// this.Timeline = createTimelineComponent((store) => store.timeline.fragments.timeline, prefix);
+		this.Resume = createResumeComponent((store) => store.resume.fragments.resume, prefix);
 	}
 
 	render() {
-		// const Timeline = this.Timeline;
+		const Resume = this.Resume;
 
 		return (
-			<div>
-				Resume
-			</div>
+			<Resume/>
 		);
 	}
 }

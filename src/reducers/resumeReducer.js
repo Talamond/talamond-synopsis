@@ -1,8 +1,17 @@
 import * as ReducerHelper from '../utils/reducerHelper';
+import * as ResumeReducerHandlers from '../fragments/resume/resumeReducerHandlers.js';
 
 export const prefix = 'RESUME__';
 
 const fragments = {
+  resume: {
+    initialState: {
+      ...ResumeReducerHandlers.getInitialState()
+    },
+    handlers: {
+      ...ResumeReducerHandlers.createHandlers(prefix)
+    }
+  }
 };
 
 const initialState = {
