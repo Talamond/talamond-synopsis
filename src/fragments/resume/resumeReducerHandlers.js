@@ -7,7 +7,8 @@ export function getInitialState() {
     jobData: [],
     educationData: [],
     expandedSections: {},
-    skillMap: {}
+    skillMap: {},
+    allSkills: []
   };
 }
 
@@ -35,6 +36,11 @@ export const createHandlers = (prefix) => {
         });
       }
     });
+    const allSkills = [];
+    _.forIn(newState.skillMap, (v, k) => {
+      allSkills.push({label: k, weight: v});
+    });
+    newState.allSkills = allSkills;
     return newState;
   };
 

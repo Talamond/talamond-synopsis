@@ -5,17 +5,14 @@ import {D3TagCloud} from './d3TagCloud.js';
 export class TagCloud extends React.Component {
 
   static propTypes = {
-    tagCloud: PropTypes.object, // state
-    // attributes
-    id: PropTypes.number,
+    id: PropTypes.object,
     data: PropTypes.array,
     width: PropTypes.number,
     height: PropTypes.number
   };
 
-  // TODO, recalculate
-  componentWillMount() {
-    const {data, width, height} = this.props;
+  createWords(props) {
+    const {data, width, height} = props;
     const totalArea = width * height;
     const elems = [];
     let sum = 0;
@@ -31,7 +28,14 @@ export class TagCloud extends React.Component {
       });
     }
     this.wordElements = elems;
+  }
 
+  componentWillMount() {
+    this.createWords(this.props);
+  }
+
+  componentWillUpdate(nextProps) {
+    this.createWords(nextProps);
   }
 
   render() {

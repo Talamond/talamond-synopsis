@@ -2,9 +2,9 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {createActionCreators} from './resumeActionCreator.js';
 import {createActionTypes} from './resumeActionTypes.js';
+import {TagCloud} from '../../components/tagCloudComponent.js';
 import _ from 'lodash';
 import './resume.scss';
-
 
 export function createResumeComponent(selectState, prefix, urls) {
   @connect(store => ({
@@ -22,10 +22,15 @@ export function createResumeComponent(selectState, prefix, urls) {
       this.props.fetchData();
     }
 
+    renderSummary() {
+      return <TagCloud id="resume-summary" data={this.props.resume.allSkills} height={400} width={400}/>;
+    }
+
     render() {
       return (
         <div className="resume-root">
-          resume root
+          Boring Text mode vs interactive? (same fragment, but extended)
+          {this.renderSummary()}
         </div>
       );
     }
