@@ -55,6 +55,7 @@ export class D3TagCloud extends React.Component {
       .fontSize(function (d) {
         return d.size;
       })
+      .random(() => 0.5)
       .on("end", (words) => this.draw(words));
 
     this.layout.start();

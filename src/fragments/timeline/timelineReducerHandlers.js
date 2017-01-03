@@ -4,11 +4,13 @@ import moment from 'moment';
 import * as ReducerHelper from '../../utils/reducerHelper';
 import _ from 'lodash';
 import {getTagCloudPrefix} from './timelineHelper.js';
+import {createTagCloudComponent} from '../tagCloud/tagCloudComponent.js';
 
 const format = 'YYYY-MM-DD';
 const displayedMonths = 3;
 
 // TODO, make this come from node server
+/*
 const sampleTimelineElements = [
   {
     id: 1,
@@ -84,12 +86,12 @@ const sampleTimelineElements = [
     color: '#3498DB'
   },
 ];
-
+*/
 // TODO, ReducerHelper function?
 
-const fragments = (prefix) => {
+const fragments = (prefix, tlElems) => {
   const frags = {};
-  _.forEach(sampleTimelineElements, (elem) => {
+  _.forEach(tlElems, (elem) => {
     const tagPrefix = getTagCloudPrefix(prefix, elem.id);
     frags[tagPrefix] = {
       initialState: getTagCloudInitialState(),
@@ -134,14 +136,14 @@ function createDate(date) {
 export function getInitialState(prefix) {
   const now = moment().format(format);
   const then = moment().subtract(displayedMonths, 'months').format(format);
-  const rowsObj = findTimelineRows(sampleTimelineElements);
   return ReducerHelper.createState({
     displayStartDate: then,
     displayEndDate: now,
-    timelineElements: sampleTimelineElements,
-    timelineRows: rowsObj.newElems,
-    timelineSpans: rowsObj.timelineSpans
-  }, fragments(prefix));
+    timelineElements: [],
+    timelineRows: [],
+    timelineSpans: [],
+    TagClouds: {} // these are the react classes for redux fragments
+  }, fragments(prefix, []));
 };
 
 /* eslint-disable no-param-reassign */ // the newState is passed in to avoid having to create a new state on each function
@@ -159,6 +161,29 @@ export const createHandlers = (prefix) => {
     }
 		return newState;
 	};
+
+	handlers[actionTypes.FETCH_DATA] = (newState, payload) => {
+    const rowsObj = findTimelineRows(payload.data);
+    const now = moment().format(format);
+    const then = moment().subtract(displayedMonths, 'months').format(format);
+    // each needs different prefix
+    // TODO fragment helper?
+    const TagClouds = {};
+    _.forEach(payload.data, (elem, index) => {
+      const tcPrefix = getTagCloudPrefix(prefix, elem.id);
+      TagClouds[elem.id] = createTagCloudComponent((s) => {
+        return payload.selectState(s).fragments[tcPrefix];
+      }, tcPrefix, {});
+    });
+    return ReducerHelper.createState({
+      displayStartDate: then,
+      displayEndDate: now,
+      timelineElements: payload.data,
+      timelineRows: rowsObj.newElems,
+      timelineSpans: rowsObj.timelineSpans,
+      TagClouds
+    }, fragments(prefix, payload.data));
+  };
 
 	return ReducerHelper.addFragmentsHandlers(handlers, fragments(prefix));
 };

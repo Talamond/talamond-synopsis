@@ -23,7 +23,7 @@ export class TimelineElem extends Component {
           <div className="timeline-elem grow"
                onClick={() => onClick(timelineElem)}>
             <div className="timeline-elem-date">{timelineElem.startDate.format('YYYY-MM-DD')}</div>
-            <div className="timeline-elem-content">{timelineElem.content}</div>
+            <div className="timeline-elem-content">{timelineElem.content || timelineElem.summary || timelineElem.employer}</div>
             {tagCloud}
           </div>
         </div>

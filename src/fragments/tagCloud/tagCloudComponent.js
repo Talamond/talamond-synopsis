@@ -5,6 +5,7 @@ import {createActionTypes} from './tagCloudActionTypes.js';
 import { D3TagCloud } from './d3TagCloud.js';
 import './tagCloud.scss';
 
+// TODO unfragment this
 export function createTagCloudComponent(selectState, prefix, urls) {
   @connect(store => ({
     tagCloud: selectState(store)
@@ -25,6 +26,22 @@ export function createTagCloudComponent(selectState, prefix, urls) {
     componentWillMount() {
       const {data, width, height, initialize} = this.props;
       initialize(data, width, height);
+      const totalArea = width * height;
+      const elems = [];
+      let sum = 0;
+      if (data) {
+        // First calculate the total height of the sums
+        data.forEach((word) => {
+          sum = sum + word.weight;
+        });
+        // Then calculate the height of each element
+        data.forEach((word) => {
+          const size = Math.floor((word.weight / sum) * height);
+          elems.push({ text: word.label, size });
+        });
+      }
+      this.wordElements = elems;
+
     }
 
     render() {
@@ -32,7 +49,7 @@ export function createTagCloudComponent(selectState, prefix, urls) {
       const { height, width, id, tagCloud: { wordElements } } = this.props;
       return (
         <div className="tagcloud-root">
-          <D3TagCloud selectId={`tagcloud-root-${id}`} degrees={0} words={wordElements} width={width} height={height} />
+          <D3TagCloud selectId={`tagcloud-root-${id}`} degrees={0} words={this.wordElements} width={width} height={height} />
         </div>
       );
     }
