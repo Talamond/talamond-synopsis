@@ -6,7 +6,12 @@ export function getInitialState() {
   return {
     jobData: [],
     educationData: [],
-    expandedSections: {},
+    expandedSections: {
+      summary: true,
+      education: true,
+      work: true,
+      personal: true
+    },
     skillMap: {},
     allSkills: []
   };
@@ -41,6 +46,11 @@ export const createHandlers = (prefix) => {
       allSkills.push({label: k, weight: v});
     });
     newState.allSkills = allSkills;
+    return newState;
+  };
+
+  handlers[actionTypes.EXPAND_SECTION] = (newState, payload) => {
+    newState.expandedSections[payload.section] = !newState.expandedSections[payload.section];
     return newState;
   };
 

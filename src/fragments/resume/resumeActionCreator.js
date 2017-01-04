@@ -13,7 +13,17 @@ export function createActionCreators(actionTypes) {
     };
   }
 
+  function expandSection(section) { // TODO this is weird...
+    return {
+      type: actionTypes.EXPAND_SECTION,
+      payload: {
+        section
+      }
+    };
+  }
+
   return {
-    fetchData
+    fetchData,
+    expandSection
   };
 }
