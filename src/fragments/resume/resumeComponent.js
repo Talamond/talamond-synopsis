@@ -31,11 +31,32 @@ export function createResumeComponent(selectState, prefix, urls) {
     }
 
     renderEducation() {
-      return <div>Education</div>;
+      const {educationData} = this.props.resume;
+      const educations = [];
+      _.forEach(educationData, (e, i) => {
+        educations.push(<div key={i}>{e.summary}</div>);
+      });
+      return educations;
+    }
+
+    renderWorkDetails(job) {
+      return <div>Work Details</div>;
     }
 
     renderWorkExperience() {
-      return <div>Work Experience</div>;
+      const {resume: {expandedSections, jobData}, expandSection} = this.props;
+      const jobs = [];
+      _.forEach(jobData, (j, i) => {
+        jobs.push(<Section
+          id={`job${i}`}
+          key={`job${i}`}
+          expanded={expandedSections[`job${i}`]}
+          title={j.title}
+          content={this.renderWorkDetails(j)}
+          onClick={(section) => expandSection(section)}
+        />);
+      });
+      return jobs;
     }
 
     renderPersonal() {
@@ -43,7 +64,7 @@ export function createResumeComponent(selectState, prefix, urls) {
     }
 
     render() {
-      const { resume: {expandedSections}, expandSection} = this.props;
+      const {resume: {expandedSections}, expandSection} = this.props;
       return (
         <div className="resume-root">
           <Section id="summary"
