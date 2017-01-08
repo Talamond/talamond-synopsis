@@ -19,7 +19,8 @@ export function createTimelineComponent(selectState, prefix, urls) {
       timelineData: PropTypes.array,
 
       // actions
-      fetchData: PropTypes.func
+      fetchData: PropTypes.func,
+      selectTab: PropTypes.func
     };
 
     componentWillMount() {
@@ -27,9 +28,10 @@ export function createTimelineComponent(selectState, prefix, urls) {
     }
 
     renderTimelines() {
+      const {timeline: {timelineElements, selectedTabs}, selectTab} = this.props;
       const elems = [];
-      _.forEach(this.props.timeline.timelineElements, (elem) => {
-        elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onClick={(elem) => this.props.clickElem(elem)}/>);
+      _.forEach(timelineElements, (elem) => {
+        elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onTabSelect={selectTab} selectedTab={selectedTabs[elem.id]}/>);
       });
       return elems;
     }

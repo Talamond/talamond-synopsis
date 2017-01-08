@@ -1,14 +1,14 @@
 import * as ReducerHelper from '../utils/reducerHelper';
-import { createActionTypes } from '../fragments/timeline/timelineActionTypes.js';
-import * as TimelineReducerHandlers from '../fragments/timeline/timelineReducerHandlers.js';
+import { createActionTypes } from '../fragments/coolTimeline/timelineActionTypes.js';
+import * as TimelineReducerHandlers from '../fragments/coolTimeline/timelineReducerHandlers.js';
 
-export const prefix = 'TIMELINE__';
+export const prefix = 'COOL_TIMELINE__';
 const actionTypes = createActionTypes(prefix);
 
 const fragments = {
 	timeline: {
 		initialState: {
-			...TimelineReducerHandlers.getInitialState(prefix)
+			...TimelineReducerHandlers.initialState
 		},
 		handlers: {
 			...TimelineReducerHandlers.createHandlers(prefix)

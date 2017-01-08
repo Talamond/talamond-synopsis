@@ -1,10 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import {calculateLeft} from './timelineHelper.js';
 import {TagCloud} from '../../components/tagCloudComponent.js';
+import {TabArea} from '../../components/tabAreaComponent.js';
 
 export class TimelineElem extends Component {
   static propTypes = {
-    timelineElem: PropTypes.object // TODO shape
+    timelineElem: PropTypes.object, // TODO shape
+    selectedTab: PropTypes.number,
+    onTabSelect: PropTypes.func
   };
 
   renderImage(timelineElem) {
@@ -15,14 +18,25 @@ export class TimelineElem extends Component {
     return <img src={timelineElem.image} />;
   }
 
+  renderSkills(timelineElem) {
+    return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={100} width={100} color="#aec7e8"/>;
+  }
+
+  renderDescription(timelineElem) {
+    return <span className="description">{timelineElem.description}</span>;
+  }
+
   render() {
-    const {timelineElem} = this.props;
+    const {timelineElem, selectedTab, onTabSelect} = this.props;
+    const tabContents = [
+      {name: 'Skills', content: this.renderSkills(timelineElem)},
+      {name: 'Description',  content: this.renderDescription(timelineElem)}
+    ];
+
     return (
       <div className="timeline-elem-wrapper" style={{left: calculateLeft(timelineElem.startDate)}}>
         {this.renderImage(timelineElem)}
-        <TagCloud id={timelineElem.id} data={timelineElem.skills} height={100} width={100} color="#aec7e8"/>
-        <span className="description">{timelineElem.description}</span>
-        <div className="timeline-elem-display-date">{timelineElem.startDate.format('YYYY-MM-DD')}</div>
+        <TabArea tabContents={tabContents} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
       </div>
     );
   }

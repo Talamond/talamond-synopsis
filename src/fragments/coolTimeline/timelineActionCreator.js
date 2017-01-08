@@ -13,7 +13,18 @@ export function createActionCreators(actionTypes) {
     };
   }
 
+  function selectTab(id, tabIndex) {
+	  return {
+	    type: actionTypes.SELECT_TAB,
+      payload: {
+	      id,
+        tabIndex
+      }
+    };
+  }
+
 	return {
-    fetchData
+    fetchData,
+    selectTab
 	};
 }

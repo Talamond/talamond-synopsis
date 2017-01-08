@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52a40ad-0f8e-4b3b-a6dd-81ef5836ee4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/d3TagCloud.js" afterPath="$PROJECT_DIR$/src/components/d3TagCloud.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tagCloudComponent.js" afterPath="$PROJECT_DIR$/src/components/tagCloudComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/timelineContainer.js" afterPath="$PROJECT_DIR$/src/containers/timelineContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/timeline/timeline.scss" afterPath="$PROJECT_DIR$/src/fragments/timeline/timeline.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/apiSimulator.js" afterPath="$PROJECT_DIR$/src/utils/apiSimulator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionTypes.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionTypes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/timelineReducer.js" afterPath="$PROJECT_DIR$/src/reducers/timelineReducer.js" />
     </list>
     <ignored path="timeline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,33 +31,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="apiSimulator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/apiSimulator.js">
+      <file leaf-file-name="tabAreaComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/tabAreaComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="30">
+              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding>
-                <element signature="e#75#103#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss">
+      <file leaf-file-name="timelineReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/timelineReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timelineActionCreator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fragments/timeline/timelineActionCreator.js">
+      <file leaf-file-name="tab.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/tab.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -65,10 +68,22 @@
       <file leaf-file-name="timelineComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="450">
+              <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timelineElemComponent.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="38" column="137" lean-forward="false" selection-start-line="38" selection-start-column="137" selection-end-line="38" selection-end-column="137" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +92,8 @@
       <file leaf-file-name="timelineReducerHandlers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -86,33 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timelineElemComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
+      <file leaf-file-name="timelineActionTypes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionTypes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="105" lean-forward="false" selection-start-line="22" selection-start-column="105" selection-end-line="22" selection-end-column="105" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tagCloudComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/tagCloudComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-75">
-              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d3TagCloud.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/d3TagCloud.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="30">
+              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -121,23 +114,29 @@
       <file leaf-file-name="timelineActionCreator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+            <state relative-caret-position="405">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timelineComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fragments/timeline/timelineComponent.js">
+      <file leaf-file-name="tagCloudComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/tagCloudComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="6" selection-end-column="25" />
-              <folding>
-                <marker date="1483899109000" expanded="true" signature="1109:1183" ph="{...}" />
-                <marker date="1483899109000" expanded="true" signature="1737:1738" ph="{...}" />
-                <marker date="1483899109000" expanded="true" signature="1940:1955" ph="{...}" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="39" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="headerComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/headerComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,11 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/webpack.config.production.js" />
-        <option value="$PROJECT_DIR$/webpack.config.base.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/webpack.config.development.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/fragments/tagcloud/tagCloudComponent.js" />
@@ -176,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/components/tagCloud.scss" />
         <option value="$PROJECT_DIR$/src/fragments/tagCloud/tagCloudActionTypes.js" />
         <option value="$PROJECT_DIR$/src/fragments/timeline/timelineHelper.js" />
-        <option value="$PROJECT_DIR$/src/reducers/timelineReducer.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/constants/navigation.js" />
         <option value="$PROJECT_DIR$/src/containers/blogContainer.js" />
@@ -204,16 +197,22 @@
         <option value="$PROJECT_DIR$/src/fragments/resume/resume.scss" />
         <option value="$PROJECT_DIR$/src/fragments/resume/resumeReducerHandlers.js" />
         <option value="$PROJECT_DIR$/src/fragments/resume/resumeComponent.js" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js" />
         <option value="$PROJECT_DIR$/src/containers/timelineContainer.js" />
         <option value="$PROJECT_DIR$/src/fragments/timeline/timelineComponent.js" />
         <option value="$PROJECT_DIR$/src/fragments/timeline/timeline.scss" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
         <option value="$PROJECT_DIR$/src/utils/apiSimulator.js" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
         <option value="$PROJECT_DIR$/src/components/tagCloudComponent.js" />
         <option value="$PROJECT_DIR$/src/components/d3TagCloud.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
+        <option value="$PROJECT_DIR$/src/components/tabArea.js" />
+        <option value="$PROJECT_DIR$/src/components/tab.scss" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionTypes.js" />
+        <option value="$PROJECT_DIR$/src/reducers/timelineReducer.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/tabAreaComponent.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
       </list>
     </option>
   </component>
@@ -540,12 +539,12 @@
       <workItem from="1481165295065" duration="4798000" />
       <workItem from="1481591825815" duration="7711000" />
       <workItem from="1481986285964" duration="7151000" />
-      <workItem from="1483371815106" duration="39514000" />
+      <workItem from="1483371815106" duration="43065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113449000" />
+    <option name="totallyTimeSpent" value="117000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -586,32 +585,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.development.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -675,14 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/headerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/appContentContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -727,14 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/timelineReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -912,14 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/timeline/timelineActionCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fragments/timeline/timelineComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -932,37 +886,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fragments/timeline/timeline.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,10 +904,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/d3TagCloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/timeline/timelineActionCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/headerComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tagCloudComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="39" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tab.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/timelineReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tabAreaComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="450">
+          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -988,27 +1010,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="105" lean-forward="false" selection-start-line="22" selection-start-column="105" selection-end-line="22" selection-end-column="105" />
+        <state relative-caret-position="405">
+          <caret line="38" column="137" lean-forward="false" selection-start-line="38" selection-start-column="137" selection-end-line="38" selection-end-column="137" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tagCloudComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/d3TagCloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>

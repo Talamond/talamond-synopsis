@@ -1,7 +1,6 @@
 export function createActionTypes(prefix = '') {
 	return {
-		GO_TO_DATE: `${prefix}GO_TO_DATE`,
-    CLICK_ELEM: `${prefix}CLICK_ELEM`,
+    SELECT_TAB: `${prefix}SELECT_TAB`,
 
     FETCH_DATA: `${prefix}FETCH_DATA`
 	};
