@@ -11,10 +11,11 @@ export class D3TagCloud extends React.Component {
     words: PropTypes.array,
     degrees: PropTypes.number,
     width: PropTypes.number,
-    height: PropTypes.number
+    height: PropTypes.number,
+    color: PropTypes.string
   };
 
-  draw(words) {
+  draw(words, color) {
     const fill = d3.schemeCategory20;
     const layout = this.layout;
     d3.select(`#${this.props.selectId}`).append("svg")
@@ -30,6 +31,9 @@ export class D3TagCloud extends React.Component {
       })
       .style("font-family", "Impact")
       .style("fill", function (d, i) {
+        if (color) {
+          return color;
+        }
         return fill[i];
       })
       .attr("text-anchor", "middle")
@@ -42,7 +46,7 @@ export class D3TagCloud extends React.Component {
   }
 
   setLayout() {
-    const {degrees, words, width, height} = this.props;
+    const {degrees, words, width, height, color} = this.props;
     this.layout = cloud()
       .size([width, height])
       .words(words)
@@ -53,7 +57,7 @@ export class D3TagCloud extends React.Component {
         return d.size;
       })
       .random(() => 0.5)
-      .on("end", (words) => this.draw(words));
+      .on("end", (words) => this.draw(words, color));
 
     this.layout.start();
   }
