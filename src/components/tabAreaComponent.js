@@ -17,7 +17,7 @@ export class TabArea extends React.Component {
   renderTabs(tabContents) {
     const tabs = [];
     _.forEach(tabContents, (tabContent, index) => {
-      tabs.push(<div className="tab" onClick={() => this.props.onTabSelect(index)}>
+      tabs.push(<div key={index} className="tab" onClick={() => this.props.onTabSelect(index)}>
         {tabContent.name}
       </div>);
     });
@@ -28,10 +28,12 @@ export class TabArea extends React.Component {
     const {tabContents, selectedTab} = this.props;
     return (
       <div className="tabArea-root">
-        <div>
+        <div className="tab-content">
           {tabContents[selectedTab].content}
         </div>
-        {this.renderTabs(tabContents)}
+        <div className="tabs">
+          {this.renderTabs(tabContents)}
+        </div>
       </div>
     );
   }

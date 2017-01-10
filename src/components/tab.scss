@@ -1,3 +1,21 @@
-.tab {
-  padding: 5px;
+.tabArea-root {
+  position: relative;
+  .tab {
+    padding: 5px;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 14px;
+    color: grey;
+    border: 1px solid lightgrey;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    float: right;
+  }
+
+  .tabs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
 }

@@ -34,7 +34,7 @@ export class TimelineElem extends Component {
     ];
 
     return (
-      <div className="timeline-elem-wrapper" style={{left: calculateLeft(timelineElem.startDate)}}>
+      <div className="timeline-elem-wrapper">
         {this.renderImage(timelineElem)}
         <TabArea tabContents={tabContents} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
       </div>

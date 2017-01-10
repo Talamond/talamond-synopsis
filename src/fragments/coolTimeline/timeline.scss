@@ -24,6 +24,12 @@
     img {
       height: 100px;
     }
+    .tabArea-root {
+      display: inline-block;
+      border: 1px solid lightgrey;
+      width: 500px;
+      height: 250px;
+    }
   }
 
   .timeline-elem-display-date {
