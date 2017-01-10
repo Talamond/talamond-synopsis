@@ -18,6 +18,8 @@
   }
 
   .timeline-elem-wrapper {
+    width: 66%;
+    margin: auto;
     height: 250px;
     position: relative;
     img {
@@ -32,7 +34,6 @@
       position: absolute;
       right: 0;
       display: inline-block;
-      border: 1px solid lightgrey;
       width: 500px;
       height: 250px;
       .tagcloud-root {
