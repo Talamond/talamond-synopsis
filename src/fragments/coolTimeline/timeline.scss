@@ -18,10 +18,19 @@
   }
 
   .timeline-elem-wrapper {
+    height: 250px;
+    position: relative;
     img {
       height: 100px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
     }
     .tabArea-root {
+      position: absolute;
+      right: 0;
       display: inline-block;
       border: 1px solid lightgrey;
       width: 500px;

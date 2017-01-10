@@ -23,7 +23,7 @@ export class TimelineElem extends Component {
   }
 
   renderDescription(timelineElem) {
-    return <span className="description">{timelineElem.description}</span>;
+    return <div className="description">{timelineElem.description}</div>;
   }
 
   render() {
