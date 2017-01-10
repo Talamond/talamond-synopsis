@@ -30,8 +30,12 @@ export function createTimelineComponent(selectState, prefix, urls) {
     renderTimelines() {
       const {timeline: {timelineElements, selectedTabs}, selectTab} = this.props;
       const elems = [];
-      _.forEach(timelineElements, (elem) => {
-        elems.push(<TimelineElem key={'tl-' + elem.id} timelineElem={elem} onTabSelect={selectTab} selectedTab={selectedTabs[elem.id]}/>);
+      _.forEach(timelineElements, (elem, index) => {
+        elems.push(<TimelineElem key={index}
+                                 timelineElem={elem}
+                                 onTabSelect={selectTab}
+                                 selectedTab={selectedTabs[elem.id]}
+                                 className={index % 2 ? 'odd' : 'even'}/>);
       });
       return elems;
     }

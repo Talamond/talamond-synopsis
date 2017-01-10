@@ -1,3 +1,4 @@
+$timeline-elem-padding: 300px;
 .cool-timeline-root {
   .timeline-elem {
     position: relative;
@@ -18,10 +19,11 @@
   }
 
   .timeline-elem-wrapper {
-    width: 66%;
+    width: calc(100% - #{$timeline-elem-padding});
     margin: auto;
     height: 250px;
     position: relative;
+    padding: 150px 0;
     img {
       height: 100px;
       margin: auto;
@@ -41,6 +43,19 @@
         width: 200px;
       }
     }
+    &.even {
+      background-color: ghostwhite;
+      padding-right: $timeline-elem-padding;
+    }
+    &.odd {
+      background-color: white;
+      padding-left: $timeline-elem-padding;
+    }
+  }
+
+  .description {
+    font-family: Arial;
+    color: #343434;
   }
 
   .timeline-elem-display-date {

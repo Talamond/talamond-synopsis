@@ -1,6 +1,9 @@
 .app-root {
   margin-top: 40px;
-  margin-bottom: 40px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 40px);
   overflow: scroll;
+}
+
+body {
+  margin: 0px;
 }

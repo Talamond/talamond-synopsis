@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import {calculateLeft} from './timelineHelper.js';
+import cn from 'classnames';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import {TabArea} from '../../components/tabAreaComponent.js';
 
@@ -7,7 +7,8 @@ export class TimelineElem extends Component {
   static propTypes = {
     timelineElem: PropTypes.object, // TODO shape
     selectedTab: PropTypes.number,
-    onTabSelect: PropTypes.func
+    onTabSelect: PropTypes.func,
+    className: PropTypes.string
   };
 
   renderImage(timelineElem) {
@@ -34,7 +35,7 @@ export class TimelineElem extends Component {
     ];
 
     return (
-      <div className="timeline-elem-wrapper">
+      <div className={cn('timeline-elem-wrapper', this.props.className)}>
         {this.renderImage(timelineElem)}
         <TabArea tabContents={tabContents} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
       </div>

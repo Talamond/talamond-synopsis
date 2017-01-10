@@ -43,7 +43,6 @@ export default class Main extends Component {
         <div className="app-root">
           {this.props.children}
         </div>
-				<Footer/>
 			</div>
 		);
 	}
