@@ -14,9 +14,9 @@ export class TimelineElem extends Component {
   renderImage(timelineElem) {
     // This is hack cause the n8Identity logg is low res
     if (timelineElem.employer === 'N8Identity') {
-      return <img src={timelineElem.image} style={{height: '20px', padding: '40px 0'}}/>;
+      return <img src={timelineElem.image} className={this.props.className} style={{height: '20px', padding: '40px 0'}}/>;
     }
-    return <img src={timelineElem.image} />;
+    return <img src={timelineElem.image} className={this.props.className} />;
   }
 
   renderSkills(timelineElem) {
@@ -28,16 +28,18 @@ export class TimelineElem extends Component {
   }
 
   render() {
-    const {timelineElem, selectedTab, onTabSelect} = this.props;
+    const {timelineElem, selectedTab, onTabSelect, className} = this.props;
     const tabContents = [
       {name: 'Skills', content: this.renderSkills(timelineElem)},
       {name: 'Description',  content: this.renderDescription(timelineElem)}
     ];
 
     return (
-      <div className={cn('timeline-elem-wrapper', this.props.className)}>
-        {this.renderImage(timelineElem)}
-        <TabArea tabContents={tabContents} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
+      <div className={cn('timeline-elem-outer', className)}>
+        <div className={cn('timeline-elem-wrapper', className)}>
+          {this.renderImage(timelineElem)}
+          <TabArea tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
+        </div>
       </div>
     );
   }

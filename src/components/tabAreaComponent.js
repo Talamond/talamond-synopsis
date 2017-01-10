@@ -8,6 +8,7 @@ export class TabArea extends React.Component {
   static propTypes = {
     tabContents: PropTypes.array,
     selectedTab: PropTypes.number,
+    className: PropTypes.string,
     onTabSelect: PropTypes.func
   };
 
@@ -29,9 +30,9 @@ export class TabArea extends React.Component {
   }
 
   render() {
-    const {tabContents, selectedTab} = this.props;
+    const {tabContents, selectedTab, className} = this.props;
     return (
-      <div className="tabArea-root">
+      <div className={cn('tabArea-root', className)}>
         <div className="tab-content">
           {tabContents[selectedTab].content}
         </div>

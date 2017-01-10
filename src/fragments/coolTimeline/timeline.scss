@@ -18,38 +18,52 @@ $timeline-elem-padding: 300px;
     }
   }
 
+  .timeline-elem-outer.even {
+    background-color: white;
+    padding-right: 300px;
+    padding-left: 100px;
+  }
+
+  .timeline-elem-outer.odd {
+    background-color: ghostwhite;
+    padding-left: 300px;
+    padding-right: 100px;
+  }
+
   .timeline-elem-wrapper {
-    width: calc(100% - #{$timeline-elem-padding});
+    width: 100%;
     margin: auto;
     height: 250px;
     position: relative;
-    padding: 150px 0;
+    padding: 150px 0 25px 0;
     img {
       height: 100px;
       margin: auto;
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 0;
+      &.even {
+        left: 0;
+      }
+      &.odd {
+        right: 0;
+      }
     }
     .tabArea-root {
       position: absolute;
-      right: 0;
       display: inline-block;
       width: 500px;
       height: 250px;
+      &.even {
+        right: 0;
+      }
+      &.odd {
+        left: 0;
+      }
       .tagcloud-root {
         margin: 0 auto;
         width: 200px;
       }
-    }
-    &.even {
-      background-color: ghostwhite;
-      padding-right: $timeline-elem-padding;
-    }
-    &.odd {
-      background-color: white;
-      padding-left: $timeline-elem-padding;
     }
   }
 
@@ -61,39 +75,6 @@ $timeline-elem-padding: 300px;
   .timeline-elem-display-date {
     font-size: 12px;
     color: grey;
-  }
-
-  .grow {
-    height: 200px;
-    width: 200px;
-    z-index: 10;
-    top: -100px;
-    left: -100px;
-    text-align: center;
-    background: white;
-    color: black;
-    border-radius: 100%;
-    overflow: hidden;
-
-    &:hover {
-      background: white;
-      border-color: #777777;
-    }
-  }
-
-  .timeline-span-row {
-    position: relative;
-    height: 10px;
-    top: 30px;
-    margin-top: 3px;
-    .timeline-span {
-      display: inline-block;
-      position: absolute;
-      height: 8px;
-      border: 1px solid #333333;
-      border-radius: 10px;
-      box-shadow: 3px 3px 3px #888888;
-    }
   }
 
   .timeline-elem-big {
