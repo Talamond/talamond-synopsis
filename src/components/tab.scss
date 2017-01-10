@@ -1,6 +1,7 @@
 .tabArea-root {
   position: relative;
   .tab {
+    height: 16px;
     padding: 5px;
     display: inline-block;
     font-family: Arial;
@@ -10,8 +11,16 @@
     border-top: none;
     border-radius: 0 0 10px 10px;
     float: right;
+    cursor: pointer;
+    &.selected {
+      font-weight: bold;
+    }
   }
-
+  .tab-select-line {
+    width: 100%;
+    border-bottom: 3px solid darkcyan;
+    padding-top: 2px;
+  }
   .tabs {
     position: absolute;
     bottom: 0;

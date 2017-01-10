@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import './tab.scss';
 import _ from 'lodash';
+import cn from 'classnames';
 
 export class TabArea extends React.Component {
 
@@ -15,10 +16,13 @@ export class TabArea extends React.Component {
   };
 
   renderTabs(tabContents) {
+    const {selectedTab} = this.props;
     const tabs = [];
     _.forEach(tabContents, (tabContent, index) => {
-      tabs.push(<div key={index} className="tab" onClick={() => this.props.onTabSelect(index)}>
+      const selected = index === selectedTab;
+      tabs.push(<div key={index} className={cn('tab', {selected})} onClick={() => this.props.onTabSelect(index)}>
         {tabContent.name}
+        {selected && <div className="tab-select-line"/>}
       </div>);
     });
     return tabs;
