@@ -1,7 +1,4 @@
 .cool-timeline-root {
-  .tagcloud-root {
-    display: inline-block;
-  }
   .timeline-elem {
     position: relative;
     border-radius: 100%;
@@ -29,6 +26,10 @@
       border: 1px solid lightgrey;
       width: 500px;
       height: 250px;
+      .tagcloud-root {
+        margin: 0 auto;
+        width: 200px;
+      }
     }
   }
 

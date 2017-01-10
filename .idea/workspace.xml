@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52a40ad-0f8e-4b3b-a6dd-81ef5836ee4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tab.scss" afterPath="$PROJECT_DIR$/src/components/tab.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tabAreaComponent.js" afterPath="$PROJECT_DIR$/src/components/tabAreaComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
     </list>
@@ -52,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tab.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/tab.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -77,8 +75,8 @@
       <file leaf-file-name="timelineElemComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="210">
+              <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -86,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="timeline.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="0">
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -206,10 +204,10 @@
         <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineActionCreator.js" />
         <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js" />
         <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineComponent.js" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
         <option value="$PROJECT_DIR$/src/components/tabAreaComponent.js" />
         <option value="$PROJECT_DIR$/src/components/tab.scss" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
       </list>
     </option>
   </component>
@@ -536,12 +534,12 @@
       <workItem from="1481165295065" duration="4798000" />
       <workItem from="1481591825815" duration="7711000" />
       <workItem from="1481986285964" duration="7151000" />
-      <workItem from="1483371815106" duration="44132000" />
+      <workItem from="1483371815106" duration="44570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118067000" />
+    <option name="totallyTimeSpent" value="118505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -979,24 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tabAreaComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1007,10 +987,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tab.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
           <folding />
         </state>
       </provider>
