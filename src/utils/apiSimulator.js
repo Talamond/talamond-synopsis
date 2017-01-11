@@ -18,6 +18,8 @@ export function getResumeData() {
       startDate: createDate('2006-09-01'),
       endDate: createDate('2011-04-30'),
       summary: 'Bachelor of Computer Science/Software Engineering Option - Co-operative Program, University of Waterloo',
+      title: 'Bachelor of Computer Science/Software Engineering Option - Coop',
+      employer: 'University of Waterloo',
       type: 'education',
       color: '#F1C40F',
       image: uw

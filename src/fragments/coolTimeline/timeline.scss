@@ -51,7 +51,6 @@ $font-fam: Arial;
   }
 
   .timeline-elem-wrapper {
-    width: 100%;
     margin: auto;
     height: 250px;
     position: relative;
@@ -65,6 +64,8 @@ $font-fam: Arial;
       left: 0;
       &.bigImage {
         height: 400px;
+        right: 0;
+        top: 75px;
       }
     }
     .tabArea-root {
@@ -114,14 +115,4 @@ $font-fam: Arial;
     top: 47%;
   }
 
-  .timeline-line {
-    border-top: 1px solid #777777;
-    width: 100%;
-    top: 6px;
-    position: relative;
-  }
-
-  .timeline-tag-cloud {
-    margin-left: 50px;
-  }
 }

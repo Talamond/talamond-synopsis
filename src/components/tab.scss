@@ -9,14 +9,14 @@ $tabHeight: 27px;
     font-size: 14px;
     color: grey;
     border: 1px solid lightgrey;
+    border-top: none;
     border-radius: 0 0 10px 10px;
     float: right;
     cursor: pointer;
-    background-color: whitesmoke;
+
     &.selected {
       font-weight: bold;
       background-color: white;
-      border-top: none;
     }
   }
   .tab-select-line {
