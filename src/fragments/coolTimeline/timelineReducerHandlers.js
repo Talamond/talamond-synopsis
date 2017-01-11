@@ -27,7 +27,11 @@ export const createHandlers = (prefix) => {
 	};
 
 	handlers[actionTypes.FETCH_DATA] = (newState, payload) => {
-	  newState.timelineElements = payload.data;
+	  // sort by reserve end time
+    // TODO modifying payload
+    newState.timelineElements = _.sortBy(payload.data, (elem) => {
+      return -1 * elem.endDate.unix();
+    });
     return newState;
   };
 

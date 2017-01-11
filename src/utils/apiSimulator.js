@@ -75,7 +75,10 @@ export function getResumeData() {
         'Contributed in application design sessions',
         'Fixed various types of bugs for various applications'
       ],
-      description: '',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
+      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       type: 'coop',
       color: '#229954',
       skills: [{label: 'Swing', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
@@ -86,19 +89,22 @@ export function getResumeData() {
     {
       id: 5,
       startDate: createDate('2009-01-01'),
-      endDate: createDate('2009-04-30'),
+      endDate: createDate('2010-08-31'),
       title: 'Java Programmer',
       employer: 'N8Identity',
       type: 'coop',
       color: '#D35400',
-      description: '',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
+      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}
+        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}
       ],
       image: n8
     },
-    {
+    /*{
       id: 6,
       startDate: createDate('2009-09-01'),
       endDate: createDate('2009-12-31'),
@@ -109,7 +115,7 @@ export function getResumeData() {
       description: '',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}
+        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}
       ],
       image: n8
     },
@@ -124,10 +130,10 @@ export function getResumeData() {
       description: '',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}
+        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}
       ],
       image: n8
-    },
+    }, */
     {
       id: 8,
       startDate: createDate('2011-05-01'),
@@ -136,7 +142,10 @@ export function getResumeData() {
       employer: 'N8Identity',
       type: 'full',
       color: '#D35400',
-      description: '',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
+      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
         {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}
@@ -147,9 +156,12 @@ export function getResumeData() {
       id: 9,
       startDate: createDate('2013-01-01'),
       endDate: createDate('2017-01-01'),   // todo get current date and use that
-      title: '',
-      employer: '',
-      description: '',
+      title: 'Software Developer / Lead UI Architect',
+      employer: 'IBM Canada',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
+      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       summary: 'IBM Canada',
       type: 'full',
       color: '#3498DB',

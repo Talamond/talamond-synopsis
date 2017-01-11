@@ -24,7 +24,7 @@ export class TagCloud extends React.Component {
       });
       // Then calculate the height of each element
       data.forEach((word) => {
-        const size = Math.floor((word.weight / sum) * height);
+        const size = Math.floor((word.weight / sum) * height) * 1.2;
         elems.push({text: word.label, size});
       });
     }
