@@ -1,4 +1,5 @@
 $timeline-elem-padding: 300px;
+$font-fam: Arial;
 .cool-timeline-root {
   .timeline-elem {
     position: relative;
@@ -18,16 +19,33 @@ $timeline-elem-padding: 300px;
     }
   }
 
-  .timeline-elem-outer.even {
-    background-color: white;
-    padding-right: 300px;
+  .timeline-elem-outer {
+    padding-right: 100px;
     padding-left: 100px;
+    height: 650px;
+    &.even {
+      background-color: white;
+    }
+    &.odd {
+      background-color: ghostwhite;
+    }
   }
 
-  .timeline-elem-outer.odd {
-    background-color: ghostwhite;
-    padding-left: 300px;
-    padding-right: 100px;
+  .job-title {
+    font-size: 36px;
+    font-family: $font-fam;
+    color: black;
+    padding-top: 30px;
+    text-align: center;
+  }
+  .employer {
+    font-size: 24px;
+    font-family: $font-fam;
+    color: darkgrey;
+    text-align: center;
+  }
+  .start-date, .end-date {
+    color: darkgray;
   }
 
   .timeline-elem-wrapper {
@@ -42,24 +60,14 @@ $timeline-elem-padding: 300px;
       position: absolute;
       top: 0;
       bottom: 0;
-      &.even {
-        left: 0;
-      }
-      &.odd {
-        right: 0;
-      }
+      left: 0;
     }
     .tabArea-root {
       position: absolute;
       display: inline-block;
       width: 500px;
       height: 250px;
-      &.even {
-        right: 0;
-      }
-      &.odd {
-        left: 0;
-      }
+      right: 0;
       .tagcloud-root {
         margin: 0 auto;
         width: 200px;
@@ -68,7 +76,7 @@ $timeline-elem-padding: 300px;
   }
 
   .description {
-    font-family: Arial;
+    font-family: $font-fam;
     color: #343434;
   }
 

@@ -3,6 +3,8 @@ import cn from 'classnames';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import {TabArea} from '../../components/tabAreaComponent.js';
 
+const DATE_FORMAT = 'YYYY-MM-DD';
+
 export class TimelineElem extends Component {
   static propTypes = {
     timelineElem: PropTypes.object, // TODO shape
@@ -36,6 +38,12 @@ export class TimelineElem extends Component {
 
     return (
       <div className={cn('timeline-elem-outer', className)}>
+        <div className="job-title">{timelineElem.title}</div>
+        <div className="employer">{timelineElem.employer}</div>
+        <div className="start-end-dates">
+          <span className="start-date">{timelineElem.startDate.format(DATE_FORMAT)}</span>
+          <span className="end-date">{timelineElem.endDate.format(DATE_FORMAT)}</span>
+        </div>
         <div className={cn('timeline-elem-wrapper', className)}>
           {this.renderImage(timelineElem)}
           <TabArea tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>

@@ -12,6 +12,7 @@ for (var i = 0; i < dependencies.length; i++) {
     vendorDeps.push(dependencies[i]);
   }
 }
+// todo, get all deps in here
 module.exports = {
   // output as library
   output: {
