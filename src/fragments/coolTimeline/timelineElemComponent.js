@@ -29,24 +29,30 @@ export class TimelineElem extends Component {
     return <div className="description">{timelineElem.description}</div>;
   }
 
-  render() {
+  renderContent() {
     const {timelineElem, selectedTab, onTabSelect, className} = this.props;
+    if (timelineElem.type === 'education') {
+      return <img src={timelineElem.image} className={cn('bigImage', className)} />;
+    }
     const tabContents = [
       {name: 'Skills', content: this.renderSkills(timelineElem)},
       {name: 'Description',  content: this.renderDescription(timelineElem)}
     ];
+    return [
+      this.renderImage(timelineElem),
+      <TabArea tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
+    ];
+  }
 
+  render() {
+    const {timelineElem, className} = this.props;
     return (
       <div className={cn('timeline-elem-outer', className)}>
         <div className="job-title">{timelineElem.title}</div>
         <div className="employer">{timelineElem.employer}</div>
-        <div className="start-end-dates">
-          <span className="start-date">{timelineElem.startDate.format(DATE_FORMAT)}</span>
-          <span className="end-date">{timelineElem.endDate.format(DATE_FORMAT)}</span>
-        </div>
+        <div className="start-end-dates">{timelineElem.startDate.format(DATE_FORMAT)} - {timelineElem.endDate.format(DATE_FORMAT)}</div>
         <div className={cn('timeline-elem-wrapper', className)}>
-          {this.renderImage(timelineElem)}
-          <TabArea tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
+          {this.renderContent()}
         </div>
       </div>
     );

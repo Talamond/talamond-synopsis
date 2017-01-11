@@ -12,10 +12,5 @@ function renderHeaders(headers) {
 
 export const Header = ({headers}) =>
   <div className="header-root">
-    <MediaQuery minDeviceWidth={1224}>
-      {renderHeaders(headers)}
-    </MediaQuery>
-    <MediaQuery maxDeviceWidth={1224}>
-      <div>hmm</div>
-    </MediaQuery>
+    {renderHeaders(headers)}
   </div>;

@@ -2,12 +2,9 @@
   position: absolute;
   float: top;
   width: 100%;
-  background: linear-gradient(
-      145deg,
-      #1f7e9a 250px,
-      transparent 250px
-  );
-  height: 32px;
+  background-color: darkslategray;
+  height: 40px;
+  line-height: 40px;
   top: 0;
   left: 0;
 }
@@ -15,4 +12,9 @@
 .header-elem {
   color: white;
   display: inline-block;
+  font-family: Arial;
+  margin: auto;
+  vertical-align: middle;
+  padding-left: 40px;
+  cursor: pointer;
 }

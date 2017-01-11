@@ -44,8 +44,10 @@ $font-fam: Arial;
     color: darkgrey;
     text-align: center;
   }
-  .start-date, .end-date {
+  .start-end-dates {
+    font-size: 20px;
     color: darkgray;
+    text-align: center;
   }
 
   .timeline-elem-wrapper {
@@ -61,6 +63,9 @@ $font-fam: Arial;
       top: 0;
       bottom: 0;
       left: 0;
+      &.bigImage {
+        height: 400px;
+      }
     }
     .tabArea-root {
       position: absolute;
