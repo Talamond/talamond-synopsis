@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import cn from 'classnames';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import {TabArea} from '../../components/tabAreaComponent.js';
+import _ from 'lodash';
 
 const DATE_FORMAT = 'YYYY-MM-DD';
 
@@ -25,8 +26,8 @@ export class TimelineElem extends Component {
     return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={400} width={400} color="#aec7e8"/>;
   }
 
-  renderDescription(timelineElem) {
-    return <div className="description">{timelineElem.description}</div>;
+  renderDescription(description) {
+    return <div className="description">{description}</div>;
   }
 
   renderContent() {
@@ -36,8 +37,13 @@ export class TimelineElem extends Component {
     }
     const tabContents = [
       {name: 'Skills', content: this.renderSkills(timelineElem)},
-      {name: 'Description',  content: this.renderDescription(timelineElem)}
+      {name: 'Summary',  content: this.renderDescription(timelineElem.description)}
     ];
+    if (timelineElem.descriptions) {
+      _.forIn(timelineElem.descriptions, (v, k) => {
+        tabContents.push({name: k, content: this.renderDescription(v)});
+      });
+    }
     return [
       this.renderImage(timelineElem),
       <TabArea tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>

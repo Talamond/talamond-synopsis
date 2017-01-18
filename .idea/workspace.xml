@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52a40ad-0f8e-4b3b-a6dd-81ef5836ee4b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" afterPath="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/apiSimulator.js" afterPath="$PROJECT_DIR$/src/utils/apiSimulator.js" />
     </list>
     <ignored path="timeline.iws" />
@@ -47,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apiSimulator.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apiSimulator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/apiSimulator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="160" column="24" lean-forward="false" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+            <state relative-caret-position="402">
+              <caret line="167" column="136" lean-forward="false" selection-start-line="167" selection-start-column="136" selection-end-line="167" selection-end-column="136" />
               <folding>
                 <element signature="e#75#103#0" expanded="true" />
               </folding>
@@ -111,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timelineElemComponent.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="timelineElemComponent.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="90" lean-forward="false" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+            <state relative-caret-position="477">
+              <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -204,11 +205,11 @@
         <option value="$PROJECT_DIR$/src/containers/appContentContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/appContentContainer.scss" />
         <option value="$PROJECT_DIR$/src/components/header.scss" />
-        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
         <option value="$PROJECT_DIR$/src/components/tagCloudComponent.js" />
         <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timeline.scss" />
         <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineReducerHandlers.js" />
         <option value="$PROJECT_DIR$/src/utils/apiSimulator.js" />
+        <option value="$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js" />
       </list>
     </option>
   </component>
@@ -321,6 +322,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="reducers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talamond-synopsis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talamond-synopsis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talamond-synopsis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talamond-synopsis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coolTimeline" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,12 +569,12 @@
       <workItem from="1481591825815" duration="7711000" />
       <workItem from="1481986285964" duration="7151000" />
       <workItem from="1483371815106" duration="57873000" />
-      <workItem from="1484261107089" duration="5986000" />
+      <workItem from="1484261107089" duration="6959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137794000" />
+    <option name="totallyTimeSpent" value="138767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -872,8 +913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/apiSimulator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="160" column="24" lean-forward="false" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+        <state relative-caret-position="402">
+          <caret line="167" column="136" lean-forward="false" selection-start-line="167" selection-start-column="136" selection-end-line="167" selection-end-column="136" />
           <folding>
             <element signature="e#75#103#0" expanded="true" />
           </folding>
@@ -922,21 +963,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="90" lean-forward="false" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tagCloudComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragments/coolTimeline/timelineElemComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

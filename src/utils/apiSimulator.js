@@ -158,8 +158,14 @@ export function getResumeData() {
         ' was a Native Application on both Andriod and iOs, but actually, all the native code did was run a WebView. The WebView contained ' +
         'Javascript running Sencha Touch. So while most the development couldn\'t be considered Native development, there was still a bit ' +
         'of native work for things like the WebViews and our login process. I was also responsible for deploying Concert Mobile onto the App Store ' +
-        'and Play Store.',
-        'Watson Analytics': ''
+        'and Play Store. Concert sold a few copies before I moved onto the next new project.',
+        'Watson Analytics': 'Watson Analytics, like Concert, was another application that brought together other IBM products in a more ' +
+        'user friendly way. The collaboration was taken to the next level in Watson Analytics there. There we 4 separate teams among IBM ' +
+        'who all worked together to produce Watson Analytics. While the idea of Watson Analytics came from our PM, none of the applications ' +
+        'being integrated with it out created by us, so we took the role of creating WA\'s "Core". The Core was a web application that ' +
+        'hosted all the other applications in iframes and provided mechanisms of communication using primarily Web Api\'s postMessage. The core ' +
+        'provided a Javascript library that tenant applications could include to make communication easy. There was also support for ' +
+        'drag and drop between the iframes and Core. For the Core\'s UI, we used primarily backbonejs with some jQuery to create our UI.'
       },
 
       summary: 'IBM Canada',
@@ -167,7 +173,7 @@ export function getResumeData() {
       color: '#3498DB',
       skills: [{label: 'C#', weight: 10}, {label: 'Java', weight: 27}, {label: 'Mobile', weight: 25}, {label: 'Javascript', weight: 100},
         {label: 'Objective C', weight: 6}, {label: 'Sencha Touch', weight: 10}, {label: 'Extjs', weight: 20}, {label: 'JUnit', weight: 7},
-        {label: 'Tomcat', weight: 10}, {label: 'Git', weight: 10},
+        {label: 'Tomcat', weight: 10}, {label: 'Git', weight: 10}, {label: 'jQuery', weight: 30},
         {label: 'CSS', weight: 40}, {label: 'NodeJS', weight: 75}, {label: 'NodeJS', weight: 50},
         {label: 'Backbonejs', weight: 20}, {label: 'HTML5', weight: 30}, {label: 'Apache Kafka', weight: 15}
       ],
