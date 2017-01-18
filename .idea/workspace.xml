@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52a40ad-0f8e-4b3b-a6dd-81ef5836ee4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/apiSimulator.js" afterPath="$PROJECT_DIR$/src/utils/apiSimulator.js" />
     </list>
     <ignored path="timeline.iws" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="apiSimulator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/apiSimulator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="176" column="95" lean-forward="false" selection-start-line="176" selection-start-column="95" selection-end-line="176" selection-end-column="95" />
+            <state relative-caret-position="477">
+              <caret line="160" column="24" lean-forward="false" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
               <folding>
                 <element signature="e#75#103#0" expanded="true" />
               </folding>
@@ -529,12 +528,12 @@
       <workItem from="1481591825815" duration="7711000" />
       <workItem from="1481986285964" duration="7151000" />
       <workItem from="1483371815106" duration="57873000" />
-      <workItem from="1484261107089" duration="2309000" />
+      <workItem from="1484261107089" duration="5986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134117000" />
+    <option name="totallyTimeSpent" value="137794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -873,8 +872,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/apiSimulator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="176" column="95" lean-forward="false" selection-start-line="176" selection-start-column="95" selection-end-line="176" selection-end-column="95" />
+        <state relative-caret-position="477">
+          <caret line="160" column="24" lean-forward="false" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
           <folding>
             <element signature="e#75#103#0" expanded="true" />
           </folding>

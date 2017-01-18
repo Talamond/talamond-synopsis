@@ -109,36 +109,6 @@ export function getResumeData() {
       ],
       image: n8
     },
-    /*{
-      id: 6,
-      startDate: createDate('2009-09-01'),
-      endDate: createDate('2009-12-31'),
-      title: 'Java Programmer',
-      employer: 'N8Identity',
-      type: 'coop',
-      color: '#D35400',
-      description: '',
-      skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}
-      ],
-      image: n8
-    },
-    {
-      id: 7,
-      startDate: createDate('2010-05-01'),
-      endDate: createDate('2010-08-31'),
-      title: 'Java Programmer',
-      employer: 'N8Identity',
-      type: 'coop',
-      color: '#D35400',
-      description: '',
-      skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}
-      ],
-      image: n8
-    }, */
     {
       id: 8,
       startDate: createDate('2011-05-01'),
@@ -164,10 +134,34 @@ export function getResumeData() {
       endDate: createDate('2015-08-31'),
       title: 'Software Developer / Team Lead',
       employer: 'IBM Canada',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
-      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
-      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Started off at IBM as a regular Software Developer working an application ICM, ' +
+      'but I quickly became someone they knew could adapt and that they could trust to put onto new project. After a few months, ' +
+      'I was moved onto a small team started a new project called Concert because of my former Java experience and good reviews from my ICM team lead. ' +
+      'Shortly after Concert started' +
+      ' I was put into a Team Lead position where I was responsible for delievering Concert\'s mobile application. Also around this' +
+      'time I became responsible work interviewing new hires. ' +
+      ' We worked on Concert for about a year and a half and sold a few copies, but then I was moved onto another new venture ' +
+      'called Watson Analytics. There I was responsible for getting Watson Analytics\' "UI Core". After that we spend a few moneths' +
+      'playing with Apache Kafka, Spark Streaming and Microservices for a new project, but that was quickly interrupted ' +
+      'by the next new thing...',
+      descriptions: {
+        ICM: 'Incentive Compensation Management (ICM) is our biggest product with over 200 large enterprise clients. ICM started off' +
+        ' as a windows desktop application using Windows Forms, C#, .Net Framework amd SQLServer. ' +
+        'ICM is used by companies with a myriad of salespeople to perform complex calculations on how much earnings each salesperson makes.' +
+        'While I worked on ICM, I was part of' +
+        ' a small 4 person team and was responsible for fixing bugs as well as implementing new ICM enhancements on the full stack.' +
+        ' I worked on ICM for about 4 months.',
+        Concert: 'Concert was a new product idea that brought some existing IBM applications together in a moe user friendly way. ' +
+        ' It was a web application with a Java backend that integrated with some other IBM products. But I don\'t know much about that' +
+        ' because I was responsible for the apps that connected with the Java backend, Concert Mobile. ' +
+        'Concert Mobile ran on both Android and iOS. We built it using Sencha Touch and IBM Worklight. Technically speaking, Concert Mobile' +
+        ' was a Native Application on both Andriod and iOs, but actually, all the native code did was run a WebView. The WebView contained ' +
+        'Javascript running Sencha Touch. So while most the development couldn\'t be considered Native development, there was still a bit ' +
+        'of native work for things like the WebViews and our login process. I was also responsible for deploying Concert Mobile onto the App Store ' +
+        'and Play Store.',
+        'Watson Analytics': ''
+      },
+
       summary: 'IBM Canada',
       type: 'full',
       color: '#3498DB',
