@@ -1,6 +1,7 @@
 // Simulate talking to an api server, doesn't do much simulating right now
 import moment from 'moment';
 import ibm from '../assets/images/IBM_logo.svg';
+import ibm2 from '../assets/images/eye_bee_m.jpg';
 import uw from '../assets/images/Uwaterloo_seal.gif';
 import n8 from '../assets/images/n8.png';
 import ontario from '../assets/images/ontario.jpg';
@@ -42,7 +43,9 @@ export function getResumeData() {
         'technically.',
       type: 'coop',
       color: '#BF5FFF',
-      image: parlay
+      image: parlay,
+      skills: [{label: 'QA', weight: 7}
+      ],
     },
     {
       id: 3,
@@ -60,7 +63,7 @@ export function getResumeData() {
       type: 'coop',
       color: '#99A3A4',
       skills: [{label: 'JSP', weight: 7}, {label: 'J2EE', weight: 4}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'Web', weight: 8}
+        {label: 'OO', weight: 4}, {label: 'Web', weight: 8}, {label: 'SVN', weight: 5}
       ],
       image: ontario
     },
@@ -82,7 +85,8 @@ export function getResumeData() {
       type: 'coop',
       color: '#229954',
       skills: [{label: 'Swing', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}
+        {label: 'OO', weight: 4}, {label: 'Oracle', weight: 6}, {label: 'PostgreSQL', weight: 6},
+        {label: 'SQLServer', weight: 6}, {label: 'SVN', weight: 5}
       ],
       image: sql
     },
@@ -100,7 +104,8 @@ export function getResumeData() {
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}
+        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}, {label: 'Tomcat', weight: 10},
+        {label: 'SVN', weight: 5}, {label: 'CSS', weight: 8}
       ],
       image: n8
     },
@@ -148,15 +153,16 @@ export function getResumeData() {
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
-        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}
+        {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}, {label: 'Tomcat', weight: 10},
+        {label: 'Git', weight: 7}, {label: 'CSS', weight: 8}
       ],
       image: n8
     },
     {
       id: 9,
       startDate: createDate('2013-01-01'),
-      endDate: createDate('2017-01-01'),   // todo get current date and use that
-      title: 'Software Developer / Lead UI Architect',
+      endDate: createDate('2015-08-31'),
+      title: 'Software Developer / Team Lead',
       employer: 'IBM Canada',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
       ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
@@ -165,7 +171,40 @@ export function getResumeData() {
       summary: 'IBM Canada',
       type: 'full',
       color: '#3498DB',
+      skills: [{label: 'C#', weight: 10}, {label: 'Java', weight: 27}, {label: 'Mobile', weight: 25}, {label: 'Javascript', weight: 100},
+        {label: 'Objective C', weight: 6}, {label: 'Sencha Touch', weight: 10}, {label: 'Extjs', weight: 20}, {label: 'JUnit', weight: 7},
+        {label: 'Tomcat', weight: 10}, {label: 'Git', weight: 10},
+        {label: 'CSS', weight: 40}, {label: 'NodeJS', weight: 75}, {label: 'NodeJS', weight: 50},
+        {label: 'Backbonejs', weight: 20}, {label: 'HTML5', weight: 30}, {label: 'Apache Kafka', weight: 15}
+      ],
       image: ibm
+    },
+    {
+      id: 10,
+      startDate: createDate('2015-09-01'),
+      endDate: createDate('2017-02-01'),   // todo get current date and use that
+      title: 'Team Lead / Lead UI Architect',
+      employer: 'IBM Canada',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
+      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
+      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      summary: 'IBM Canada',
+      type: 'full',
+      color: '#3498DB',
+      skills: [
+        {label: 'React', weight: 100},
+        {label: 'Redux', weight: 70},
+        {label: 'ES6', weight: 80},
+        {label: 'Javascript', weight: 50},
+        {label: 'CSS', weight: 50},
+        {label: 'SASS', weight: 30},
+        {label: 'Webpack', weight: 80},
+        {label: 'Karma', weight: 70},
+        {label: 'NPM', weight: 50},
+        {label: 'Git', weight: 20}
+      ],
+      image: ibm2
     },
   ];
 }
