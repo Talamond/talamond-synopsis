@@ -51,7 +51,7 @@ export class D3TagCloud extends React.Component {
       .size([width, height])
       .words(words)
       .padding(0)
-      .rotate(() => ~~(Math.random() * 2) * degrees)
+      .rotate(() => (Math.random() * degrees))
       .font("Impact")
       .fontSize(function (d) {
         return d.size;

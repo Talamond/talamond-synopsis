@@ -4,22 +4,17 @@ import { Footer } from '../components/footerComponent.js';
 import { Header } from '../components/headerComponent.js';
 import { navigate } from '../utils/navHelper.js';
 import { NAVIGATION } from '../constants/navigation.js';
+import _ from 'lodash';
 import './appContentContainer.scss';
 
-const headerElems = [
-	{
-		label: 'Timeline',
-		onClick: (e) => navigate(e, NAVIGATION.TIMELINE.PATH)
-	},
-	{
-		label: 'Resume',
-		onClick: (e) => navigate(e, NAVIGATION.RESUME.PATH)
-	},
-	{
-		label: 'Blog',
-		onClick: (e) => navigate(e, NAVIGATION.BLOG.PATH)
-	}
-];
+const headerElems = [];
+
+_.forIn(NAVIGATION, (v) => {
+  headerElems.push({
+    label: v.TITLE,
+    onClick: (e) => navigate(e, v.PATH)
+  });
+});
 
 @connect(state => ({
 	router: state.router

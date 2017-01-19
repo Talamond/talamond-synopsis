@@ -3,8 +3,11 @@ import {connect} from 'react-redux';
 import {createActionCreators} from './timelineActionCreator.js';
 import {createActionTypes} from './timelineActionTypes.js';
 import {TimelineElem} from './timelineElemComponent.js';
+import {TagCloud} from '../../components/tagCloudComponent.js';
 import _ from 'lodash';
 import './timeline.scss';
+import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
+import jon from '../../assets/images/me.jpeg';
 
 export function createTimelineComponent(selectState, prefix, urls) {
   @connect(store => ({
@@ -43,6 +46,9 @@ export function createTimelineComponent(selectState, prefix, urls) {
     render() {
       return (
         <div className="cool-timeline-root">
+          <img src={bannerImg} className="timeline banner" />
+          <img src={jon} className="timeline jon" />
+          <TagCloud id="resume-summary" data={this.props.timeline.allSkills} height={740} width={1200} degrees={0} factor={2}/>
           {this.renderTimelines()}
         </div>
       );

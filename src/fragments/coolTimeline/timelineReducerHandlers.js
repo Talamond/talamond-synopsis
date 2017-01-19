@@ -12,7 +12,9 @@ const fragments = {
 
 export const initialState = {
   timelineElements: [],
-  selectedTabs: {}
+  selectedTabs: {},
+  skillMap: {},
+  allSkills: []
 };
 
 /* eslint-disable no-param-reassign */ // the newState is passed in to avoid having to create a new state on each function
@@ -32,6 +34,23 @@ export const createHandlers = (prefix) => {
     newState.timelineElements = _.sortBy(payload.data, (elem) => {
       return -1 * elem.endDate.unix();
     });
+    _.forEach(payload.data, (elem) => {
+      if (elem.skills) {
+        _.forEach(elem.skills, (skill) => {
+          if (newState.skillMap[skill.label]) {
+            newState.skillMap[skill.label] += skill.weight;
+          } else {
+            newState.skillMap[skill.label] = skill.weight;
+          }
+        });
+      }
+    });
+    const allSkills = [];
+    _.forIn(newState.skillMap, (v, k) => {
+      allSkills.push({label: k, weight: v});
+    });
+    newState.allSkills = allSkills;
+
     return newState;
   };
 

@@ -9,7 +9,9 @@ import { NAVIGATION } from './constants/navigation.js';
 export default (
 	<Route path="/" component={AppContentContainer}>
 		<Route path={NAVIGATION.TIMELINE.PATH} component={TimelineContainer} />
-		<Route path={NAVIGATION.RESUME.PATH} component={ResumeContainer} />
-		<Route path={NAVIGATION.BLOG.PATH} component={BlogContainer} />
+		<Route path={NAVIGATION.ABOUT_ME.PATH} component={BlogContainer} />
+    <Route path={NAVIGATION.BLOG.PATH} component={BlogContainer} />
+    <Route path={NAVIGATION.DEMOS.PATH} component={BlogContainer} />
+    <Route path={NAVIGATION.CONTACT.PATH} component={BlogContainer} />
 	</Route>
 );

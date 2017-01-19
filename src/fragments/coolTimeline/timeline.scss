@@ -3,7 +3,22 @@
 $timeline-elem-padding: 300px;
 $font-fam: Arial;
 .cool-timeline-root {
-
+  position: relative;
+  .timeline.banner {
+    width: 100%;
+    height: 100%;
+  }
+  .timeline.jon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 5px solid $neutral;
+    width: 250px;
+    margin: 0 auto;
+  }
   .timeline-elem-outer {
     padding-right: 100px;
     padding-left: 100px;
