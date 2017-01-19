@@ -1,12 +1,11 @@
 // Simulate talking to an api server, doesn't do much simulating right now
 import moment from 'moment';
 import ibm from '../assets/images/IBM_logo.svg';
-import ibm2 from '../assets/images/eye_bee_m.jpg';
 import uw from '../assets/images/Uwaterloo_seal.gif';
 import n8 from '../assets/images/n8.png';
 import ontario from '../assets/images/ontario.jpg';
-import parlay from '../assets/images/parlay.jpg';
-import sql from '../assets/images/sqlpower.png';
+import parlay from '../assets/images/parlay2.png';
+import sql from '../assets/images/sqlpower2.png';
 const format = 'YYYY-MM-DD';
 
 function createDate(date) {
@@ -171,11 +170,24 @@ export function getResumeData() {
       summary: 'IBM Canada',
       type: 'full',
       color: '#3498DB',
-      skills: [{label: 'C#', weight: 10}, {label: 'Java', weight: 27}, {label: 'Mobile', weight: 25}, {label: 'Javascript', weight: 100},
-        {label: 'Objective C', weight: 6}, {label: 'Sencha Touch', weight: 10}, {label: 'Extjs', weight: 20}, {label: 'JUnit', weight: 7},
-        {label: 'Tomcat', weight: 10}, {label: 'Git', weight: 10}, {label: 'jQuery', weight: 30},
-        {label: 'CSS', weight: 40}, {label: 'NodeJS', weight: 75}, {label: 'NodeJS', weight: 50},
-        {label: 'Backbonejs', weight: 20}, {label: 'HTML5', weight: 30}, {label: 'Apache Kafka', weight: 15}
+      skills: [
+        {label: 'C#', weight: 10},
+        {label: 'Java', weight: 27},
+        {label: 'Mobile', weight: 25},
+        {label: 'Javascript', weight: 100},
+        {label: 'Objective C', weight: 6},
+        {label: 'Sencha Touch', weight: 10},
+        {label: 'Extjs', weight: 20},
+        {label: 'JUnit', weight: 7},
+        {label: 'Tomcat', weight: 10},
+        {label: 'Git', weight: 10},
+        {label: 'jQuery', weight: 30},
+        {label: 'CSS', weight: 40},
+        {label: 'NodeJS', weight: 75},
+        {label: 'NodeJS', weight: 50},
+        {label: 'Backbonejs', weight: 20},
+        {label: 'HTML5', weight: 30},
+        {label: 'Apache Kafka', weight: 15}
       ],
       image: ibm
     },
@@ -206,7 +218,7 @@ export function getResumeData() {
         {label: 'NPM', weight: 50},
         {label: 'Git', weight: 20}
       ],
-      image: ibm2
+      image: ibm
     },
   ];
 }
