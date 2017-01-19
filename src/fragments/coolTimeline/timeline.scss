@@ -1,52 +1,37 @@
+@import '../../constants.scss';
+
 $timeline-elem-padding: 300px;
 $font-fam: Arial;
 .cool-timeline-root {
-  .timeline-elem {
-    position: relative;
-    border-radius: 100%;
-    border: 2px solid black;
-    height: 7px;
-    width: 7px;
-    cursor: default;
-    top: 0px;
-    left: 0px;
-    -webkit-transition-duration: 1s;
-    -webkit-transition-property: all;
-    -webkit-transition-timing-function: ease-in-out;
-    &:hover {
-      background: #5bc0de;
-      border-color: #3b10be;
-    }
-  }
 
   .timeline-elem-outer {
     padding-right: 100px;
     padding-left: 100px;
     height: 650px;
     &.even {
-      background-color: white;
+      background-color: $backgroundEven;
     }
     &.odd {
-      background-color: ghostwhite;
+      background-color: $backgroundOdd;
     }
   }
 
   .job-title {
     font-size: 36px;
     font-family: $font-fam;
-    color: black;
+    color: $mainText;
     padding-top: 30px;
     text-align: center;
   }
   .employer {
     font-size: 24px;
     font-family: $font-fam;
-    color: darkgrey;
+    color: $subText;
     text-align: center;
   }
   .start-end-dates {
     font-size: 20px;
-    color: darkgray;
+    color: $subText;
     text-align: center;
   }
 
@@ -74,13 +59,16 @@ $font-fam: Arial;
       width: 600px;
       height: 400px;
       right: 0;
+      .tab-select-line {
+        border-bottom: 3px solid $watermelon;
+      }
       .tab-content {
         position: relative;
         .description {
           position: absolute;
           font-family: $font-fam;
           font-size: 22px;
-          color: #7d7d7d;
+          color: $subText;
           font-style: italic;
           text-align: center;
           bottom: 0;
@@ -96,7 +84,7 @@ $font-fam: Arial;
 
   .timeline-elem-display-date {
     font-size: 12px;
-    color: grey;
+    color: $subText;
   }
 
   .timeline-elem-big {
@@ -107,12 +95,12 @@ $font-fam: Arial;
   }
 
   .timeline-elem-date {
-    color: #999999;
+    color: $subText;
     padding: 20px;
   }
 
   .timeline-elem-content {
-    color: #777777;
+    color: $subText;
     padding: 0 10px;
   }
 

@@ -183,12 +183,14 @@ export function getResumeData() {
       id: 10,
       startDate: createDate('2015-09-01'),
       endDate: createDate('2017-02-01'),   // todo get current date and use that
-      title: 'Team Lead / Lead UI Architect',
+      title: 'Lead UI Architect',
       employer: 'IBM Canada',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
-      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
-      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'In September 2015, I started a new venture at IBM. I was given the responsibility of leading the development of ICM’s UI, a migration from windows to web app. After a successful rewrite of ICM’s UI, I was promoted to Lead UI Architect and moved onto rewriting the UI of another application called RCA. Once the Architect, not only was I responsible for building the initial UI build for the applications, I was also responsible for educating all teams in our office on coding good practices. After another successful rewrite of RCA’s UI, I now work on a common component library for all our products to use with the goal of saving effort and making them more consistent.',
+      descriptions: {
+        ICM: 'Being a 10 year old application, rewriting ICM was a massive undertaking. ICM had 800 screens of content that needed to be redesigned and rewrote. One of the major problems  we had was that most of our office had little to no web development experience. It was up to me to choose the web tech stack and educate the rest of the office on how to develop with it. I choose React because of its simplicity and popularity with Redux to help support our monolithic application. We started off with only 4 developers, but after a few months we had over 20 developers all working on ICM for the rest of the year. The IBM Design team provided new interface design of which I critiqued. The new ICM rewrite sold almost 2 copies right after we released it and since then has sold many more.',
+        RCA: 'RCA was another product that had a lack-luster user interface. Similar to ICM, I was tasked to rewrite RCA. Again I choose React with Redux to achieve this. It was a similar experience, but on a much smaller scale on a much smaller time frame. We had only 3 months of time to start the rewrite. In the 3 months, with a team of 4, we managed to rewrite 75% the application while leaving the other 25% with the old UI contained seemless in iframes. Since I had done my job getting the ball moving. After that 75% of the UI was complete, I handed off the rest of the RCA development to the team and moved onto something new.',
+        'React Components': 'While building RCA, I was also tasked of building a shared react component library. One of the problems we continually have with the designers is they keep designing things they’ve already done. What ended up happening it through out our 3 large teams, we have several different looks and feels for components that should be the same. It is now my job to create a library all the teams can use and also get the design team aligned with this component library. Some of the features of the component library include: high unit test coverage, accessiblity (to match wc3 level AA and polished looks with animation.'
+      },
       summary: 'IBM Canada',
       type: 'full',
       color: '#3498DB',

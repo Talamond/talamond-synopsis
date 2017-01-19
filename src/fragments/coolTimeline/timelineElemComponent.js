@@ -23,7 +23,7 @@ export class TimelineElem extends Component {
   }
 
   renderSkills(timelineElem) {
-    return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={400} width={400} color="#aec7e8"/>;
+    return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={400} width={400} color="#caebf2"/>;
   }
 
   renderDescription(description) {

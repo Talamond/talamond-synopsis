@@ -1,7 +1,9 @@
+@import '../constants.scss';
+
 .header-root {
   position: absolute;
   width: 100%;
-  background-color: darkslategray;
+  background-color: $watermelon;
   height: 40px;
   line-height: 40px;
   top: 0;
@@ -9,7 +11,7 @@
 }
 
 .header-elem {
-  color: white;
+  color: $neutral;
   display: inline-block;
   font-family: Arial;
   margin: auto;

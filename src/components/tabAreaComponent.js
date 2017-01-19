@@ -19,7 +19,7 @@ export class TabArea extends React.Component {
   renderTabs(tabContents) {
     const {selectedTab} = this.props;
     const tabs = [];
-    _.forEach(tabContents, (tabContent, index) => {
+    _.forEachRight(tabContents, (tabContent, index) => {
       const selected = index === selectedTab;
       tabs.push(<div key={index} className={cn('tab', {selected})} onClick={() => this.props.onTabSelect(index)}>
         {tabContent.name}
