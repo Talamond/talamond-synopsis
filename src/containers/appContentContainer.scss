@@ -1,8 +1,14 @@
+@import '../constants.scss';
+
 .app-root {
-  margin-top: 40px;
-  height: calc(100vh - 40px);
+  margin-top: $headerHeight;
   overflow: scroll;
   max-width: 100%;
+}
+
+.app-main {
+  height: calc(100vh - 50px);
+
 }
 
 body {

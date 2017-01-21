@@ -33,11 +33,12 @@ export default class Main extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="app-root">
         <Header headers={headerElems}/>
-        <div className="app-root">
+        <div className="app-main">
           {this.props.children}
         </div>
+        <Footer/>
 			</div>
 		);
 	}

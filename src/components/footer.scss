@@ -1,15 +1,13 @@
+@import '../constants.scss';
+
 .footer-root {
-  position: absolute;
-  float: bottom;
   width: 100%;
   background: linear-gradient(
       145deg,
       transparent calc(100% - 100px),
       #1f7e9a 100px
   );
-  height: 32px;
-  bottom: 0;
-  right: 0;
+  height: $footerHeight;
 }
 
 .footer-elem {

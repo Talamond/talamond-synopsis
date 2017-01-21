@@ -34,11 +34,15 @@ export function createTimelineComponent(selectState, prefix, urls) {
       const {timeline: {timelineElements, selectedTabs}, selectTab} = this.props;
       const elems = [];
       _.forEach(timelineElements, (elem, index) => {
+        let className = index % 2 ? 'odd' : 'even';
+        if (elem.type === 'education') {
+          className = 'education';
+        }
         elems.push(<TimelineElem key={index}
                                  timelineElem={elem}
                                  onTabSelect={selectTab}
                                  selectedTab={selectedTabs[elem.id]}
-                                 className={index % 2 ? 'odd' : 'even'}/>);
+                                 className={className}/>);
       });
       return elems;
     }

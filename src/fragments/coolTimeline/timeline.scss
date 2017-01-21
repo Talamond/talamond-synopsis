@@ -29,6 +29,9 @@ $font-fam: Arial;
     &.odd {
       background-color: $backgroundOdd;
     }
+    &.education {
+      background-color: $backgroundEducation;
+    }
   }
 
   .job-title {

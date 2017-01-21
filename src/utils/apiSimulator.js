@@ -24,7 +24,7 @@ export function getResumeData() {
       color: '#F1C40F',
       image: uw
     },
-    {
+/*    {
       id: 2,
       startDate: createDate('2007-01-01'),
       endDate: createDate('2007-04-30'),
@@ -46,6 +46,7 @@ export function getResumeData() {
       skills: [{label: 'QA', weight: 7}
       ],
     },
+*/
     {
       id: 3,
       startDate: createDate('2007-09-01'),
@@ -174,7 +175,7 @@ export function getResumeData() {
         {label: 'C#', weight: 10},
         {label: 'Java', weight: 27},
         {label: 'Mobile', weight: 25},
-        {label: 'Javascript', weight: 100},
+        {label: 'Javascript', weight: 40},
         {label: 'Objective C', weight: 6},
         {label: 'Sencha Touch', weight: 10},
         {label: 'Extjs', weight: 20},
@@ -183,8 +184,7 @@ export function getResumeData() {
         {label: 'Git', weight: 10},
         {label: 'jQuery', weight: 30},
         {label: 'CSS', weight: 40},
-        {label: 'NodeJS', weight: 75},
-        {label: 'NodeJS', weight: 50},
+        {label: 'NodeJS', weight: 40},
         {label: 'Backbonejs', weight: 20},
         {label: 'HTML5', weight: 30},
         {label: 'Apache Kafka', weight: 15}
@@ -208,9 +208,9 @@ export function getResumeData() {
       color: '#3498DB',
       skills: [
         {label: 'React', weight: 100},
-        {label: 'Redux', weight: 70},
-        {label: 'ES6', weight: 80},
-        {label: 'Javascript', weight: 50},
+        {label: 'Redux', weight: 100},
+        {label: 'ES6', weight: 90},
+        {label: 'Javascript', weight: 40},
         {label: 'CSS', weight: 50},
         {label: 'SASS', weight: 30},
         {label: 'Webpack', weight: 80},

@@ -4,9 +4,15 @@ $watermelon: #ff3b3f;
 $neutral: #efefef;
 $almostWhite: #fafafa;
 $fresh: #4abdac;
+$niceGrey: #edeeef;
+$darkGrey: #222222;
 
-$header: black;
-$backgroundOdd: $almostWhite;
+$headerHeight: 50px;
+$footerHeight: 350px;
+
+$header: $darkGrey;
+$backgroundOdd: $niceGrey;
 $backgroundEven: white;
+$backgroundEducation: lighten($darkGrey, 5%);
 $mainText: $carbon;
 $subText: $carbon;
