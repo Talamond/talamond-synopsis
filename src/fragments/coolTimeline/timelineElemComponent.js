@@ -54,9 +54,9 @@ export class TimelineElem extends Component {
     const {timelineElem, className} = this.props;
     return (
       <div className={cn('timeline-elem-outer', className)}>
-        <div className="job-title">{timelineElem.title}</div>
-        <div className="employer">{timelineElem.employer}</div>
-        <div className="start-end-dates">{timelineElem.startDate.format(DATE_FORMAT)} - {timelineElem.endDate.format(DATE_FORMAT)}</div>
+        <h1 className="job-title">{timelineElem.title}</h1>
+        <h2 className="employer">{timelineElem.employer}</h2>
+        <h3 className="start-end-dates">{timelineElem.startDate.format(DATE_FORMAT)} - {timelineElem.endDate.format(DATE_FORMAT)}</h3>
         <div className={cn('timeline-elem-wrapper', className)}>
           {this.renderContent()}
         </div>

@@ -7,11 +7,26 @@
 }
 
 .app-main {
-  height: calc(100vh - 50px);
-
 }
 
 body {
   margin: 0px;
   max-width: 100%;
+  font-family: $font;
+}
+
+h1 {
+  font-size: 48px;
+  color: $mainText;
+}
+
+h2 {
+  font-size: 24px;
+  color: lighten($mainText, 5%);
+}
+
+h3 {
+  font-size: 20px;
+  color: lighten($mainText, 10%);
+  font-weight: 300;
 }

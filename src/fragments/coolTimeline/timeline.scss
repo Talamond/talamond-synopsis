@@ -1,7 +1,6 @@
 @import '../../constants.scss';
 
 $timeline-elem-padding: 300px;
-$font-fam: Arial;
 .cool-timeline-root {
   position: relative;
   .timeline.banner {
@@ -35,21 +34,13 @@ $font-fam: Arial;
   }
 
   .job-title {
-    font-size: 36px;
-    font-family: $font-fam;
-    color: $mainText;
     padding-top: 30px;
     text-align: center;
   }
   .employer {
-    font-size: 24px;
-    font-family: $font-fam;
-    color: $subText;
     text-align: center;
   }
   .start-end-dates {
-    font-size: 20px;
-    color: $subText;
     text-align: center;
   }
 
@@ -84,7 +75,6 @@ $font-fam: Arial;
         position: relative;
         .description {
           position: absolute;
-          font-family: $font-fam;
           font-size: 22px;
           color: $subText;
           font-style: italic;
@@ -127,6 +117,20 @@ $font-fam: Arial;
     height: 100%;
     width: 22000px;
     top: 47%;
+  }
+
+  .timeline.title {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 400px;
+    font-size: 48px;
+    color: $niceGrey;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+
   }
 
 }

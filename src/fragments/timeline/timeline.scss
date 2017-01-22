@@ -1,3 +1,5 @@
+@import '../../constants.scss';
+
 .timeline-root {
   .timeline-elem {
     position: relative;
@@ -95,4 +97,5 @@
   .timeline-tag-cloud {
     margin-left: 50px;
   }
+
 }
