@@ -9,17 +9,19 @@ export class TabArea extends React.Component {
     tabContents: PropTypes.array,
     selectedTab: PropTypes.number,
     className: PropTypes.string,
-    onTabSelect: PropTypes.func
+    onTabSelect: PropTypes.func,
+    style: PropTypes.oneOf(['normal', 'bubble'])
   };
 
   static defaultProps = {
-    selectedTab: 0
+    selectedTab: 0,
+    style: 'bubble'
   };
 
   renderTabs(tabContents) {
     const {selectedTab} = this.props;
     const tabs = [];
-    _.forEachRight(tabContents, (tabContent, index) => {
+    _.forEach(tabContents, (tabContent, index) => {
       const selected = index === selectedTab;
       tabs.push(<div key={index} className={cn('tab', {selected})} onClick={() => this.props.onTabSelect(index)}>
         {tabContent.name}
@@ -30,9 +32,9 @@ export class TabArea extends React.Component {
   }
 
   render() {
-    const {tabContents, selectedTab, className} = this.props;
+    const {tabContents, selectedTab, className, style} = this.props;
     return (
-      <div className={cn('tabArea-root', className)}>
+      <div className={cn('tabArea-root', style, className)}>
         <div className="tab-content">
           {tabContents[selectedTab].content}
         </div>
