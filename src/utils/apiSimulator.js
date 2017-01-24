@@ -1,7 +1,7 @@
 // Simulate talking to an api server, doesn't do much simulating right now
 import moment from 'moment';
 import ibm from '../assets/images/IBM_logo.svg';
-import uw from '../assets/images/Uwaterloo_seal.gif';
+import uw from '../assets/images/Uwaterloo_seal2.png';
 import n8 from '../assets/images/n8.png';
 import ontario from '../assets/images/ontario.jpg';
 import parlay from '../assets/images/parlay2.png';
