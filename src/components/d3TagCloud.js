@@ -16,7 +16,8 @@ export class D3TagCloud extends React.Component {
   };
 
   draw(words, color) {
-    const fill = d3.schemeCategory20;
+    // support 60 words, 3 different colors
+    const fill = [...d3.schemeCategory20, ...d3.schemeCategory20, ...d3.schemeCategory20];
     const layout = this.layout;
     d3.select(`#${this.props.selectId}`).append("svg")
       .attr("width", layout.size()[0])

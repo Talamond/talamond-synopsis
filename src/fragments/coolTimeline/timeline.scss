@@ -43,6 +43,9 @@ $timeline-elem-padding: 300px;
   .start-end-dates {
     text-align: center;
   }
+  >.tagcloud-root {
+    background-color: $backgroundOdd;
+  }
 
   .timeline-elem-wrapper {
     margin: auto;
