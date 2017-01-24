@@ -15,6 +15,8 @@ export const Header = ({headers}) =>
   <div className="header-root">
     {renderHeaders(headers)}
     <div className="github-container">
-      <img className="github" src={github}/>
+      <a href="https://github.com/Talamond">
+        <img className="github" src={github}/>
+      </a>
     </div>
   </div>;
