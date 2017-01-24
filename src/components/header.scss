@@ -19,6 +19,24 @@ $headerColorHover: lighten($carbon, 80%);
       fill: $headerColorHover;
     }
   }
+  .github-container {
+    display: inline-block;
+    position: relative;
+    height: $headerHeight;
+    width: 32px;
+    float: right;
+    padding-right: 50px;
+    .github {
+      height: 32px;
+      width: 32px;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
 }
 
 .header-elem {

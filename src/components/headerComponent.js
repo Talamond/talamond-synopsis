@@ -14,5 +14,7 @@ function renderHeaders(headers) {
 export const Header = ({headers}) =>
   <div className="header-root">
     {renderHeaders(headers)}
-    <img src={github}/>
+    <div className="github-container">
+      <img className="github" src={github}/>
+    </div>
   </div>;
