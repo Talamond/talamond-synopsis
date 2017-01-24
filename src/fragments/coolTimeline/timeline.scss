@@ -60,9 +60,9 @@ $timeline-elem-padding: 300px;
       bottom: 0;
       left: 0;
       &.bigImage {
-        height: 400px;
+        height: 350px;
         right: 0;
-        top: 75px;
+        top: 0px;
       }
     }
     .tabArea-root {
@@ -90,6 +90,10 @@ $timeline-elem-padding: 300px;
         margin: 0 auto;
         width: 400px;
       }
+    }
+    &.education {
+      top: 25%;
+      height: initial;
     }
   }
 

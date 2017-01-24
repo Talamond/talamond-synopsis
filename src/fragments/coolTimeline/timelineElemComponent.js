@@ -57,7 +57,7 @@ export class TimelineElem extends Component {
         <h1 className="job-title">{timelineElem.title}</h1>
         <h2 className="employer">{timelineElem.employer}</h2>
         <h3 className="start-end-dates">{timelineElem.startDate.format(DATE_FORMAT)} - {timelineElem.endDate.format(DATE_FORMAT)}</h3>
-        <div className={cn('timeline-elem-wrapper', className)}>
+        <div className={cn('timeline-elem-wrapper', timelineElem.type, className)}>
           {this.renderContent()}
         </div>
       </div>
