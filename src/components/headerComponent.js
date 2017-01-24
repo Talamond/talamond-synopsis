@@ -1,7 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import './header.scss';
-import github from '../assets/images/github.svg';
+import github from '../assets/images/GitHub-64px.png';
 
 function renderHeaders(headers) {
   const headerDivs = [];
@@ -14,7 +14,5 @@ function renderHeaders(headers) {
 export const Header = ({headers}) =>
   <div className="header-root">
     {renderHeaders(headers)}
-    <svg fill="#fff">>
-      <use xlinkHref={github}/>
-    </svg>
+    <img src={github}/>
   </div>;
