@@ -27,7 +27,13 @@ export class TimelineElem extends Component {
   }
 
   renderDescription(description) {
-    return <div className="description">{description}</div>;
+    // estimate font size when length is too long
+    let fontSize = 22;
+    const maxLength = 600;
+    if (description.length > maxLength) {
+      fontSize = fontSize - ((description.length - maxLength) / 50);
+    }
+    return <div className="description" style={{fontSize: fontSize + 'px'}}>{description}</div>;
   }
 
   renderContent() {
