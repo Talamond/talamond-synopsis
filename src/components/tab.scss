@@ -43,10 +43,8 @@ $tabHeight: 27px;
   &.bubble {
     position: relative;
     .tab {
-      height: 16px;
       padding: 5px;
       display: inline-block;
-      font-size: 14px;
       color: grey;
       border: 1px solid lightgrey;
       border-radius: 10px;
@@ -56,6 +54,18 @@ $tabHeight: 27px;
       -moz-box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
       box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
       background-color: $backgroundOdd;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+        height: 12px;
+        font-size: 10px;
+      }
+      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+        height: 16px;
+        font-size: 14px;
+      }
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+        height: 16px;
+        font-size: 14px;
+      }
       &.selected {
         font-weight: bold;
         background-color: $backgroundEven;
