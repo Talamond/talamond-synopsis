@@ -48,20 +48,30 @@ export function createTimelineComponent(selectState, prefix, urls) {
     }
 
     render() {
+      let factor;
+      if (window.innerWidth > window.innerHeight) {
+        factor = window.innerWidth * 1.0 / window.innerHeight;
+      } else {
+        factor = window.innerHeight * 1.0 / window.innerWidth;
+      }
       return (
         <div className="cool-timeline-root">
           <img src={bannerImg} className="timeline banner" />
-          <img src={jon} className="timeline jon" />
-          <div className="timeline title">
-            <div>Front End Engineer</div>
-            <div>And much more...</div>
+          <div className="timeline profile">
+            <div className="timeline jonwrapper">
+              <img src={jon} className="timeline jon" />
+            </div>
+            <div className="timeline title">
+              <div>Front End Engineer</div>
+              <div>And much more...</div>
+            </div>
           </div>
           <TagCloud id="resume-summary"
                     data={this.props.timeline.allSkills}
                     height={window.innerHeight}
                     width={window.innerWidth}
                     degrees={0}
-                    factor={window.innerWidth * 1.0 / window.innerHeight}/>
+                    factor={factor}/>
           {this.renderTimelines()}
         </div>
       );

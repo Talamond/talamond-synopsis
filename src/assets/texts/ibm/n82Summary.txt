@@ -1,0 +1,1 @@
+After I graduated University, I returned to N8Identity for a year and a half. During this period, we put more ephasis on writing unit tests with our code, but other than that, we continued to working on ELM implementing new enhancements. The tech stack remained the same as did my responsibilities.

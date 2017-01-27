@@ -11,6 +11,7 @@ const format = 'YYYY-MM-DD';
 function createDate(date) {
   return moment(date, format);
 }
+// TODO, pull descriptions from text file
 export function getResumeData() {
   return [
     {
@@ -63,7 +64,7 @@ export function getResumeData() {
       type: 'coop',
       color: '#99A3A4',
       skills: [{label: 'JSP', weight: 7}, {label: 'J2EE', weight: 4}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'Web', weight: 8}, {label: 'SVN', weight: 5}
+        {label: 'Web', weight: 8}, {label: 'SVN', weight: 5}
       ],
       image: ontario
     },
@@ -78,14 +79,11 @@ export function getResumeData() {
         'Contributed in application design sessions',
         'Fixed various types of bugs for various applications'
       ],
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
-      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
-      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'SQLPower has a variety of tools related to Database management. Here I mostly worked on the front end for these applications, which were multi platform Java applications. The front end was built using Swing UI. At SQLPower, we also practiced pair programming, I can\'t say it was very time efficient...',
       type: 'coop',
       color: '#229954',
       skills: [{label: 'Swing', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'Oracle', weight: 6}, {label: 'PostgreSQL', weight: 6},
+        {label: 'Oracle', weight: 6}, {label: 'PostgreSQL', weight: 6},
         {label: 'SQLServer', weight: 6}, {label: 'SVN', weight: 5}
       ],
       image: sql
@@ -98,12 +96,9 @@ export function getResumeData() {
       employer: 'N8Identity',
       type: 'coop',
       color: '#D35400',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
-      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
-      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'I spent 3 coop terms at N8Identity (4 months each) and worked as a Java developer on a web application called ELM. ELM was a product that aided large companies with onboarding their employees. We used Spring framework for ELM and primefaces for the user interface. The backend was many Java OSGI services that we ran on service mix and used Hiberate to communicate with the database. Some of my responsiblility here included: content management directly with clients, creating a client Software Specification Document for a reporting module in ELM, creating a feed handler for bulk data load, typical ELM enhancements and bug fixes.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
+        {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
         {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}, {label: 'Tomcat', weight: 10},
         {label: 'SVN', weight: 5}, {label: 'CSS', weight: 8}
       ],
@@ -117,12 +112,9 @@ export function getResumeData() {
       employer: 'N8Identity',
       type: 'full',
       color: '#D35400',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' +
-      ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ' +
-      'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'After I graduated University, I returned to N8Identity for a year and a half. During this period, we put more ephasis on writing unit tests with our code, but other than that, we continued to working on ELM implementing new enhancements. The tech stack remained the same as did my responsibilities.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
-        {label: 'OO', weight: 4}, {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
+        {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
         {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}, {label: 'Tomcat', weight: 10},
         {label: 'Git', weight: 7}, {label: 'CSS', weight: 8}
       ],

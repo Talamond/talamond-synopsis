@@ -7,16 +7,47 @@ $timeline-elem-padding: 300px;
     width: 100%;
     height: 100%;
   }
-  .timeline.jon {
+
+  .timeline.profile {
     position: absolute;
     left: 0;
     right: 0;
-    top: 100px;
     bottom: 0;
     border-radius: 50%;
-    border: 5px solid $neutral;
-    width: 250px;
+    width: 100%;
+    top: 10vh;
+  }
+
+  .timeline.jonwrapper {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+  }
+  .timeline.jon {
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-radius: 50%;
     margin: 0 auto;
+    width: 25vw;
+    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      border: 2px solid $neutral;
+    }
+    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      border: 3px solid $neutral;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      border: 5px solid $neutral;
+    }
+  }
+  .timeline.title {
+    top: 15vh;
+    padding-top: 10px;
+    font-size: 5vw;
+    color: $niceGrey;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
   }
   .timeline-elem-outer {
     padding-right: 100px;
@@ -51,7 +82,7 @@ $timeline-elem-padding: 300px;
     margin: auto;
     height: 500px;
     position: relative;
-    padding: 0 0 25px 0;
+    padding: 0;
     img {
       height: 100px;
       margin: auto;
@@ -69,7 +100,7 @@ $timeline-elem-padding: 300px;
       position: absolute;
       display: inline-block;
       width: 600px;
-      height: 400px;
+      height: 450px;
       right: 0;
       .tab-content {
         position: relative;
@@ -114,26 +145,4 @@ $timeline-elem-padding: 300px;
     color: $subText;
     padding: 0 10px;
   }
-
-  .timeline-root {
-    position: relative;
-    height: 100%;
-    width: 22000px;
-    top: 47%;
-  }
-
-  .timeline.title {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 400px;
-    font-size: 48px;
-    color: $niceGrey;
-    width: 100%;
-    text-align: center;
-    font-weight: 800;
-
-  }
-
 }

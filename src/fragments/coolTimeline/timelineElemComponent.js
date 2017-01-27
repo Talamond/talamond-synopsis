@@ -23,15 +23,15 @@ export class TimelineElem extends Component {
   }
 
   renderSkills(timelineElem) {
-    return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={350} width={350}/>;
+    return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
   }
 
   renderDescription(description) {
     // estimate font size when length is too long
     let fontSize = 22;
-    const maxLength = 600;
+    const maxLength = 750;
     if (description.length > maxLength) {
-      fontSize = fontSize - ((description.length - maxLength) / 50);
+      fontSize = fontSize - ((description.length - maxLength ) / 50);
     }
     return <div className="description" style={{fontSize: fontSize + 'px'}}>{description}</div>;
   }
