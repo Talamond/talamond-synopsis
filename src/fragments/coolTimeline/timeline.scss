@@ -50,9 +50,17 @@ $timeline-elem-padding: 300px;
     font-weight: 800;
   }
   .timeline-elem-outer {
-    padding-right: 100px;
-    padding-left: 100px;
-    height: 650px;
+    padding-right: 8vw;
+    padding-left: 8vw;
+    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      height: 450px;
+    }
+    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      height: 550px;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      height: 650px;
+    }
     &.even {
       background-color: $backgroundEven;
     }
@@ -99,11 +107,25 @@ $timeline-elem-padding: 300px;
     .tabArea-root {
       position: absolute;
       display: inline-block;
-      width: 600px;
-      height: 450px;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+        width: 300px;
+        height: 300px;
+      }
+      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+        width: 600px;
+        height: 450px;
+      }
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+        width: 600px;
+        height: 450px;
+      }
+
       right: 0;
       .tab-content {
         position: relative;
+        @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+          height: 280px;
+        }
         .description {
           position: absolute;
           color: $subText;

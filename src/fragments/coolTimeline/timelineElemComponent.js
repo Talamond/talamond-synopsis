@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import cn from 'classnames';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import {TabArea} from '../../components/tabAreaComponent.js';
+import {Responsive, checkDeviceSize} from '../../components/standardQuery.js';
 import _ from 'lodash';
 
 const DATE_FORMAT = 'YYYY-MM-DD';
@@ -16,22 +17,32 @@ export class TimelineElem extends Component {
 
   renderImage(timelineElem) {
     // This is hack cause the n8Identity logg is low res
+    let image = <img src={timelineElem.image} className={this.props.className} />;
     if (timelineElem.employer === 'N8Identity') {
-      return <img src={timelineElem.image} className={this.props.className} style={{height: '20px', padding: '40px 0'}}/>;
+      image = <img src={timelineElem.image} className={this.props.className} style={{height: '20px', padding: '40px 0'}}/>;
     }
-    return <img src={timelineElem.image} className={this.props.className} />;
+    return <Responsive mobile={<div></div>} pad={image} desktop={image} />;
   }
 
   renderSkills(timelineElem) {
-    return <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
+    const mobile = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={300} width={300} factor={1.5}/>;
+    const pad = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
+    const desktop = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
+    return <Responsive mobile={mobile} pad={pad} desktop={desktop} />;
   }
 
   renderDescription(description) {
     // estimate font size when length is too long
     let fontSize = 22;
-    const maxLength = 750;
+    let maxLength = 750;
+    let divisor = 50;
+    if (checkDeviceSize() === 'mobile') {
+      fontSize = 14;
+      maxLength = 500;
+      divisor = 100;
+    }
     if (description.length > maxLength) {
-      fontSize = fontSize - ((description.length - maxLength ) / 50);
+      fontSize = Math.ceil(fontSize - ((description.length - maxLength ) / divisor));
     }
     return <div className="description" style={{fontSize: fontSize + 'px'}}>{description}</div>;
   }
