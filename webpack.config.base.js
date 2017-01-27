@@ -38,14 +38,21 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         loader: 'url',
         query: {
           limit: 8192,
           name: 'images/[name].[ext]?[hash]'
         }
       },
-      // Fonts
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite?' + JSON.stringify({
+          name: '[name]',
+          prefixize: true
+          // spriteModule: 'utils/my-custom-sprite'
+        })
+      },
       {
         test: /\.(woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url',

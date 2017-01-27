@@ -66,6 +66,7 @@
     "rimraf": "2.5.4",
     "sass-loader": "4.0.1",
     "style-loader": "0.13.1",
+    "svg-sprite-loader": "0.2.0",
     "url-loader": "0.5.7",
     "webpack": "2.1.0-beta.21",
     "webpack-dashboard": "0.1.8",

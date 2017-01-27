@@ -4,6 +4,14 @@
   width: 100%;
   background-color: $header;
   height: $footerHeight;
+  svg {
+    height: 32px;
+    width: 32px;
+    color: $carbon;
+    &:hover {
+      color: lighten($carbon, 80%);
+    }
+  }
 }
 
 .footer-elem {

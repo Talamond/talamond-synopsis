@@ -14,9 +14,15 @@ $headerColorHover: lighten($carbon, 80%);
   svg {
     height: 32px;
     width: 32px;
-    fill: #fff;
+    color: $carbon;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
     &:hover {
-      fill: $headerColorHover;
+      color: $headerColorHover;
     }
   }
   .github-container {
