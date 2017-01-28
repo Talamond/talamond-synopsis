@@ -11,6 +11,7 @@ export const Footer = ({footers}) =>
   <footer className="footer-root">
     <h3 className="footer message">Please feel free to contact me!</h3>
     <div className="footer info">
+      <h4>Jonathan Sweetman</h4>
       <h4>sweetmanjon@gmail.com</h4>
       <h4>Toronto, ON</h4>
       <h4>Canada</h4>

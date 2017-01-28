@@ -6,7 +6,9 @@ import {TimelineElem} from './timelineElemComponent.js';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import _ from 'lodash';
 import './timeline.scss';
+import ProgressiveImage from 'react-progressive-image';
 import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
+import bannerHolder from '../../assets/images/Forest-in-greyscale-small.jpg';
 import jon from '../../assets/images/me.jpeg';
 
 export function createTimelineComponent(selectState, prefix, urls) {
@@ -56,7 +58,9 @@ export function createTimelineComponent(selectState, prefix, urls) {
       }
       return (
         <div className="cool-timeline-root">
-          <img src={bannerImg} className="timeline banner" />
+          <ProgressiveImage src={bannerImg} placeholder={bannerHolder}>
+            {(src) => <img src={src} alt='an image'/>}
+          </ProgressiveImage>
           <div className="timeline profile">
             <div className="timeline jonwrapper">
               <img src={jon} className="timeline jon" />
