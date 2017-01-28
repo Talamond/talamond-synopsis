@@ -4,13 +4,14 @@ $headerColor: lighten($carbon, 20%);
 $headerColorHover: lighten($carbon, 80%);
 
 .header-root {
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: $header;
   height: $headerHeight;
   line-height: $headerHeight;
   top: 0;
   left: 0;
+  z-index: 100;
   svg {
     height: 32px;
     width: 32px;

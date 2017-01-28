@@ -1,9 +1,18 @@
 @import '../constants.scss';
 
 .footer-root {
+  position: relative;
   width: 100%;
   background-color: $header;
   height: $footerHeight;
+  >div, >h3 {
+    width: 100%;
+    text-align: center;
+    color: lighten($carbon, 20%);
+  }
+  .footer.message {
+    padding: 10px 0 20px 0;
+  }
   svg {
     height: 32px;
     width: 32px;
@@ -11,6 +20,16 @@
     &:hover {
       color: lighten($carbon, 80%);
     }
+  }
+  .footer.social-area {
+    position: absolute;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    a {
+      margin: 0 3px;
+    }
+    bottom: 20px;
   }
 }
 

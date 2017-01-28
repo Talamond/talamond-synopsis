@@ -12,7 +12,7 @@ function renderHeaders(headers) {
 }
 
 export const Header = ({headers}) =>
-  <div className="header-root">
+  <header className="header-root">
     {renderHeaders(headers)}
     <div className="github-container">
       <a href="https://github.com/Talamond">
@@ -21,4 +21,4 @@ export const Header = ({headers}) =>
         </svg>
       </a>
     </div>
-  </div>;
+  </header>;
