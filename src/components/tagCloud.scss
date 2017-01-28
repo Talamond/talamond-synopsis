@@ -1,11 +1,15 @@
 @keyframes example {
-  from {background-color: #ffffff;}
-  to {background-color: #000000;}
+  from {left: 400px;}
+  to {left: 0;}
 }
 
 .tagcloud-root {
-  .animate {
-    animation-name: example;
-    animation-duration: 14s;
+  >div {
+    position: relative;
+    left: 400px;
+    &.animate {
+      animation-name: example;
+      animation-duration: 4s;
+    }
   }
 }
