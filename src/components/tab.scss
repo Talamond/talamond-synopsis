@@ -1,5 +1,23 @@
 @import '../constants.scss';
 
+@-moz-keyframes grow {
+  0% { -moz-transform: scale(0.1); }
+  50% { -moz-transform: scale(1.2); }
+  100% { -moz-transform: scale(1); }
+}
+
+@-webkit-keyframes grow {
+  0% { -webkit-transform: scale(0.1); }
+  50% { -webkit-transform: scale(1.2); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@keyframes grow {
+  0% { transform: scale(0.1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
 $tabHeight: 27px;
 .tabArea-root {
   &.normal {
@@ -42,6 +60,10 @@ $tabHeight: 27px;
 
   &.bubble {
     position: relative;
+    >.animate-tabs {
+      animation-name: grow;
+      animation-duration: .5s;
+    }
     .tab {
       padding: 5px;
       display: inline-block;

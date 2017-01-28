@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import './tab.scss';
 import _ from 'lodash';
 import cn from 'classnames';
+import OnVisible from 'react-on-visible';
 
 export class TabArea extends React.Component {
 
@@ -38,9 +39,11 @@ export class TabArea extends React.Component {
         <div className="tab-content">
           {tabContents[selectedTab].content}
         </div>
-        <div className="tabs">
-          {this.renderTabs(tabContents)}
-        </div>
+        <OnVisible visibleClassName="animate-tabs">
+          <div className="tabs">
+            {this.renderTabs(tabContents)}
+          </div>
+        </OnVisible>
       </div>
     );
   }

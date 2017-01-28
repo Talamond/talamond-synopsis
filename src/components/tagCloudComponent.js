@@ -59,7 +59,7 @@ export class TagCloud extends React.Component {
     console.log(cn({animate}));
     return (
       <div className="tagcloud-root" key={`tagcloud-${id}`}>
-          <OnVisible visibleClassName="animate" key={`tagcloudon-${id}`}>
+        <OnVisible visibleClassName="animate" key={`tagcloudon-${id}`}>
           <D3TagCloud className={cn({animate})} selectId={`tagcloud-root-${id}`} degrees={degrees} words={this.wordElements} width={width}
                       height={height} color={color}/>
         </OnVisible>

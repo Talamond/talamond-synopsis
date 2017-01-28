@@ -87,7 +87,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
                     height={summaryHeight}
                     width={summaryWidth}
                     degrees={0}
-                    factor={factor}/>
+                    factor={2}/>
           {this.renderTimelines()}
         </div>
       );

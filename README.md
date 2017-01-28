@@ -5,7 +5,6 @@
  * Resume download
   * Update Resume
   * Refer to website on top of resume
- * Redraw clouds on size
  * About Me
   * Projects
     * Boilerplate
@@ -26,4 +25,4 @@
  * Contact Form
  * CSS refactor
   * Clean CSS centering
- 
+  * CSS animations
