@@ -1,8 +1,7 @@
 import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
 import cloud from 'd3-cloud';
 import * as d3 from "d3";
-import _ from 'lodash';
+import cn from 'classnames';
 
 export class D3TagCloud extends React.Component {
 
@@ -12,7 +11,8 @@ export class D3TagCloud extends React.Component {
     degrees: PropTypes.number,
     width: PropTypes.number,
     height: PropTypes.number,
-    color: PropTypes.string
+    color: PropTypes.string,
+    className: PropTypes.string
   };
 
   draw(words, color) {
@@ -84,7 +84,7 @@ export class D3TagCloud extends React.Component {
 
   render() {
     return (
-      <div id={this.props.selectId} className="d3tagcloud-root">
+      <div id={this.props.selectId} className={cn('d3tagcloud-root', this.props.className)}>
       </div>
     );
   }

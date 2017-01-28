@@ -2,6 +2,10 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {D3TagCloud} from './d3TagCloud.js';
 import './tagCloud.scss';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import VisibilitySensor from 'react-visibility-sensor';
+import OnVisible from 'react-on-visible';
+import cn from 'classnames';
 
 export class TagCloud extends React.Component {
 
@@ -40,6 +44,9 @@ export class TagCloud extends React.Component {
   }
 
   componentWillMount() {
+    this.state = {
+      animate: false
+    };
     this.createWords(this.props);
   }
 
@@ -49,10 +56,16 @@ export class TagCloud extends React.Component {
 
   render() {
     const {height, width, id, color, degrees} = this.props;
+    const {animate} = this.state;
+    console.log(animate);
+    console.log(cn({animate}));
     return (
-      <div className="tagcloud-root">
-        <D3TagCloud selectId={`tagcloud-root-${id}`} degrees={degrees} words={this.wordElements} width={width}
-                    height={height} color={color}/>
+      <div className="tagcloud-root" key={`tagcloud-${id}`}>
+          <OnVisible visibleClassName="animate" key={`tagcloudon-${id}`}>
+          <D3TagCloud className={cn({animate})} selectId={`tagcloud-root-${id}`} degrees={degrees} words={this.wordElements} width={width}
+                      height={height} color={color}/>
+        </OnVisible>
+
       </div>
     );
   }

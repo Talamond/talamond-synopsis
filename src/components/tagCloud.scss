@@ -1,30 +1,11 @@
+@keyframes example {
+  from {background-color: #ffffff;}
+  to {background-color: #000000;}
+}
+
 .tagcloud-root {
-
-}
-
-.tagcloudani-enter {
-  opacity: 0.01;
-}
-
-.tagcloudani-enter.tagcloudani-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.tagcloudani-leave {
-  opacity: 1;
-}
-
-.tagcloudani-leave.tagcloudani-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-
-.tagcloudani-appear {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
-}
-
-.tagcloudani-appear.tagcloudani-appear-active {
-  opacity: 1;
+  .animate {
+    animation-name: example;
+    animation-duration: 14s;
+  }
 }
