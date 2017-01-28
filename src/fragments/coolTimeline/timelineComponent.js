@@ -8,6 +8,7 @@ import _ from 'lodash';
 import './timeline.scss';
 import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
 import jon from '../../assets/images/me.jpeg';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export function createTimelineComponent(selectState, prefix, urls) {
   @connect(store => ({
@@ -62,7 +63,10 @@ export function createTimelineComponent(selectState, prefix, urls) {
               <img src={jon} className="timeline jon" />
             </div>
             <div className="timeline title">
-              <div>Front End Engineer</div>
+              <ReactCSSTransitionGroup transitionName="example"
+                                       transitionAppear={true}>
+                <div key="frontendengineer">Front End Engineer</div>
+              </ReactCSSTransitionGroup>
               <div>And much more...</div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {D3TagCloud} from './d3TagCloud.js';
+import './tagCloud.scss';
 
 export class TagCloud extends React.Component {
 
