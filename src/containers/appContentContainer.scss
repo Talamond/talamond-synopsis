@@ -18,19 +18,19 @@ body {
 
 h1 {
   margin: 0px;
-  font-size: 5vw;
+  font-size: 48px;
   color: $mainText;
 }
 
 h2 {
   margin: 0px;
-  font-size: 3.3vw;
+  font-size: 24px;
   color: lighten($mainText, 5%);
 }
 
 h3 {
   margin: 0px;
-  font-size: 2.7vw;
+  font-size: 20px;
   color: lighten($mainText, 10%);
   font-weight: 300;
 }
@@ -38,7 +38,42 @@ h3 {
 
 h4 {
   margin: 0px;
-  font-size: 2.2vw;
+  font-size: 18px;
   color: lighten($mainText, 10%);
   font-weight: 200;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
 }

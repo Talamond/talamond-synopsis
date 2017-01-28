@@ -19,4 +19,7 @@
  * Review Text
  * Production Build
  * Clean CSS centering
+ * Animation
+ * Redraw clouds on size
+ * ugly n8 image
  

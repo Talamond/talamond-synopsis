@@ -38,7 +38,7 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/,
+        test: /(\.png|\.jpg|\.jpeg|\.gif|IBM_logo\.svg)$/,
         loader: 'url',
         query: {
           limit: 8192,
@@ -47,6 +47,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
+        exclude: /IBM_logo\.svg/,
         loader: 'svg-sprite?' + JSON.stringify({
           name: '[name]',
           prefixize: true

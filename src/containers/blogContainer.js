@@ -1,7 +1,5 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
-import { createTimelineComponent } from '../fragments/timeline/timelineComponent.js';
-import { prefix } from '../reducers/timelineReducer.js';
 
 @connect(state => ({
 	blog: state.blog

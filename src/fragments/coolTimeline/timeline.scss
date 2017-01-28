@@ -149,8 +149,18 @@ $timeline-elem-padding: 300px;
       }
     }
     &.education {
-      top: 25%;
-      height: initial;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+        margin-top: 10px;
+        height: 200px;
+      }
+      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+        margin-top: 15px;
+        height: 350px;
+      }
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+        margin-top: 20px;
+        height: 350px;
+      }
     }
   }
 
