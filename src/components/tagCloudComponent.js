@@ -2,8 +2,6 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {D3TagCloud} from './d3TagCloud.js';
 import './tagCloud.scss';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import VisibilitySensor from 'react-visibility-sensor';
 import OnVisible from 'react-on-visible';
 import cn from 'classnames';
 
