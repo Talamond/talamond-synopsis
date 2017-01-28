@@ -14,7 +14,9 @@ export const initialState = {
   timelineElements: [],
   selectedTabs: {},
   skillMap: {},
-  allSkills: []
+  allSkills: [],
+  summaryWidth: window.innerWidth,
+  summaryHeight: window.innerHeight
 };
 
 /* eslint-disable no-param-reassign */ // the newState is passed in to avoid having to create a new state on each function
@@ -51,6 +53,13 @@ export const createHandlers = (prefix) => {
     });
     newState.allSkills = allSkills;
 
+    return newState;
+  };
+
+  handlers[actionTypes.CHANGE_DIMENSIONS] = (newState, payload) => {
+    // put up a spinner or something
+    newState.summaryWidth = payload.width;
+    newState.summaryHeight = payload.height;
     return newState;
   };
 

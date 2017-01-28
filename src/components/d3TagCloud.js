@@ -66,7 +66,14 @@ export class D3TagCloud extends React.Component {
   shouldComponentUpdate(nextProps) {
     // TODO only do this under certain circumstances
     // this.setLayout();
-    if ((!this.props.words || this.props.words.length === 0) && nextProps.words && nextProps.words.length !== this.props.words.length) {
+    if (((!this.props.words || this.props.words.length === 0) && nextProps.words && nextProps.words.length !== this.props.words.length)
+      || nextProps.width !== this.props.width
+      || nextProps.height !== this.props.height) {
+      // remove previous d3 clouds elements, these are not managed by react
+      const d3Node = document.getElementById(this.props.selectId);
+      while (d3Node.firstChild) {
+        d3Node.removeChild(d3Node.firstChild);
+      }
       return true;
     }
     return false;

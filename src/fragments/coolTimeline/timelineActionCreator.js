@@ -23,8 +23,19 @@ export function createActionCreators(actionTypes) {
     };
   }
 
+  function changeDimensions(width, height) {
+    return {
+      type: actionTypes.CHANGE_DIMENSIONS,
+      payload: {
+        width,
+        height
+      }
+    };
+  }
+
 	return {
     fetchData,
-    selectTab
+    selectTab,
+    changeDimensions
 	};
 }

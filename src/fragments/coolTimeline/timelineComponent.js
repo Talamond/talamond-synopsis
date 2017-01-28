@@ -25,8 +25,19 @@ export function createTimelineComponent(selectState, prefix, urls) {
 
       // actions
       fetchData: PropTypes.func,
-      selectTab: PropTypes.func
+      selectTab: PropTypes.func,
+      changeDimensions: PropTypes.func
     };
+
+    // listen to window resize and force an update so the tag clouds will redraw their proper size relative to the windows
+    // as well as anything else
+    componentDidMount() {
+      window.addEventListener("resize", () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener("resize", () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+    }
 
     componentWillMount() {
       this.props.fetchData(selectState);
@@ -50,11 +61,12 @@ export function createTimelineComponent(selectState, prefix, urls) {
     }
 
     render() {
+      const { summaryWidth, summaryHeight } = this.props.timeline;
       let factor;
-      if (window.innerWidth > window.innerHeight) {
-        factor = window.innerWidth * 1.0 / window.innerHeight;
+      if (summaryWidth > summaryHeight) {
+        factor = summaryWidth * 1.0 / summaryHeight;
       } else {
-        factor = window.innerHeight * 1.0 / window.innerWidth;
+        factor = summaryHeight * 1.0 / summaryWidth;
       }
       return (
         <div className="cool-timeline-root">
@@ -72,8 +84,8 @@ export function createTimelineComponent(selectState, prefix, urls) {
           </div>
           <TagCloud id="resume-summary"
                     data={this.props.timeline.allSkills}
-                    height={window.innerHeight}
-                    width={window.innerWidth}
+                    height={summaryHeight}
+                    width={summaryWidth}
                     degrees={0}
                     factor={factor}/>
           {this.renderTimelines()}

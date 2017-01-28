@@ -2,7 +2,6 @@
 
 ## TODOs
  * Responsive
- * Progressive Image Loading
  * Resume download
   * Update Resume
   * Refer to website on top of resume
