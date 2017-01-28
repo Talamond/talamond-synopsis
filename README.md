@@ -22,4 +22,5 @@
  * Animation
  * Redraw clouds on size
  * ugly n8 image
+ * CSS refactor
  

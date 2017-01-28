@@ -2,15 +2,46 @@
   from {left: 400px;}
   to {left: 0;}
 }
+@keyframes popup {
+  0% {
+    transform: translateX(700px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadein {
+  from {opacity: 0.1;}
+  to {opacity: 1;}
+
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg) scale(0.1);
+  }
+  to { -moz-transform: rotate(360deg) scale(1); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg) scale(0.1); }
+  to { -webkit-transform: rotate(360deg) scale(1); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg) scale(0.1);}
+  to {transform:rotate(360deg) scale(1);}
+}
 
 .tagcloud-root {
   >div {
-    position: relative;
-    left: 600px;
+    opacity: 0.1;
+    //position: relative;
+    //left: 600px;
     &.animate {
-      animation-name: example;
-      animation-duration: .5s;
-      left: 0;
+      animation-name: fadein;
+      animation-duration: 1s;
+      opacity: 1;
+      //left: 0;
     }
   }
 }
