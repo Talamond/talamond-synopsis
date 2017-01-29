@@ -2,6 +2,7 @@
 
 .blog-entry-root {
   border: 1px solid $carbon;
+  background-color: $backgroundEven;
   border-radius: 20px;
   padding: 15px;
   margin-top: 20px;
@@ -14,6 +15,9 @@
   flex-direction: column;
   .blog-entry.title {
     color: $mainText;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px 0;
   }
   .blog-entry.date {
     color: $mainText;
@@ -34,6 +38,7 @@
     align-items: center;
     align-self: flex-end;
     color: $mainText;
+    cursor: pointer;
     &:hover {
       color: $watermelon;
       fill: $watermelon;
