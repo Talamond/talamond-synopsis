@@ -38,14 +38,15 @@
   }
   .name {
     color: $mainText;
-  }
-  .title {
-    font-style: italic;
-    color: $subText
-  }
-  .name, .title {
     padding: 2px 0;
   }
+  .title, .date {
+    font-style: italic;
+    color: $subText;
+    font-size: 12px;
+    padding-top: 2px;
+  }
+
   .profile-tile.img-box img {
     border-radius: 50%;
     width: 50px;
