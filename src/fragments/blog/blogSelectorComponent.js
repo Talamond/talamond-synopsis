@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import { blogs } from './blogs.js';
 import {BlogEntry} from './blogEntry.js';
+import './blogSelector.scss';
 
 export class BlogSelector extends React.Component {
 

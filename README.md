@@ -1,11 +1,11 @@
 # timeline
 
 ## TODOs
- * Responsive
- * Resume download
+ * Responsive (high)
+ * Resume download (medium)
   * Update Resume
   * Refer to website on top of resume
- * About Me
+ * About Me (high)
   * Projects
     * Boilerplate
       * Unit Tests
@@ -14,20 +14,21 @@
     * This website
       * Features
     * RAG
- * Blogs
+ * Blogs (medium)
   * fragments
   * testing fragments   
   * karma code coverage
   * overwriting fragments
   * webpack DLL plugin
   * react dos and donts
- * Review Text (job descriptions)
- * Verify Production Build
- * plug redux-fragment in
- * Animations
- * ugly n8 image
-  * and other messages
- * Contact Form
- * CSS refactor
+ * Review Text (job descriptions) (medium)
+ * Verify Production Build (low)
+ * plug redux-fragment in (low)
+ * Animations (low)
+ * ugly n8 image (medium)
+  * and other images
+ * Contact Form (medium)
+ * txt loader (low)
+ * CSS refactor (medium)
   * Clean CSS centering
   * CSS animations

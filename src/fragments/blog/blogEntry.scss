@@ -1,11 +1,10 @@
 @import '../../constants.scss';
 
 .blog-entry-root {
-  position: absolute;
-  left: 0;
-  right: 0;
-  border: 1px solid $niceGrey;
-  border-radius: 10%;
+  border: 1px solid $carbon;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 20px;
   .blog-entry.title {
     color: $mainText;
   }

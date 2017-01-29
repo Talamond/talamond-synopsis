@@ -32,9 +32,7 @@ export class BlogContainer extends React.Component {
 		const BlogSelectorFrag = this.BlogSelectorFrag;
 
 		return (
-			<div>
-				<BlogSelectorFrag/>
-			</div>
+      <BlogSelectorFrag/>
 		);
 	}
 }
