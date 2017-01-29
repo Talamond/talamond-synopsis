@@ -1,6 +1,7 @@
 import React from 'react';
 import {createDate} from '../../utils/dateHelper.js';
 
+// TODO, this was moved to top reducer
 export const blogs = {
   fragment: {
     title: 'Introducing redux-fragments',
