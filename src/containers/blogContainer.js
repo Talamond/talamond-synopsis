@@ -37,12 +37,21 @@ export class BlogContainer extends React.Component {
 	  console.log('nextprops');
   }
 
-  renderBlog(id) {
-	  if (id === 'fragment') {
-	    return <FragmentBlog/>;
-    } else if (id === 'testingFragment') {
-	    return <TestFragmentBlog/>;
+  renderBlog(blog, blogs, index) {
+	  let nextBlog = {};
+	  let prevBlog = {};
+	  if (index > 0) {
+	    prevBlog = blogs[index-1];
     }
+    if (index < blogs.length - 1) {
+	    nextBlog = blogs[index+1];
+    }
+	  if (blog.id === 'fragment') {
+	    return <FragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
+    } else if (blog.id === 'testingFragment') {
+	    return <TestFragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
+    }
+    return <BlogSelectorFrag/>;
   }
 
 	render() {
@@ -54,12 +63,12 @@ export class BlogContainer extends React.Component {
       return <BlogSelectorFrag/>;
     }
     for (let i = 0; i < blogs.length; i++) {
-      const b = blogs[i];
-      if (pathname.endsWith(b.path)) {
-        return this.renderBlog(b.id);
+      const blog = blogs[i];
+      if (pathname.endsWith(blog.path)) {
+        return this.renderBlog(blog, blogs, i);
       }
     }
-    
+
 		return (
       <BlogSelectorFrag/>
 		);

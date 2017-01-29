@@ -10,10 +10,8 @@ export class BlogBase extends React.Component {
     title: PropTypes.string, // attribute
     date: PropTypes.object, // attribute
     // TODO next title as well
-    nextTitle: PropTypes.string, // attribute
-    nextUrl: PropTypes.string, // attribute
-    prevTitle: PropTypes.string, // attribute
-    prevUrl: PropTypes.string // attribute
+    nextBlog: PropTypes.object, // attribute
+    prevBlog: PropTypes.object // attribute
   };
 
   renderContent() {
@@ -27,22 +25,22 @@ export class BlogBase extends React.Component {
     </div>);
   }
 
-  renderNext(nextTitle, nextUrl) {
-      return (<div className="blog-base next-area">{nextTitle}</div>);
+  renderNext(nextBlog) {
+      return (<div className="blog-base next-area">{nextBlog.title}</div>);
   }
 
-  renderBack(prevTitle, prevUrl) {
-      return (<div className="blog-base back-area">{prevTitle}</div>);
+  renderBack(prevBlog) {
+      return (<div className="blog-base back-area">{prevBlog.title}</div>);
   }
 
   render() {
-    const {title, date, nextUrl, prevUrl, nextTitle, prevTitle} = this.props;
+    const {title, date, nextBlog, prevBlog} = this.props;
     return (
       <div className="blog-base-root">
         {this.renderTitle(title, date)}
         {this.renderContent()}
-        {this.renderBack(prevTitle, prevUrl)}
-        {this.renderNext(nextTitle, nextUrl)}
+        {this.renderBack(prevBlog)}
+        {this.renderNext(nextBlog)}
       </div>
     );
   }
