@@ -30,5 +30,5 @@
  * Contact Form (medium)
  * txt loader (low)
  * CSS refactor (medium)
-  * Clean CSS centering
+  * Clean CSS centering (flexbox vs position relative, absolute, 0 0 0 0)
   * CSS animations

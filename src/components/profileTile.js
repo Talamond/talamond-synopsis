@@ -8,7 +8,7 @@ export const ProfileTile = () =>
       <img src={jon}/>
     </div>
     <div className="profile-tile title-box">
-      <div>Jonathan Sweetman</div>
-      <div>Frontend Engineer</div>
+      <div className="profile-tile name">Jonathan Sweetman</div>
+      <div className="profile-tile title">Front End Engineer</div>
     </div>
   </div>;
