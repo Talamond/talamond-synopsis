@@ -4,8 +4,8 @@ import {TagCloud} from '../../components/tagCloudComponent.js';
 import {TabArea} from '../../components/tabAreaComponent.js';
 import {Responsive, checkDeviceSize} from '../../components/standardQuery.js';
 import _ from 'lodash';
+import { toString } from '../../utils/dateHelper.js';
 
-const DATE_FORMAT = 'YYYY-MM-DD';
 
 export class TimelineElem extends Component {
   static propTypes = {
@@ -82,7 +82,7 @@ export class TimelineElem extends Component {
       <div className={cn('timeline-elem-outer', className)}>
         <h1 className="job-title">{timelineElem.title}</h1>
         <h2 className="employer">{timelineElem.employer}</h2>
-        <h3 className="start-end-dates">{timelineElem.startDate.format(DATE_FORMAT)} - {timelineElem.endDate.format(DATE_FORMAT)}</h3>
+        <h3 className="start-end-dates">{toString(timelineElem.startDate)} - {toString(timelineElem.endDate)}</h3>
         <div className={cn('timeline-elem-wrapper', timelineElem.type, className)}>
           {this.renderContent()}
         </div>

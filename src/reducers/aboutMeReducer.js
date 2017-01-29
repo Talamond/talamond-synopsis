@@ -1,20 +1,11 @@
 import * as ReducerHelper from '../utils/reducerHelper';
-import {initialState, createHandlers} from '../fragments/blog/blogSelectorReducerHandlers.js';
 
 export const prefix = 'BLOG__';
 
 const fragments = {
-  blogSelector: {
-    initialState: {
-      ...initialState
-    },
-    handlers: {
-      ...createHandlers(prefix)
-    }
-  }
 };
 
-const state = {
+const initialState = {
   root: {
   }
 };
@@ -22,7 +13,7 @@ const state = {
 const handlers = {};
 
 const getInitialState = () => {
-	return ReducerHelper.createState(state, fragments);
+	return ReducerHelper.createState(initialState, fragments);
 };
 
 export function blog(state = getInitialState(), action) {

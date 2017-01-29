@@ -1,0 +1,18 @@
+@import '../../constants.scss';
+
+.blog-entry-root {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid $niceGrey;
+  border-radius: 10%;
+  .blog-entry.title {
+    color: $mainText;
+  }
+  .blog-entry.date {
+    color: $mainText;
+  }
+  .blog-entry.summary {
+    color: $mainText;
+  }
+}

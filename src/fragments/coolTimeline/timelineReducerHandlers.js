@@ -25,14 +25,13 @@ export const createHandlers = (prefix) => {
 	const handlers = {};
 
 	handlers[actionTypes.SELECT_TAB] = (newState, payload) => {
-		// put up a spinner or something
     newState.selectedTabs[payload.id] = payload.tabIndex;
 		return newState;
 	};
 
 	handlers[actionTypes.FETCH_DATA] = (newState, payload) => {
 	  // sort by reserve end time
-    // TODO modifying payload
+    // TODO modifying payload, am I?
     newState.timelineElements = _.sortBy(payload.data, (elem) => {
       return -1 * elem.endDate.unix();
     });
@@ -57,7 +56,6 @@ export const createHandlers = (prefix) => {
   };
 
   handlers[actionTypes.CHANGE_DIMENSIONS] = (newState, payload) => {
-    // put up a spinner or something
     newState.summaryWidth = payload.width;
     newState.summaryHeight = payload.height;
     return newState;

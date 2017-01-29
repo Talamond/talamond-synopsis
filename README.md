@@ -11,6 +11,9 @@
       * Unit Tests
       * Code Coverage
     * redux-fragments
+    * This website
+      * Features
+    * RAG
  * Blogs
   * fragments
   * testing fragments   
@@ -20,8 +23,10 @@
   * react dos and donts
  * Review Text (job descriptions)
  * Verify Production Build
+ * plug redux-fragment in
  * Animations
  * ugly n8 image
+  * and other messages
  * Contact Form
  * CSS refactor
   * Clean CSS centering

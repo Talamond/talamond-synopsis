@@ -1,5 +1,9 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
+import { createActionTypes } from '../fragments/blog/blogSelectorActionTypes.js';
+import { createActionCreators } from '../fragments/blog/blogSelectorActionCreator.js';
+import { prefix } from '../reducers/blogReducer.js';
+import { BlogSelector } from '../fragments/blog/blogSelectorComponent.js';
 
 @connect(state => ({
 	blog: state.blog
@@ -17,15 +21,19 @@ export class BlogContainer extends React.Component {
 	};
 
 	componentWillMount() {
-		// this.Timeline = createTimelineComponent((store) => store.timeline.fragments.timeline, prefix);
+	  // todo, this function go in redux-fragment?
+	  const enhance = connect(store => ({
+      blogSelector: (store) => store.blog.fragments.blogSelector
+    }), createActionCreators(createActionTypes(prefix)));
+	  this.BlogSelectorFrag = enhance(BlogSelector);
 	}
 
 	render() {
-		// const Timeline = this.Timeline;
+		const BlogSelectorFrag = this.BlogSelectorFrag;
 
 		return (
 			<div>
-				Blog
+				<BlogSelectorFrag/>
 			</div>
 		);
 	}
