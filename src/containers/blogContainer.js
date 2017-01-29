@@ -4,9 +4,12 @@ import { createActionTypes } from '../fragments/blog/blogSelectorActionTypes.js'
 import { createActionCreators } from '../fragments/blog/blogSelectorActionCreator.js';
 import { prefix } from '../reducers/blogReducer.js';
 import { BlogSelector } from '../fragments/blog/blogSelectorComponent.js';
+import { NAVIGATION } from '../constants/navigation.js';
+import { blogs } from '../fragments/blog/blogs.js';
 
 @connect(state => ({
-	blog: state.blog
+	blog: state.blog,
+
 }))
 export class BlogContainer extends React.Component {
 	static propTypes = {
@@ -28,9 +31,22 @@ export class BlogContainer extends React.Component {
 	  this.BlogSelectorFrag = enhance(BlogSelector);
 	}
 
-	render() {
-		const BlogSelectorFrag = this.BlogSelectorFrag;
+	componentWillReceiveProps(nextProps) {
+	  console.log('nextprops');
+  }
 
+	render() {
+	  // TODO this is a bit weird... I wonder if there's a better way to do it without having
+    // a container for each blog?
+		const BlogSelectorFrag = this.BlogSelectorFrag;
+	  const { location: {pathname} } = this.props;
+	  if (pathname === NAVIGATION.BLOG.PATH) {
+      return <BlogSelectorFrag/>;
+    } else if (pathname.endsWith(blogs.fragment.path)) {
+	    return <div>Fragment</div>;
+    } else if (pathname.endsWith(blogs.testingFragment.path)) {
+      return <div>Testing Fragment</div>;
+    }
 		return (
       <BlogSelectorFrag/>
 		);

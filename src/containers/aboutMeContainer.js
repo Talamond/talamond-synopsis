@@ -22,6 +22,7 @@ export class AboutMeContainer extends React.Component {
   render() {
     return (
       <div>
+        About Me
       </div>
     );
   }

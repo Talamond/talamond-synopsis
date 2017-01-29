@@ -3,6 +3,8 @@ import _ from 'lodash';
 import { blogs } from './blogs.js';
 import {BlogEntry} from './blogEntry.js';
 import './blogSelector.scss';
+import { browserHistory } from 'react-router';
+import { NAVIGATION } from '../../constants/navigation.js';
 
 export class BlogSelector extends React.Component {
 
@@ -13,10 +15,18 @@ export class BlogSelector extends React.Component {
     selectBlog: PropTypes.func
   };
 
+  // TODO what if I'm holding ctrl?
+  onReadMore(path) {
+    browserHistory.push(`${NAVIGATION.BLOG.PATH}${path}`);
+  }
+
   renderBlogs() {
     const blogElems = [];
     _.forEach(blogs, (blog) => {
-      blogElems.push(<BlogEntry title={blog.title} summary={blog.summary} date={blog.date}/>);
+      blogElems.push(<BlogEntry title={blog.title}
+                                summary={blog.summary}
+                                date={blog.date}
+                                readMoreAction={() => this.onReadMore(blog.path)}/>);
     });
     return blogElems;
   }

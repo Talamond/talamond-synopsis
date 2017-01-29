@@ -29,6 +29,7 @@
   * and other images
  * Contact Form (medium)
  * txt loader (low)
+ * Check TODOs in code
  * CSS refactor (medium)
   * Clean CSS centering (flexbox vs position relative, absolute, 0 0 0 0)
   * CSS animations
