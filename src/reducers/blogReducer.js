@@ -1,6 +1,7 @@
 import * as ReducerHelper from '../utils/reducerHelper';
 import {initialState, createHandlers} from '../fragments/blog/blogSelectorReducerHandlers.js';
 import { createDate } from '../utils/dateHelper.js';
+import { NAVIGATION } from '../constants/navigation.js';
 
 export const prefix = 'BLOG__';
 
@@ -20,14 +21,14 @@ const state = {
     blogs: [
       {
         id: 'testingFragment',
-        title: 'Testing redux-fragments',
-        path: '/testing-redux-fragments',
+        title: NAVIGATION.BLOG.TESTING_FRAGMENT.TITLE,
+        path: NAVIGATION.BLOG.TESTING_FRAGMENT.PATH,
         summary: 'Learn stratageies on testing redux-fragments',
         date: createDate('2017-02-07')
       }, {
         id: 'fragment',
-        title: 'Introducing redux-fragments',
-        path: '/redux-fragments',
+        title: NAVIGATION.BLOG.FRAGMENT.TITLE,
+        path: NAVIGATION.BLOG.FRAGMENT.PATH,
         summary: 'Learn about redux-fragments and how they might help shape your web application',
         date: createDate('2017-01-29')
       }

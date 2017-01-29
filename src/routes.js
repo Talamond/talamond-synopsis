@@ -5,7 +5,6 @@ import { TimelineContainer }  from './containers/timelineContainer.js';
 import { AboutMeContainer }  from './containers/aboutMeContainer.js';
 import { BlogContainer }  from './containers/blogContainer.js';
 import { NAVIGATION } from './constants/navigation.js';
-import { blogs } from './fragments/blog/blogs.js';
 
 export default (
 	<Route path="/" component={AppContentContainer}>
@@ -14,8 +13,8 @@ export default (
 		<Route path={NAVIGATION.ABOUT_ME.PATH} component={AboutMeContainer} />
     <Route path={NAVIGATION.BLOG.PATH} component={BlogContainer}>
       <IndexRoute component={BlogContainer}/>
-      <Route path={NAVIGATION.BLOG.PATH + blogs.fragment.path} component={BlogContainer} />
-      <Route path={NAVIGATION.BLOG.PATH + blogs.testingFragment.path} component={BlogContainer} />
+      <Route path={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.FRAGMENT.PATH} component={BlogContainer} />
+      <Route path={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.TESTING_FRAGMENT.PATH} component={BlogContainer} />
     </Route>
 	</Route>
 );

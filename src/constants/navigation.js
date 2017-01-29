@@ -17,6 +17,14 @@ export const NAVIGATION = {
   // },
   BLOG: {
 	  TITLE: 'Blog',
-	  PATH: '/blog'
+	  PATH: '/blog',
+    FRAGMENT: {
+      TITLE: 'Introduction to redux-fragments',
+      PATH: '/redux-fragments'
+    },
+    TESTING_FRAGMENT: {
+      TITLE: 'Testing redux-fragments',
+      PATH: '/testing-redux-fragments'
+    }
   }
 };
