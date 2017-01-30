@@ -2,4 +2,42 @@
 
 .blog-base-root {
   background-color: $backgroundEven;
+  svg {
+    height: 48px;
+    width: 48px;
+  }
+  .blog-base.back-area {
+    padding: 0 0 10px 100px;
+  }
+  .blog-base.next-area {
+    padding: 0 100px 10px 0;
+  }
+  .blog-base.back-area svg {
+    transform: rotate(180deg);
+  }
+  .blog-base.next-area, .blog-base.back-area {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $mainText;
+    &:hover {
+      color: $watermelon;
+    }
+  }
+  .blog-base.navigation {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

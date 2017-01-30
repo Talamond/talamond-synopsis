@@ -25,6 +25,10 @@ export const NAVIGATION = {
     TESTING_FRAGMENT: {
       TITLE: 'Testing redux-fragments',
       PATH: '/testing-redux-fragments'
+    },
+    SYNOPSIS: {
+	    TITLE: 'Creating talamond-synopsis',
+      PATH: '/talamond-synopsis'
     }
   }
 };

@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import { browserHistory } from 'react-router';
 import { ProfileTile } from '../../../components/profileTile.js';
 import './blogBase.scss';
+import arrow from '../../../assets/images/arrow.svg';
 
 export class BlogBase extends React.Component {
 
@@ -26,11 +27,21 @@ export class BlogBase extends React.Component {
   }
 
   renderNext(nextBlog) {
-      return (<div className="blog-base next-area">{nextBlog.title}</div>);
+      return (<div className="blog-base next-area" onClick={() => browserHistory(nextBlog.path)}>
+          <span>{nextBlog.title}</span>
+          <svg>
+            <use xlinkHref={arrow}/>
+          </svg>
+        </div>);
   }
 
   renderBack(prevBlog) {
-      return (<div className="blog-base back-area">{prevBlog.title}</div>);
+      return (<div className="blog-base back-area" onClick={() => browserHistory(prevBlog.path)}>
+          <svg>
+            <use xlinkHref={arrow}/>
+          </svg>
+          <span>{prevBlog.title}</span>
+        </div>);
   }
 
   render() {
@@ -39,8 +50,10 @@ export class BlogBase extends React.Component {
       <div className="blog-base-root">
         {this.renderTitle(title, date)}
         {this.renderContent()}
-        {this.renderBack(prevBlog)}
-        {this.renderNext(nextBlog)}
+        <div className="blog-base navigation">
+          {this.renderBack(prevBlog)}
+          {this.renderNext(nextBlog)}
+        </div>
       </div>
     );
   }
