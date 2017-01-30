@@ -3,6 +3,7 @@ import {browserHistory} from 'react-router';
 import {ProfileTile} from '../../../components/profileTile.js';
 import './blogBase.scss';
 import arrow from '../../../assets/images/arrow.svg';
+import { NAVIGATION } from '../../../constants/navigation.js';
 
 export class BlogBase extends React.Component {
 
@@ -19,6 +20,10 @@ export class BlogBase extends React.Component {
     return <div className="blog-base content">Overwrite me</div>;
   }
 
+  onNavigate(path) {
+    browserHistory.push(NAVIGATION.BLOG.PATH + path);
+  }
+
   renderTitle(title, date) {
     return (<div className="blog-base title-area">
       <ProfileTile date={date}/>
@@ -30,7 +35,7 @@ export class BlogBase extends React.Component {
     if (!nextBlog.title) {
       return <div></div>;
     }
-    return (<div className="blog-base next-area" onClick={() => browserHistory(nextBlog.path)}>
+    return (<div className="blog-base next-area" onClick={() => this.onNavigate(nextBlog.path)}>
       <span>{nextBlog.title}</span>
       <svg>
         <use xlinkHref={arrow}/>
@@ -42,7 +47,7 @@ export class BlogBase extends React.Component {
     if (!prevBlog.title) {
       return <div></div>;
     }
-    return (<div className="blog-base back-area" onClick={() => browserHistory(prevBlog.path)}>
+    return (<div className="blog-base back-area" onClick={() => this.onNavigate(prevBlog.path)}>
       <svg>
         <use xlinkHref={arrow}/>
       </svg>
