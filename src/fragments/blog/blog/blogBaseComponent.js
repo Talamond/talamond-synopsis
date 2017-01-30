@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import { browserHistory } from 'react-router';
-import { ProfileTile } from '../../../components/profileTile.js';
+import {browserHistory} from 'react-router';
+import {ProfileTile} from '../../../components/profileTile.js';
 import './blogBase.scss';
 import arrow from '../../../assets/images/arrow.svg';
 
@@ -27,21 +27,27 @@ export class BlogBase extends React.Component {
   }
 
   renderNext(nextBlog) {
-      return (<div className="blog-base next-area" onClick={() => browserHistory(nextBlog.path)}>
-          <span>{nextBlog.title}</span>
-          <svg>
-            <use xlinkHref={arrow}/>
-          </svg>
-        </div>);
+    if (!nextBlog.title) {
+      return <div></div>;
+    }
+    return (<div className="blog-base next-area" onClick={() => browserHistory(nextBlog.path)}>
+      <span>{nextBlog.title}</span>
+      <svg>
+        <use xlinkHref={arrow}/>
+      </svg>
+    </div>);
   }
 
   renderBack(prevBlog) {
-      return (<div className="blog-base back-area" onClick={() => browserHistory(prevBlog.path)}>
-          <svg>
-            <use xlinkHref={arrow}/>
-          </svg>
-          <span>{prevBlog.title}</span>
-        </div>);
+    if (!prevBlog.title) {
+      return <div></div>;
+    }
+    return (<div className="blog-base back-area" onClick={() => browserHistory(prevBlog.path)}>
+      <svg>
+        <use xlinkHref={arrow}/>
+      </svg>
+      <span>{prevBlog.title}</span>
+    </div>);
   }
 
   render() {

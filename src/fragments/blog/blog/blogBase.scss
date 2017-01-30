@@ -1,5 +1,6 @@
 @import '../../../constants.scss';
 
+$edgePadding: 300px;
 .blog-base-root {
   background-color: $backgroundEven;
   svg {
@@ -7,13 +8,21 @@
     width: 48px;
   }
   .blog-base.back-area {
-    padding: 0 0 10px 100px;
+    margin: 0 0 10px $edgePadding;
   }
   .blog-base.next-area {
-    padding: 0 100px 10px 0;
+    margin: 0 $edgePadding 10px 0;
   }
   .blog-base.back-area svg {
     transform: rotate(180deg);
+  }
+  .blog-base.title {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px 0;
+  }
+  .blog-base.title-area, .blog-base.content {
+    margin: 0 $edgePadding;
   }
   .blog-base.next-area, .blog-base.back-area {
     display: -webkit-box;

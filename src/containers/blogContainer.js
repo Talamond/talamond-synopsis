@@ -40,10 +40,10 @@ export class BlogContainer extends React.Component {
     let nextBlog = {};
     let prevBlog = {};
     if (index > 0) {
-      prevBlog = blogs[index - 1];
+      nextBlog = blogs[index - 1];
     }
     if (index < blogs.length - 1) {
-      nextBlog = blogs[index + 1];
+      prevBlog = blogs[index + 1];
     }
     if (blog.id === 'fragment') {
       return <FragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
