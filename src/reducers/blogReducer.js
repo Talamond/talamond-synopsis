@@ -21,8 +21,8 @@ const state = {
     blogs: [
       {
         id: 'about-me',
-        title: NAVIGATION.BLOG.SYNOPSIS.TITLE,
-        path: NAVIGATION.BLOG.SYNOPSIS.PATH,
+        title: NAVIGATION.BLOG.ABOUT_ME.TITLE,
+        path: NAVIGATION.BLOG.ABOUT_ME.PATH,
         summary: 'Learn a bit about me',
         date: createDate('2017-03-08')
       }, {

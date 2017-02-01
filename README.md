@@ -31,7 +31,8 @@
  * txt loader (low)
  * Check TODOs in code
  * React warnings
- 
+ * Feedback
+ * scroll to top whenever I switch page
  * footer, to learn about website, checkout my blog
  * CSS refactor (medium)
   * Clean CSS centering (flexbox vs position relative, absolute, 0 0 0 0)

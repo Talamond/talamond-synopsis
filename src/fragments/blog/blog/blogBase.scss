@@ -21,6 +21,14 @@ $edgePadding: 300px;
     font-weight: bold;
     padding: 20px 0;
   }
+  .blog-base.paragraph {
+    color: $mainText;
+  }
+  .blog-base.paragraph-title {
+    color: black;
+    font-weight: bold;
+    padding: 20px 0 10px 0;
+  }
   .blog-base.title-area, .blog-base.content {
     margin: 0 $edgePadding;
   }
@@ -48,5 +56,6 @@ $edgePadding: 300px;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     align-items: center;
+    padding: 60px 0 30px 0;
   }
 }

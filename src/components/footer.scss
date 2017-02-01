@@ -5,13 +5,25 @@
   width: 100%;
   background-color: $header;
   height: $footerHeight;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  flex-direction: column;
   >div, >h3 {
     width: 100%;
     text-align: center;
     color: lighten($carbon, 20%);
   }
+  .footer.info {
+    padding-top: 40px;
+  }
   .footer.message {
-    padding: 10px 0 20px 0;
+    padding-bottom: 40px;
   }
   svg {
     height: 32px;
@@ -22,14 +34,12 @@
     }
   }
   .footer.social-area {
-    position: absolute;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
     a {
       margin: 0 3px;
     }
-    bottom: 20px;
   }
 }
 
