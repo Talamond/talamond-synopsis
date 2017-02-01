@@ -7,6 +7,8 @@ import {BlogSelector} from '../fragments/blog/blogSelectorComponent.js';
 import {NAVIGATION} from '../constants/navigation.js';
 import {FragmentBlog} from '../fragments/blog/fragmentBlog/fragmentBlogComponent.js';
 import {TestFragmentBlog} from '../fragments/blog/testFragmentBlog/testFragmentBlogComponent.js';
+import {AboutMeBlog} from '../fragments/blog/aboutMeBlog/aboutMeBlogComponent.js';
+import {WebsiteBlog} from '../fragments/blog/websiteBlog/websiteBlogComponent.js';
 import _ from 'lodash';
 
 @connect(state => ({
@@ -49,6 +51,10 @@ export class BlogContainer extends React.Component {
       return <FragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
     } else if (blog.id === 'testingFragment') {
       return <TestFragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
+    } else if (blog.id === 'talamond-synopsis') {
+      return <WebsiteBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
+    } else if (blog.id === 'about-me') {
+      return <AboutMeBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
     }
     return <BlogSelectorFrag blogs={this.props.blog.blogs}/>;
   }

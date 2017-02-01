@@ -78,8 +78,8 @@ export function createTimelineComponent(selectState, prefix, urls) {
               <img src={jon} className="timeline jon" />
             </div>
             <div className="timeline title">
-              <div key="frontendengineer">Front End Engineer</div>
-              <div>And much more...</div>
+              <div key="frontendengineer">Front end engineer</div>
+              <div>and much more...</div>
             </div>
           </div>
           <TagCloud id="resume-summary"

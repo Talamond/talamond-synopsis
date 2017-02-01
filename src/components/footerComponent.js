@@ -9,7 +9,6 @@ import meetup from '../assets/images/meetup.svg';
 
 export const Footer = ({footers}) =>
   <footer className="footer-root">
-    <h3 className="footer message">Please feel free to contact me!</h3>
     <div className="footer info">
       <h4>Jonathan Sweetman</h4>
       <h4>sweetmanjon@gmail.com</h4>
@@ -43,4 +42,5 @@ export const Footer = ({footers}) =>
         </svg>
       </a>
     </div>
+    <h3 className="footer message">Please feel free to contact me!</h3>
   </footer>;

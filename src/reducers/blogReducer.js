@@ -20,6 +20,12 @@ const state = {
   root: {
     blogs: [
       {
+        id: 'about-me',
+        title: NAVIGATION.BLOG.SYNOPSIS.TITLE,
+        path: NAVIGATION.BLOG.SYNOPSIS.PATH,
+        summary: 'Learn a bit about me',
+        date: createDate('2017-03-08')
+      }, {
         id: 'talamond-synopsis',
         title: NAVIGATION.BLOG.SYNOPSIS.TITLE,
         path: NAVIGATION.BLOG.SYNOPSIS.PATH,

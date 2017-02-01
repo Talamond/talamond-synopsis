@@ -7,10 +7,10 @@ export const NAVIGATION = {
 	//   TITLE: 'Demos',
   //   PATH: '/aboutme'
   // },
-  ABOUT_ME: {
-	  TITLE: 'About Me',
-    PATH: '/aboutme'
-  },
+  // ABOUT_ME: {
+	//   TITLE: 'About Me',
+  //   PATH: '/aboutme'
+  // },
   // CONTACT: {
 	//   TITLE: 'Contact',
   //   PATH: '/contact'
@@ -29,6 +29,10 @@ export const NAVIGATION = {
     SYNOPSIS: {
 	    TITLE: 'Creating talamond-synopsis',
       PATH: '/talamond-synopsis'
+    },
+    ABOUT_ME: {
+      TITLE: 'A little about me',
+      PATH: '/about-me'
     }
   }
 };
