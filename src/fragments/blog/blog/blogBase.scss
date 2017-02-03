@@ -1,6 +1,8 @@
 @import '../../../constants.scss';
 
 $edgePadding: 300px;
+$edgePaddingMobile: 10px;
+
 .blog-base-root {
   background-color: $backgroundEven;
   svg {
@@ -8,10 +10,28 @@ $edgePadding: 300px;
     width: 48px;
   }
   .blog-base.back-area {
-    margin: 0 0 10px $edgePadding;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      margin: 0 0 10px $edgePaddingMobile;
+    }
+    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      margin: 0 0 10px $edgePadding;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      margin: 0 0 10px $edgePadding;
+    }
   }
   .blog-base.next-area {
-    margin: 0 $edgePadding 10px 0;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      margin: 0 $edgePaddingMobile 10px 0;
+    }
+    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      margin: 0 $edgePadding 10px 0;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      margin: 0 $edgePadding 10px 0;
+    }
   }
   .blog-base.back-area svg {
     transform: rotate(180deg);
@@ -30,7 +50,16 @@ $edgePadding: 300px;
     padding: 20px 0 10px 0;
   }
   .blog-base.title-area, .blog-base.content {
-    margin: 0 $edgePadding;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      margin: 0 $edgePaddingMobile;
+    }
+    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      margin: 0 $edgePadding;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      margin: 0 $edgePadding;
+    }
   }
   .blog-base.next-area, .blog-base.back-area {
     display: -webkit-box;

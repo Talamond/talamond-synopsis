@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={this.props.store}>
-        <Router history={history}>
+        <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
           {Routes}
         </Router>
       </Provider>
