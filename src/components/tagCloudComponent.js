@@ -8,7 +8,7 @@ import cn from 'classnames';
 export class TagCloud extends React.Component {
 
   static propTypes = {
-    id: PropTypes.object,
+    id: PropTypes.number,
     data: PropTypes.array,
     width: PropTypes.number,
     height: PropTypes.number,
@@ -55,8 +55,6 @@ export class TagCloud extends React.Component {
   render() {
     const {height, width, id, color, degrees} = this.props;
     const {animate} = this.state;
-    console.log(animate);
-    console.log(cn({animate}));
     return (
       <div className="tagcloud-root" key={`tagcloud-${id}`}>
         <OnVisible visibleClassName="animate" key={`tagcloudon-${id}`}>

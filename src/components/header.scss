@@ -4,6 +4,7 @@ $headerColor: lighten($carbon, 20%);
 $headerColorHover: lighten($carbon, 80%);
 
 .header-root {
+  opacity: 0.93;
   position: fixed;
   width: 100%;
   background-color: $header;

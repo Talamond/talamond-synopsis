@@ -15,6 +15,18 @@
   100% { right: 0; }
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+
 $timeline-elem-padding: 300px;
 .cool-timeline-root {
   position: relative;
@@ -40,17 +52,26 @@ $timeline-elem-padding: 300px;
     .timeline.detail {
       // This slides into right 0 position with slideIn animation
       position: relative;
-      right: -700px;
+      //right: -700px;
+      opacity: 0;
       color: $mainText;
-      font-size: 22px;
       font-style: italic;
       text-align: center;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+        font-size: 15px;
+      }
+      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+        font-size: 22px;
+      }
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+        font-size: 22px;
+      }
     }
     .animate-detail {
       .timeline.detail {
-        animation-name: slideIn;
-        animation-duration: 1s;
-        right: 0;
+        animation-name: fadein;
+        animation-duration: 2s;
+        opacity: 1;
       }
     }
   }
@@ -58,6 +79,10 @@ $timeline-elem-padding: 300px;
   .timeline.education {
     position: relative;
     height: 100%;
+    >img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .timeline.education-title {
@@ -73,9 +98,15 @@ $timeline-elem-padding: 300px;
 
     .bigImage {
       position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
       @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
         height: 100px;
         width: 100px;
+        top: 75px;
       }
       @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
         height: 200px;
@@ -85,11 +116,6 @@ $timeline-elem-padding: 300px;
         height: 200px;
         width: 200px;
       }
-      margin: auto;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
     }
   }
 

@@ -9,8 +9,6 @@
   * fragments
   * testing fragments   
   * karma code coverage
-  * overwriting fragments
-  * webpack DLL plugin
   * react dos and donts
   * About me
     * Projects
@@ -25,16 +23,17 @@
  * Favicon
  * Verify Production Build (low)
  * plug redux-fragment in (low)
- * Animations (low)
- * ugly n8 image (medium)
-  * and other images
+ * job svgs transparent backgrounds
+ * remove unused images
  * Contact Form (medium)
  * Check TODOs in code
  * React warnings
  * scroll to top whenever I switch page
  * footer, to learn about website, checkout my blog
- * try new animation
- * try opacity banner
+ * put my name on banner
+ * try arrow down "scroll to learn more"
+ * summary of qualifcations (low)
+ * change tag cloud font
  * CSS refactor (medium)
   * Clean CSS centering (flexbox vs position relative, absolute, 0 0 0 0)
   * CSS animations

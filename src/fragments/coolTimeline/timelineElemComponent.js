@@ -23,10 +23,10 @@ export class TimelineElem extends Component {
   renderDetails(timelineElem) {
     // determine font size based of details length
     return (<div className="timeline details">
-      {_.map(timelineElem.details, (detail) => {
+      {_.map(timelineElem.details, (detail, index) => {
         return (
-          <OnVisible visibleClassName="animate-detail">
-            <div className="timeline detail">{detail}</div>
+          <OnVisible key={index} visibleClassName="animate-detail">
+            <div key={index} className="timeline detail">{detail}</div>
           </OnVisible>
         );
       })}
@@ -34,7 +34,7 @@ export class TimelineElem extends Component {
   }
 
   renderSkills(timelineElem) {
-    const mobile = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={300} width={300} factor={1.5}/>;
+    const mobile = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={280} width={280} factor={1.5}/>;
     const pad = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
     const desktop = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
     return <Responsive mobile={mobile} pad={pad} desktop={desktop} />;
@@ -64,7 +64,7 @@ export class TimelineElem extends Component {
     const tabContents = [
       {name: 'Details', content: this.renderDetails(timelineElem)},
       {name: 'Skills', content: this.renderSkills(timelineElem)},
-      {name: 'Desc.',  content: this.renderDescription(timelineElem.description)}
+      {name: 'Desc',  content: this.renderDescription(timelineElem.description)}
     ];
     if (timelineElem.descriptions) {
       _.forIn(timelineElem.descriptions, (v, k) => {
