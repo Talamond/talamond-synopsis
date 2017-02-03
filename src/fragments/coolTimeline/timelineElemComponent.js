@@ -5,7 +5,7 @@ import {TabArea} from '../../components/tabAreaComponent.js';
 import {Responsive, checkDeviceSize} from '../../components/standardQuery.js';
 import _ from 'lodash';
 import { toString } from '../../utils/dateHelper.js';
-
+import OnVisible from 'react-on-visible';
 
 export class TimelineElem extends Component {
   static propTypes = {
@@ -24,7 +24,11 @@ export class TimelineElem extends Component {
     // determine font size based of details length
     return (<div className="timeline details">
       {_.map(timelineElem.details, (detail) => {
-        return <div className="timeline detail">{detail}</div>;
+        return (
+          <OnVisible visibleClassName="animate-detail">
+            <div className="timeline detail">{detail}</div>
+          </OnVisible>
+        );
       })}
     </div>);
   }
