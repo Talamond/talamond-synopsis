@@ -8,6 +8,30 @@ $timeline-elem-padding: 300px;
     height: 100%;
   }
 
+
+  .timeline.details {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    flex-direction: column;
+    .detail:first-child {
+      padding-top: 10px;
+    }
+  }
+
+  .timeline.detail {
+    color: $mainText;
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+  }
+
   .timeline.education {
     position: relative;
     height: 100%;

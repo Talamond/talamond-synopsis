@@ -22,6 +22,7 @@
           * Features
         * RAG
  * Review Text (job descriptions) (medium)
+ * Favicon
  * Verify Production Build (low)
  * plug redux-fragment in (low)
  * Animations (low)

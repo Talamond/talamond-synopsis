@@ -53,6 +53,7 @@ export function getResumeData() {
       employer: 'Ministry of Education',
       details: [
         'Developed skills on Object Oriented programming while working on a web application',
+        'Worked with third party to implement web application AIMS',
         'Used J2EE with IBM Rational to create Enterprise Application pages (JSP, business rules, Hibernate)'
       ],
       description: 'The Ministry of Education provided with my first software development position. Here I contributed ' +
@@ -93,6 +94,11 @@ export function getResumeData() {
       employer: 'N8Identity',
       type: 'coop',
       color: '#D35400',
+      details: [
+        'Implemented enhancements and fixed bugs on flagship product ELM',
+        'Worked directly with clients to sort out application content (string management)',
+        'Part took in writing client Software Specification Document'
+      ],
       description: 'I spent 3 coop terms at N8Identity (4 months each) and worked as a Java developer on a web application called ELM. ELM was a product that aided large companies with onboarding their employees. We used Spring framework for ELM and primefaces for the user interface. The backend was many Java OSGI services that we ran on service mix and used Hiberate to communicate with the database. Some of my responsiblility here included: content management directly with clients, creating a client Software Specification Document for a reporting module in ELM, creating a feed handler for bulk data load, typical ELM enhancements and bug fixes.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
@@ -109,12 +115,19 @@ export function getResumeData() {
       employer: 'N8Identity',
       type: 'full',
       color: '#D35400',
+      details: [
+        'Implemented enhancements and fixed bugs on flagship product ELM',
+        'Created Feed Handler for loading bulk data into PostgreSQL',
+        'Involved in design strategies to develop forward thinking and efficient solutions',
+        'Developed robust JUnit test cases'
+      ],
       description: 'After I graduated University, I returned to N8Identity for a year and a half. During this period, we put more ephasis on writing unit tests with our code, but other than that, we continued to working on ELM implementing new enhancements. The tech stack remained the same as did my responsibilities.',
       skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {label: 'Java', weight: 10},
         {label: 'RichFaces', weight: 7}, {label: 'PostgreSQL', weight: 7}, {label: 'JUnit', weight: 7},
         {label: 'Agile', weight: 7}, {label: 'ServiceMix', weight: 6}, {label: 'Linux', weight: 6}, {label: 'Tomcat', weight: 10},
         {label: 'Git', weight: 7}, {label: 'CSS', weight: 8}
       ],
+
       image: n8
     },
     {
@@ -158,6 +171,12 @@ export function getResumeData() {
       },
 
       summary: 'IBM Canada',
+      details: [
+        'Interviewed development team candidates',
+        'Implemented enhancements and fixed bugs on a variety of products',
+        'Lead a team with size up to 5 on product implementation',
+        'Responsible for creating and deploying cross platform mobile application'
+      ],
       type: 'full',
       color: '#3498DB',
       skills: [
@@ -193,6 +212,13 @@ export function getResumeData() {
         'React Components': 'While building RCA, I was also tasked of building a shared react component library. One of the problems we continually have with the designers is they keep designing things they’ve already done. What ended up happening it through out our 3 large teams, we have several different looks and feels for components that should be the same. It is now my job to create a library all the teams can use and also get the design team aligned with this component library. Some of the features of the component library include: high unit test coverage, accessiblity (to match wc3 level AA and polished looks with animation.'
       },
       summary: 'IBM Canada',
+      details: [
+        'Responsible for designing and implementing UI Architecture in multiple projects',
+        'Lead mutliple teams up to size 20 on product implementation',
+        'Worked with design to flush out application behaviour',
+        'Educated developers on React/Redux practices',
+        'Implemented a React component library to be used on all products'
+      ],
       type: 'full',
       color: '#3498DB',
       skills: [

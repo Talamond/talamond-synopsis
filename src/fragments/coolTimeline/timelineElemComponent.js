@@ -16,21 +16,17 @@ export class TimelineElem extends Component {
   };
 
   renderImage(timelineElem) {
-    // This is hack cause the n8Identity logg is low res
     let image = <img src={timelineElem.image} className={this.props.className} />;
-    // if (timelineElem.employer === 'N8Identity') {
-    //   image = <img src={timelineElem.image} className={this.props.className} style={{height: '20px', padding: '40px 0'}}/>;
-    // }
-    /*
-    else if (timelineElem.employer === 'IBM Canada') {
-      image = (
-        <svg width="300" height="150" viewBox="0 0 2000 1000">
-          <use xlinkHref={timelineElem.image}/>
-        </svg>
-      );
-    }
-    */
     return <Responsive mobile={<div></div>} pad={image} desktop={image} />;
+  }
+
+  renderDetails(timelineElem) {
+    // determine font size based of details length
+    return (<div className="timeline details">
+      {_.map(timelineElem.details, (detail) => {
+        return <div className="timeline detail">{detail}</div>;
+      })}
+    </div>);
   }
 
   renderSkills(timelineElem) {
@@ -62,8 +58,9 @@ export class TimelineElem extends Component {
       return <img src={timelineElem.image} className={cn('bigImage', className)} />;
     }
     const tabContents = [
+      {name: 'Details', content: this.renderDetails(timelineElem)},
       {name: 'Skills', content: this.renderSkills(timelineElem)},
-      {name: 'Summary',  content: this.renderDescription(timelineElem.description)}
+      {name: 'Desc.',  content: this.renderDescription(timelineElem.description)}
     ];
     if (timelineElem.descriptions) {
       _.forIn(timelineElem.descriptions, (v, k) => {
