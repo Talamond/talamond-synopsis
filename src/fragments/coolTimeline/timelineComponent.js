@@ -9,7 +9,11 @@ import './timeline.scss';
 import ProgressiveImage from 'react-progressive-image';
 import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
 import bannerHolder from '../../assets/images/Forest-in-greyscale-small.jpg';
+import schoolImg from '../../assets/images/UW_Building.jpg';
+import schoolHolder from '../../assets/images/UW_Building-small.jpg';
 import jon from '../../assets/images/me.jpeg';
+import cn from 'classnames';
+import { toString } from '../../utils/dateHelper.js';
 
 export function createTimelineComponent(selectState, prefix, urls) {
   @connect(store => ({
@@ -49,13 +53,25 @@ export function createTimelineComponent(selectState, prefix, urls) {
       _.forEach(timelineElements, (elem, index) => {
         let className = index % 2 ? 'odd' : 'even';
         if (elem.type === 'education') {
-          className = 'education';
+          elems.push(<div className="timeline education">
+            <ProgressiveImage src={schoolImg} placeholder={schoolHolder}>
+              {(src) => <img src={src} alt='an image'/>}
+            </ProgressiveImage>
+            <div className="timeline education-title">
+              <h1 className="job-title">{elem.title}</h1>
+              <h2 className="employer">{elem.subTitle}</h2>
+              <h2 className="employer">{elem.employer}</h2>
+              <h3 className="start-end-dates">{toString(elem.startDate)} - {toString(elem.endDate)}</h3>
+              <img src={elem.image} className={cn('bigImage')} />
+            </div>
+          </div>);
+        } else {
+          elems.push(<TimelineElem key={index}
+                                   timelineElem={elem}
+                                   onTabSelect={selectTab}
+                                   selectedTab={selectedTabs[elem.id]}
+                                   className={className}/>);
         }
-        elems.push(<TimelineElem key={index}
-                                 timelineElem={elem}
-                                 onTabSelect={selectTab}
-                                 selectedTab={selectedTabs[elem.id]}
-                                 className={className}/>);
       });
       return elems;
     }

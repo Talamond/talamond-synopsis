@@ -1,10 +1,10 @@
 // Simulate talking to an api server, doesn't do much simulating right now
 import ibm from '../assets/images/IBM_logo.svg';
 import uw from '../assets/images/Uwaterloo_seal2.png';
-import n8 from '../assets/images/n8.png';
-import ontario from '../assets/images/ontario.jpg';
+import n8 from '../assets/images/n8.svg';
+import ontario from '../assets/images/ontario.svg';
 import parlay from '../assets/images/parlay2.png';
-import sql from '../assets/images/sqlpower2.png';
+import sql from '../assets/images/sqlpower.svg';
 import {createDate} from './dateHelper.js';
 
 // TODO, pull descriptions from text file
@@ -15,7 +15,8 @@ export function getResumeData() {
       startDate: createDate('2006-09-01'),
       endDate: createDate('2011-04-30'),
       summary: 'Bachelor of Computer Science/Software Engineering Option - Co-operative Program, University of Waterloo',
-      title: 'Bachelor of Computer Science/Software Engineering Option - Coop',
+      title: 'Bachelor of Computer Science - Coop',
+      subTitle: 'Software Engineering Option',
       employer: 'University of Waterloo',
       type: 'education',
       color: '#F1C40F',

@@ -18,9 +18,9 @@ export class TimelineElem extends Component {
   renderImage(timelineElem) {
     // This is hack cause the n8Identity logg is low res
     let image = <img src={timelineElem.image} className={this.props.className} />;
-    if (timelineElem.employer === 'N8Identity') {
-      image = <img src={timelineElem.image} className={this.props.className} style={{height: '20px', padding: '40px 0'}}/>;
-    }
+    // if (timelineElem.employer === 'N8Identity') {
+    //   image = <img src={timelineElem.image} className={this.props.className} style={{height: '20px', padding: '40px 0'}}/>;
+    // }
     /*
     else if (timelineElem.employer === 'IBM Canada') {
       image = (
