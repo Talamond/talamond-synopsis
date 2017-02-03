@@ -1,11 +1,11 @@
 # timeline
 
 ## TODOs
- * Responsive (high)
+ * Responsive iPads(low)
  * Resume download (medium)
   * Update Resume
   * Refer to website on top of resume
- * Blogs (medium)
+ * Blogs (low)
   * fragments
   * testing fragments   
   * karma code coverage
@@ -21,19 +21,19 @@
         * RAG
  * Review Text (job descriptions) (medium)
  * Favicon
- * Verify Production Build (low)
  * plug redux-fragment in (low)
  * job svgs transparent backgrounds
- * remove unused images
- * Contact Form (medium)
  * Check TODOs in code
- * React warnings
- * scroll to top whenever I switch page
+ * React warnings (still a couple
  * footer, to learn about website, checkout my blog
- * put my name on banner
  * try arrow down "scroll to learn more"
  * summary of qualifcations (low)
- * change tag cloud font
+ * change tag cloud font (sucks on mobile)
+  
+## Less Important TODOs
+ * Verify Production Build (low)
+ * remove unused images
+ * Contact Form (medium)
  * CSS refactor (medium)
-  * Clean CSS centering (flexbox vs position relative, absolute, 0 0 0 0)
-  * CSS animations
+  * Clean CSS centering with mixins
+  * CSS animations in one file
