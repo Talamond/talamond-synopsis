@@ -5,7 +5,6 @@ import './blogSelector.scss';
 import { browserHistory } from 'react-router';
 import { NAVIGATION } from '../../constants/navigation.js';
 
-// TODO pass in blogs
 export class BlogSelector extends React.Component {
 
   static propTypes = {

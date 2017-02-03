@@ -29,13 +29,12 @@
  * ugly n8 image (medium)
   * and other images
  * Contact Form (medium)
- * txt loader (low)
  * Check TODOs in code
  * React warnings
- * kevin Feedback
  * scroll to top whenever I switch page
  * footer, to learn about website, checkout my blog
- * too many tg clouds
+ * try new animation
+ * try opacity banner
  * CSS refactor (medium)
   * Clean CSS centering (flexbox vs position relative, absolute, 0 0 0 0)
   * CSS animations
