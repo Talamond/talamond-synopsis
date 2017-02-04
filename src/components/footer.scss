@@ -1,23 +1,22 @@
 @import '../constants.scss';
 
+$linkHover: lighten($carbon, 80%);
+$link: $carbon;
+
 .footer-root {
   position: relative;
   width: 100%;
   background-color: $header;
   height: $footerHeight;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  @include flexboxJustify(space-around);
   flex-direction: column;
   >div, >h3 {
     width: 100%;
     text-align: center;
     color: lighten($carbon, 20%);
+  }
+  h4 {
+    color: lighten($carbon, 15%);
   }
   .footer.info {
     padding-top: 40px;
@@ -28,9 +27,10 @@
   svg {
     height: 32px;
     width: 32px;
-    color: $carbon;
+    color: $link;
     &:hover {
-      color: lighten($carbon, 80%);
+      color: $linkHover;
+      cursor: pointer;
     }
   }
   .footer.social-area {
@@ -39,6 +39,20 @@
     justify-content: center;
     a {
       margin: 0 3px;
+    }
+  }
+  .footer.about {
+    @include flexboxJustify(center);
+    flex-direction: row;
+    >a {
+      padding: 0 15px;
+      font-weight: bold;
+      color: $link;
+      text-decoration: none;
+      &:hover{
+        color: $linkHover;
+        cursor: pointer;
+      }
     }
   }
 }

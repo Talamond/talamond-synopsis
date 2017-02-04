@@ -25,9 +25,9 @@
  * job svgs transparent backgrounds
  * React warnings (still a couple)
  * footer, to learn about website, checkout my blog
- * try arrow down "scroll to learn more"
- * summary of qualifcations (low)
- * change tag cloud font (sucks on mobile)
+ * change tag cloud font (need to check)
+ * change main pic
+ * align job icons
   
 ## Less Important TODOs
  * Check TODOs in code

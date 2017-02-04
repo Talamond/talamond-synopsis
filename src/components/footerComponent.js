@@ -1,5 +1,6 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+import { Link } from 'react-router';
+import { NAVIGATION } from '../constants/navigation.js';
 import './footer.scss';
 import github from '../assets/images/github.svg';
 import email from '../assets/images/email.svg';
@@ -41,6 +42,10 @@ export const Footer = ({footers}) =>
           <use xlinkHref={meetup}/>
         </svg>
       </a>
+    </div>
+    <div className="footer about">
+      <Link to={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.SYNOPSIS.PATH}>About this site</Link>
+      <Link to={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.ABOUT_ME.PATH}>About me</Link>
     </div>
     <h3 className="footer message">Please feel free to contact me!</h3>
   </footer>;

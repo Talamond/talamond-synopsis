@@ -10,7 +10,7 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Canta
 
 
 $headerHeight: 50px;
-$footerHeight: 300px;
+$footerHeight: 350px;
 
 $header: $darkGrey;
 $backgroundOdd: $niceGrey;
@@ -18,3 +18,17 @@ $backgroundEven: white;
 $backgroundEducation: lighten($darkGrey, 5%);
 $mainText: darken($carbon, 30%);
 $subText: $carbon;
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexboxJustify($just) {
+  @include flexbox();
+  -webkit-justify-content: $just;
+  justify-content: $just;
+}
