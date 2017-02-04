@@ -1,14 +1,13 @@
 @import '../constants.scss';
 
-$linkHover: lighten($carbon, 80%);
 $link: $carbon;
 
 .footer-root {
+  @include flexboxJustify(space-around);
   position: relative;
   width: 100%;
   background-color: $header;
   height: $footerHeight;
-  @include flexboxJustify(space-around);
   flex-direction: column;
   >div, >h3 {
     width: 100%;
@@ -34,9 +33,7 @@ $link: $carbon;
     }
   }
   .footer.social-area {
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
+    @include flexboxJustify(center);
     a {
       margin: 0 3px;
     }

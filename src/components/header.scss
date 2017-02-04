@@ -1,30 +1,24 @@
 @import '../constants.scss';
 
 $headerColor: lighten($carbon, 20%);
-$headerColorHover: lighten($carbon, 80%);
 
 .header-root {
-  opacity: 0.93;
   position: fixed;
-  width: 100%;
-  background-color: $header;
-  height: $headerHeight;
-  line-height: 49px;
   top: 0;
   left: 0;
+  width: 100%;
+  height: $headerHeight;
+  opacity: 0.93;
+  background-color: $header;
+  line-height: 49px;
   z-index: 100;
   svg {
-    height: 32px;
+    @include absoluteAuto();
     width: 32px;
+    height: 32px;
     color: $carbon;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
     &:hover {
-      color: $headerColorHover;
+      color: $linkHover;
     }
   }
   .github-container {
@@ -35,22 +29,17 @@ $headerColorHover: lighten($carbon, 80%);
     float: right;
     padding-right: 50px;
     .github {
+      @include absoluteAuto();
       height: 32px;
       width: 32px;
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
       cursor: pointer;
     }
   }
 }
 
 .header-elem {
-  color: $headerColor;
   display: inline-block;
+  color: $headerColor;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Open Sans", "Helvetica Neue", "Ubuntu", sans-serif;
   margin: auto;
   vertical-align: middle;
@@ -60,7 +49,7 @@ $headerColorHover: lighten($carbon, 80%);
   font-weight: bold;
   font-size: 16px;
   &:hover {
-    color: $headerColorHover;
+    color: $linkHover;
     background-color: lighten($header, 10%);
   }
 }

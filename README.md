@@ -28,6 +28,8 @@
  * change tag cloud font (need to check)
  * change main pic
  * align job icons
+ * scroll to top on back
+ * header flash at beginning (I think its the background color)
   
 ## Less Important TODOs
  * Check TODOs in code
