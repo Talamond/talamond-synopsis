@@ -2,8 +2,8 @@ import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import {BlogEntry} from './blogEntry.js';
 import './blogSelector.scss';
-import { browserHistory } from 'react-router';
 import { NAVIGATION } from '../../constants/navigation.js';
+import {navigate} from '../../utils/navHelper.js';
 
 export class BlogSelector extends React.Component {
 
@@ -15,9 +15,8 @@ export class BlogSelector extends React.Component {
     selectBlog: PropTypes.func
   };
 
-  // TODO what if I'm holding ctrl?
-  onReadMore(path) {
-    browserHistory.push(`${NAVIGATION.BLOG.PATH}${path}`);
+  onReadMore(path, e) {
+    navigate(e, `${NAVIGATION.BLOG.PATH}${path}`);
   }
 
   renderBlogs() {
@@ -26,7 +25,7 @@ export class BlogSelector extends React.Component {
       blogElems.push(<BlogEntry title={blog.title}
                                 summary={blog.summary}
                                 date={blog.date}
-                                readMoreAction={() => this.onReadMore(blog.path)}/>);
+                                readMoreAction={(e) => this.onReadMore(blog.path, e)}/>);
     });
     return blogElems;
   }

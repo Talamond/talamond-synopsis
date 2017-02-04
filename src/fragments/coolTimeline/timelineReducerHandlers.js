@@ -1,11 +1,7 @@
 import * as TimelineActionTypes from './timelineActionTypes.js';
-import moment from 'moment';
 import * as ReducerHelper from '../../utils/reducerHelper';
 import _ from 'lodash';
-import {getTagCloudPrefix} from './timelineHelper.js';
 
-const format = 'YYYY-MM-DD';
-const displayedMonths = 3;
 
 const fragments = {
 };

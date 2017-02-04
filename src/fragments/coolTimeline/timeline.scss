@@ -1,7 +1,5 @@
 @import '../../constants.scss';
 
-
-
 $timeline-elem-padding: 300px;
 .cool-timeline-root {
   position: relative;
@@ -11,7 +9,7 @@ $timeline-elem-padding: 300px;
   }
 
   .timeline.details {
-    @include flexboxJustify(space-around)
+    @include flexboxJustify(space-around);
     flex-direction: column;
     height: 100%;
     .detail:first-child {

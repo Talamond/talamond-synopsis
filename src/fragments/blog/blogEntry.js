@@ -8,7 +8,7 @@ export const BlogEntry = ({title, summary, date, readMoreAction}) =>
     <ProfileTile date={date}/>
     <div className="blog-entry title">{title}</div>
     <div className="blog-entry summary">{summary}</div>
-    <div className="blog-entry show-more" onClick={() => readMoreAction()}>
+    <div className="blog-entry show-more" onClick={(e) => readMoreAction(e)}>
       <span>Read More</span>
       <svg>
         <use xlinkHref={arrow}/>

@@ -47,7 +47,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
     }
 
     componentWillMount() {
-      this.props.fetchData(selectState);
+      this.props.fetchData();
     }
 
     renderEducation(elem) {
