@@ -31,6 +31,8 @@
  * scroll to top on back
  * header flash at beginning (I think its the background color)
  * css media query refactor
+ * add copyright on footer
+ * smaller phones are a bit messed up
   
 ## Less Important TODOs
  * Check TODOs in code

@@ -1,3 +1,4 @@
+// Constants
 $sky: #caebf2;
 $carbon: #a9a9a9;
 $watermelon: #ff3b3f;
@@ -19,7 +20,12 @@ $backgroundEven: white;
 $backgroundEducation: lighten($darkGrey, 5%);
 $mainText: darken($carbon, 30%);
 $subText: $carbon;
+$phoneMinWidth: 320px;
+$padMinWidth: 480px;
+$desktopMinWidth: 768px;
 
+
+// Handy Mixins
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -47,6 +53,25 @@ $subText: $carbon;
   margin: auto;
 }
 
+@mixin mobile {
+  @media (min-width: #{$phoneMinWidth}) and (max-width: #{$padMinWidth - 1px}) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (min-width: #{$padMinWidth}) and (max-width: #{$desktopMinWidth - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktopMinWidth}) {
+    @content;
+  }
+}
+
+// Animations
 @-moz-keyframes grow {
   0% { -moz-transform: scale(0.1); }
   50% { -moz-transform: scale(1.2); }

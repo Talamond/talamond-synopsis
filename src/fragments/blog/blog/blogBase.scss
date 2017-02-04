@@ -11,25 +11,25 @@ $edgePaddingMobile: 10px;
   }
   .blog-base.back-area {
 
-    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+    @include mobile {
       margin: 0 0 10px $edgePaddingMobile;
     }
-    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+    @include pad {
       margin: 0 0 10px $edgePadding;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+    @include desktop {
       margin: 0 0 10px $edgePadding;
     }
   }
   .blog-base.next-area {
 
-    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+    @include mobile {
       margin: 0 $edgePaddingMobile 10px 0;
     }
-    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+    @include pad {
       margin: 0 $edgePadding 10px 0;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+    @include desktop {
       margin: 0 $edgePadding 10px 0;
     }
   }
@@ -51,23 +51,18 @@ $edgePaddingMobile: 10px;
   }
   .blog-base.title-area, .blog-base.content {
 
-    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+    @include mobile {
       margin: 0 $edgePaddingMobile;
     }
-    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+    @include pad {
       margin: 0 $edgePadding;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+    @include desktop {
       margin: 0 $edgePadding;
     }
   }
   .blog-base.next-area, .blog-base.back-area {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
+    @include flexbox();
     align-items: center;
     cursor: pointer;
     color: $mainText;
@@ -76,14 +71,7 @@ $edgePaddingMobile: 10px;
     }
   }
   .blog-base.navigation {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    @include flexboxJustify(space-between);
     align-items: center;
     padding: 60px 0 30px 0;
   }

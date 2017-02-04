@@ -1,5 +1,3 @@
-// Polyfills must be imported first!
-// import 'babel-polyfill';
 import React from 'react';
 import * as ReactDOM from 'react-dom';
 import { store } from './store';

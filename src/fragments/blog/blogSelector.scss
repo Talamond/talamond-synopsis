@@ -4,13 +4,13 @@
   background-color: $backgroundOdd;
   position: relative;
   padding: 30px 100px;
-  @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+  @include mobile {
     padding: 30px 10px;
   }
-  @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+  @include pad {
     padding: 30px 100px;
   }
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+  @include desktop {
     padding: 30px 100px;
   }
 }

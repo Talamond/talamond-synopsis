@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Redirect, IndexRoute} from 'react-router';
+import {Route, IndexRoute} from 'react-router';
 import AppContentContainer from './containers/appContentContainer.js';
 import {TimelineContainer}  from './containers/timelineContainer.js';
 import {BlogContainer}  from './containers/blogContainer.js';

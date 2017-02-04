@@ -21,13 +21,13 @@ $timeline-elem-padding: 300px;
       color: $mainText;
       font-style: italic;
       text-align: center;
-      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      @include mobile {
         font-size: 15px;
       }
-      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      @include pad {
         font-size: 22px;
       }
-      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      @include desktop {
         font-size: 22px;
       }
     }
@@ -62,16 +62,16 @@ $timeline-elem-padding: 300px;
 
     .bigImage {
       @include absoluteAuto();
-      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      @include mobile {
         height: 100px;
         width: 100px;
         top: 75px;
       }
-      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      @inclide pad {
         height: 200px;
         width: 200px;
       }
-      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      @include desktop {
         height: 200px;
         width: 200px;
       }
@@ -101,13 +101,13 @@ $timeline-elem-padding: 300px;
     margin: 0 auto;
     border-radius: 50%;
     width: 25vw;
-    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+    @include mobile {
       border: 2px solid $neutral;
     }
-    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+    @include pad {
       border: 3px solid $neutral;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+    @include desktop {
       border: 5px solid $neutral;
     }
   }
@@ -123,13 +123,13 @@ $timeline-elem-padding: 300px;
   .timeline-elem-outer {
     padding-right: 8vw;
     padding-left: 8vw;
-    @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+    @include mobile {
       height: 450px;
     }
-    @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+    @include pad {
       height: 550px;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+    @include desktop {
       height: 650px;
     }
     &.even {
@@ -173,15 +173,15 @@ $timeline-elem-padding: 300px;
     .tabArea-root {
       position: absolute;
       display: inline-block;
-      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      @include mobile {
         width: 300px;
         height: 300px;
       }
-      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      @include pad {
         width: 600px;
         height: 450px;
       }
-      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      @include desktop {
         width: 600px;
         height: 450px;
       }
@@ -189,7 +189,7 @@ $timeline-elem-padding: 300px;
       right: 0;
       .tab-content {
         position: relative;
-        @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+        @include mobile {
           height: 280px;
         }
         .description {
@@ -207,15 +207,15 @@ $timeline-elem-padding: 300px;
       }
     }
     &.education {
-      @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+      @include mobile {
         margin-top: 10px;
         height: 200px;
       }
-      @media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+      @include pad {
         margin-top: 15px;
         height: 350px;
       }
-      @media only screen and (min-device-width : 768px) and (max-device-width : 1999px) {
+      @include desktop {
         margin-top: 20px;
         height: 350px;
       }
