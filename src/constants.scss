@@ -73,20 +73,55 @@ $subText: $carbon;
     transform: translateX(0px);
   }
 }
+@-moz-keyframes slideIn {
+  0% { right: -700px; }
+  100% { right: 0; }
+}
+
+@-webkit-keyframes slideIn {
+  0% { right: -700px; }
+  100% { right: 0; }
+}
+
+@keyframes slideIn {
+  0% { right: -700px; }
+  100% { right: 0; }
+}
 
 @keyframes fadein {
-  from {opacity: 0.1;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+    transform: translate3d(0px, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
 }
 
 @-moz-keyframes fadein {
-  from {opacity: 0.1;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+    transform: translate3d(0px, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
 }
 
 @-webkit-keyframes fadein {
-  from {opacity: 0.1;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+    transform: translate3d(0px, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
 }
 
 @-moz-keyframes spin {

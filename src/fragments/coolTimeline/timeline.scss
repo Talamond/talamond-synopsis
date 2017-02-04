@@ -1,31 +1,6 @@
 @import '../../constants.scss';
 
-@-moz-keyframes slideIn {
-  0% { right: -700px; }
-  100% { right: 0; }
-}
 
-@-webkit-keyframes slideIn {
-  0% { right: -700px; }
-  100% { right: 0; }
-}
-
-@keyframes slideIn {
-  0% { right: -700px; }
-  100% { right: 0; }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translate3d(0px, -20px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0);
-  }
-}
 
 $timeline-elem-padding: 300px;
 .cool-timeline-root {
@@ -36,23 +11,14 @@ $timeline-elem-padding: 300px;
   }
 
   .timeline.details {
-    height: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
+    @include flexboxJustify(space-around)
     flex-direction: column;
+    height: 100%;
     .detail:first-child {
       padding-top: 10px;
     }
     .timeline.detail {
-      // This slides into right 0 position with slideIn animation
       position: relative;
-      //right: -700px;
       opacity: 0;
       color: $mainText;
       font-style: italic;
@@ -97,12 +63,7 @@ $timeline-elem-padding: 300px;
     }
 
     .bigImage {
-      position: absolute;
-      margin: auto;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
+      @include absoluteAuto();
       @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
         height: 100px;
         width: 100px;
@@ -125,9 +86,9 @@ $timeline-elem-padding: 300px;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 50%;
-    width: 100%;
     top: 10vh;
+    width: 100%;
+    border-radius: 50%;
   }
 
   .timeline.jonwrapper {
@@ -139,8 +100,8 @@ $timeline-elem-padding: 300px;
     position: absolute;
     right: 0;
     left: 0;
-    border-radius: 50%;
     margin: 0 auto;
+    border-radius: 50%;
     width: 25vw;
     @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
       border: 2px solid $neutral;
@@ -284,31 +245,4 @@ $timeline-elem-padding: 300px;
     color: $subText;
     padding: 0 10px;
   }
-}
-
-.example-enter {
-  opacity: 0.01;
-  transition: opacity 5s ease-in;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-}
-
-.example-leave {
-  opacity: 1;
-  transition: opacity 5s ease-in;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-}
-
-.example-appear {
-  opacity: 0.01;
-  transition: opacity 5s ease-in;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
 }

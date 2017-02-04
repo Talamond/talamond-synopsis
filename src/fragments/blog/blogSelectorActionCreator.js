@@ -1,7 +1,7 @@
 export function createActionCreators(actionTypes) {
 
-  // In real scenario, this would be a special action redux-api-middleware
-  function selectBlog() { // TODO this is weird...
+  // Turns out I didn't use this action
+  function selectBlog() {
     return {
       type: actionTypes.SELECT_BLOG,
       payload: {}

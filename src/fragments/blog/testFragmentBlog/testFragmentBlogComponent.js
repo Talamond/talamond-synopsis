@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import {BlogBase} from '../blog/blogBaseComponent.js';
-import {browserHistory} from 'react-router'; // this needs to be imported because BlogBase uses it
-import arrow from '../../../assets/images/arrow.svg';
+import {browserHistory} from 'react-router'; // this needs to be imported because BlogBase uses it... that kinda sucks
 
 // TODO for some reason browserHistory isn't working...
 

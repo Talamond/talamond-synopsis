@@ -8,6 +8,7 @@ export const initialState = {
   selectedBlog: null
 };
 
+// todo immutable
 /* eslint-disable no-param-reassign */ // the newState is passed in to avoid having to create a new state on each function
 export const createHandlers = (prefix) => {
   const actionTypes = createActionTypes(prefix);

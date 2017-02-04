@@ -30,6 +30,7 @@
  * align job icons
  * scroll to top on back
  * header flash at beginning (I think its the background color)
+ * css media query refactor
   
 ## Less Important TODOs
  * Check TODOs in code
