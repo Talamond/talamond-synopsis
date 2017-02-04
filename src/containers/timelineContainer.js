@@ -15,8 +15,7 @@ export class TimelineContainer extends React.Component {
 		routeParams: PropTypes.object,
 		routes: PropTypes.array,
 
-		timeline: PropTypes.object,
-    mainData: PropTypes.object
+		timeline: PropTypes.object
 	};
 
 	componentWillMount() {

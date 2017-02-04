@@ -47,16 +47,16 @@ export class BlogContainer extends React.Component {
     if (index < blogs.length - 1) {
       prevBlog = blogs[index + 1];
     }
-    if (blog.id === 'fragment') {
+    if (blog.id === blogs[3].id) {
       return <FragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
-    } else if (blog.id === 'testingFragment') {
+    } else if (blog.id === blogs[2].id) {
       return <TestFragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
-    } else if (blog.id === 'talamond-synopsis') {
+    } else if (blog.id === blogs[1].id) {
       return <WebsiteBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
-    } else if (blog.id === 'about-me') {
+    } else if (blog.id === blogs[0].id) {
       return <AboutMeBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
     }
-    return <BlogSelectorFrag blogs={this.props.blog.blogs}/>;
+    return <BlogSelectorFrag blogs={blogs}/>;
   }
 
   render() {
@@ -65,7 +65,7 @@ export class BlogContainer extends React.Component {
     const BlogSelectorFrag = this.BlogSelectorFrag;
     const {location: {pathname}, blog: {blogs}} = this.props;
     if (pathname === NAVIGATION.BLOG.PATH) {
-      return <BlogSelectorFrag blogs={this.props.blog.blogs}/>;
+      return <BlogSelectorFrag blogs={blogs}/>;
     }
     for (let i = 0; i < blogs.length; i++) {
       const blog = blogs[i];
@@ -75,7 +75,7 @@ export class BlogContainer extends React.Component {
     }
 
     return (
-      <BlogSelectorFrag blogs={this.props.blog.blogs}/>
+      <BlogSelectorFrag blogs={blogs}/>
     );
   }
 }
