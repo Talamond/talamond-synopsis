@@ -24,25 +24,25 @@ const state = {
         title: NAVIGATION.BLOG.ABOUT_ME.TITLE,
         path: NAVIGATION.BLOG.ABOUT_ME.PATH,
         summary: 'Learn a bit about me',
-        date: createDate('2017-03-08')
+        date: createDate('2017-02-01')
       }, {
         id: 'talamond-synopsis',
         title: NAVIGATION.BLOG.SYNOPSIS.TITLE,
         path: NAVIGATION.BLOG.SYNOPSIS.PATH,
         summary: 'Learn the cogs and gears behind this website',
-        date: createDate('2017-02-08')
+        date: createDate('2017-01-31')
       }, {
         id: 'testingFragment',
         title: NAVIGATION.BLOG.TESTING_FRAGMENT.TITLE,
         path: NAVIGATION.BLOG.TESTING_FRAGMENT.PATH,
         summary: 'Learn stratageies on testing redux-fragments',
-        date: createDate('2017-02-07')
+        date: createDate('2017-01-28')
       }, {
         id: 'fragment',
         title: NAVIGATION.BLOG.FRAGMENT.TITLE,
         path: NAVIGATION.BLOG.FRAGMENT.PATH,
         summary: 'Learn about redux-fragments and how they might help shape your web application',
-        date: createDate('2017-01-29')
+        date: createDate('2017-01-27')
       }
     ]
   }

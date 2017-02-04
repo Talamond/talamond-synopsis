@@ -30,7 +30,8 @@ export class D3TagCloud extends React.Component {
       .style("font-size", function (d) {
         return d.size + "px";
       })
-      .style("font-family", "Impact")
+      .style("font-family", "HelveticaNeue-CondensedBlack")
+      .style("font-weight", "bold")
       .style("fill", function (d, i) {
         if (color) {
           return color;
@@ -53,7 +54,7 @@ export class D3TagCloud extends React.Component {
       .words(words)
       .padding(0)
       .rotate(() => (Math.random() * degrees))
-      .font("Impact")
+      .font("HelveticaNeue-CondensedBlack")
       .fontSize(function (d) {
         return d.size;
       })

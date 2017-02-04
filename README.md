@@ -23,14 +23,14 @@
  * Favicon
  * plug redux-fragment in (low)
  * job svgs transparent backgrounds
- * Check TODOs in code
- * React warnings (still a couple
+ * React warnings (still a couple)
  * footer, to learn about website, checkout my blog
  * try arrow down "scroll to learn more"
  * summary of qualifcations (low)
  * change tag cloud font (sucks on mobile)
   
 ## Less Important TODOs
+ * Check TODOs in code
  * Verify Production Build (low)
  * remove unused images
  * Contact Form (medium)
