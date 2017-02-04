@@ -24,13 +24,12 @@
  * plug redux-fragment in (low)
  * job svgs transparent backgrounds
  * React warnings (still a couple)
- * footer, to learn about website, checkout my blog
+ * footer, to learn about website, checkout my blog (could look better)
  * change tag cloud font (need to check)
  * change main pic
  * align job icons
  * scroll to top on back
  * header flash at beginning (I think its the background color)
- * css media query refactor
  * add copyright on footer
  * smaller phones are a bit messed up
   
@@ -39,6 +38,3 @@
  * Verify Production Build (low)
  * remove unused images
  * Contact Form (medium)
- * CSS refactor (medium)
-  * Clean CSS centering with mixins
-  * CSS animations in one file
