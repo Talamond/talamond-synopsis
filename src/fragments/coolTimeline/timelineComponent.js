@@ -39,12 +39,32 @@ export function createTimelineComponent(selectState, prefix, urls) {
       changeDimensions: PropTypes.func
     };
 
+    // orientationchange seems unrealiable, do some additional checks to help it be right
+    onOrientationChange() {
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      if (window.matchMedia("(orientation: portrait)").matches) {
+        // if I'm in potrait, use the smaller of width/height for width
+        if (height < width) {
+          width = window.innerHeight;
+          height = window.innerWidth;
+        }
+      } else if (window.matchMedia("(orientation: landscape)").matches) {
+        // if I'm in landscape, use the larger of width/height for width
+        if (height > width) {
+          width = window.innerHeight;
+          height = window.innerWidth;
+        }
+      }
+      this.props.changeDimensions(width, height);
+    }
+
     // listen to window resize and force an update so the tag clouds will redraw their proper size relative to the windows
     // as well as anything else.
     // If mobile, it will only do it when you rotate your phone
     componentDidMount() {
       if (checkDeviceSize() === 'mobile') {
-        window.addEventListener('orientationchange', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+        window.addEventListener('orientationchange', () => this.onOrientationChange());
       } else {
         window.addEventListener('resize', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
       }
@@ -52,7 +72,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
 
     componentWillUnmount() {
       if (checkDeviceSize() === 'mobile') {
-        window.removeEventListener('orientationchange', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+        window.removeEventListener('orientationchange', () => this.onOrientationChange());
       } else {
         window.removeEventListener('resize', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
       }

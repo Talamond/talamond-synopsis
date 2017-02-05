@@ -24,12 +24,12 @@
  
 ## Bugs
  * When pressing browser back, the scroll position isn't what you would expect
- * Content loads in undesirable order
- * mobile tag cloud renders on some devices when the browser header disappears
+ * Content loads in undesirable order (the placeholder image is still too big?)
  * Some React warnings
  * Production build doesn't use production React
- * Website doesn't work well on medium size devices such as tablets
- * 320px phones have cut off content
  * job logos are not aligned
  * P in sql power doesn't look quite right
- 
+ * some medium lengths the tab buttons go too far down
+ * mobile oritention change doesnt resize tag cloud
+ * landscape phone kinda messed up
+ * footer ugly on phone
