@@ -190,17 +190,15 @@ $timeline-elem-padding: 300px;
 
       //right: 0;
       .tab-content {
+        @include flexboxJustify(space-around);
         position: relative;
         @include mobile {
           height: 280px;
         }
         .description {
-          position: absolute;
           color: $mainText;
           font-style: italic;
           text-align: center;
-          bottom: 0;
-          padding-bottom: 30px;
         }
       }
       .tagcloud-root {

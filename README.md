@@ -30,7 +30,6 @@
  * Production build doesn't use production React
  * Website doesn't work well on medium size devices such as tablets
  * 320px phones have cut off content
- * small description texts are not vertically aligned
  * job logos are not aligned
  * P in sql power doesn't look quite right
  
