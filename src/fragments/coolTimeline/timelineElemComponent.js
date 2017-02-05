@@ -7,17 +7,22 @@ import _ from 'lodash';
 import { toString } from '../../utils/dateHelper.js';
 import OnVisible from 'react-on-visible';
 
+const NO_IMAGE_WIDTH = 1100;
+
 export class TimelineElem extends Component {
   static propTypes = {
     timelineElem: PropTypes.object, // TODO shape
     selectedTab: PropTypes.number,
     onTabSelect: PropTypes.func,
+    windowWidth: PropTypes.number,
     className: PropTypes.string
   };
 
   renderImage(timelineElem) {
-    let image = <img src={timelineElem.image} className={this.props.className} />;
-    return <Responsive mobile={<div></div>} pad={image} desktop={image} />;
+    if (this.props.windowWidth < NO_IMAGE_WIDTH) {
+      return null;
+    }
+    return <img src={timelineElem.image} className={this.props.className} />;
   }
 
   renderDetails(timelineElem) {
@@ -34,9 +39,9 @@ export class TimelineElem extends Component {
   }
 
   renderSkills(timelineElem) {
-    const mobile = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={280} width={280} factor={1.5}/>;
-    const pad = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
-    const desktop = <TagCloud id={timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
+    const mobile = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={280} width={280} factor={1.5}/>;
+    const pad = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
+    const desktop = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
     return <Responsive mobile={mobile} pad={pad} desktop={desktop} />;
   }
 

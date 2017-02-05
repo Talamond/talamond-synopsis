@@ -1,7 +1,6 @@
 # timeline
 
 ## TODOs
- * Responsive iPads(low)
  * Blogs (low)
   * fragments
   * testing fragments   
@@ -16,21 +15,22 @@
           * Features
         * RAG
  * Review Text (job descriptions) (medium)
- * plug redux-fragment in (low)
- * job svgs transparent backgrounds
- * React warnings (still a couple)
- * footer, to learn about website, checkout my blog (could look better)
- * mobile tag cloud keeps rerendering
  * change main pic
- * align job icons
- * scroll to top on back
- * header flash at beginning (I think its the background color)
- * add copyright on footer
- * smaller phones are a bit messed up
- * P in sql power is weird looking
   
 ## Less Important TODOs
  * Check TODOs in code
- * Verify Production Build (low)
- * remove unused images
  * Contact Form (medium)
+ * plug redux-fragment in (_.cloneDeep is messed up in prod build somehow...)
+ 
+## Bugs
+ * When pressing browser back, the scroll position isn't what you would expect
+ * Content loads in undesirable order
+ * mobile tag cloud renders on some devices when the browser header disappears
+ * Some React warnings
+ * Production build doesn't use production React
+ * Website doesn't work well on medium size devices such as tablets
+ * 320px phones have cut off content
+ * small description texts are not vertically aligned
+ * job logos are not aligned
+ * P in sql power doesn't look quite right
+ 

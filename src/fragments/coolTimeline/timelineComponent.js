@@ -10,10 +10,13 @@ import {Responsive, checkDeviceSize} from '../../components/standardQuery.js';
 import ProgressiveImage from 'react-progressive-image';
 import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
 import bannerHolder from '../../assets/images/Forest-in-greyscale-small.jpg';
+
+// TODO these are named backwards
 import schoolImg from '../../assets/images/UW_Building-full.jpg';
 import schoolHolder from '../../assets/images/UW_Building-small-full.jpg';
 import schoolImgMobile from '../../assets/images/UW_Building-mobile.jpg';
 import schoolHolderMobile from '../../assets/images/UW_Building-small-mobile.jpg';
+
 import jon from '../../assets/images/me.jpeg';
 import cn from 'classnames';
 import { toString } from '../../utils/dateHelper.js';
@@ -37,13 +40,22 @@ export function createTimelineComponent(selectState, prefix, urls) {
     };
 
     // listen to window resize and force an update so the tag clouds will redraw their proper size relative to the windows
-    // as well as anything else
+    // as well as anything else.
+    // If mobile, it will only do it when you rotate your phone
     componentDidMount() {
-      window.addEventListener("resize", () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+      if (checkDeviceSize() === 'mobile') {
+        window.addEventListener('orientationchange', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+      } else {
+        window.addEventListener('resize', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+      }
     }
 
     componentWillUnmount() {
-      window.removeEventListener("resize", () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+      if (checkDeviceSize() === 'mobile') {
+        window.removeEventListener('orientationchange', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+      } else {
+        window.removeEventListener('resize', () => this.props.changeDimensions(window.innerWidth, window.innerHeight));
+      }
     }
 
     componentWillMount() {
@@ -53,11 +65,11 @@ export function createTimelineComponent(selectState, prefix, urls) {
     renderEducation(elem) {
       let schoolImage, schoolImageSmall;
       if (checkDeviceSize() === 'mobile') {
-        schoolImage = schoolImgMobile;
-        schoolImageSmall = schoolHolderMobile;
-      } else {
         schoolImage = schoolImg;
         schoolImageSmall = schoolHolder;
+      } else {
+        schoolImage = schoolImgMobile;
+        schoolImageSmall = schoolHolderMobile;
       }
       return (
         <div className="timeline education">
@@ -84,7 +96,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
     }
 
     renderTimelines() {
-      const {timeline: {timelineElements, selectedTabs}, selectTab} = this.props;
+      const {timeline: {timelineElements, selectedTabs, summaryWidth}, selectTab} = this.props;
       const elems = [];
       _.forEach(timelineElements, (elem, index) => {
         let className = index % 2 ? 'odd' : 'even';
@@ -95,7 +107,9 @@ export function createTimelineComponent(selectState, prefix, urls) {
                                    timelineElem={elem}
                                    onTabSelect={selectTab}
                                    selectedTab={selectedTabs[elem.id]}
-                                   className={className}/>);
+                                   className={className}
+                                   windowWidth={summaryWidth}
+          />);
         }
       });
       return elems;

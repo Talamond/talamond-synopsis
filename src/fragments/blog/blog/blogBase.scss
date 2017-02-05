@@ -1,7 +1,6 @@
 @import '../../../constants.scss';
 
-$edgePadding: 300px;
-$edgePaddingMobile: 10px;
+$edgePadding: 10vw;
 
 .blog-base-root {
   background-color: $backgroundEven;
@@ -10,28 +9,10 @@ $edgePaddingMobile: 10px;
     width: 48px;
   }
   .blog-base.back-area {
-
-    @include mobile {
-      margin: 0 0 10px $edgePaddingMobile;
-    }
-    @include pad {
-      margin: 0 0 10px $edgePadding;
-    }
-    @include desktop {
-      margin: 0 0 10px $edgePadding;
-    }
+    margin: 0 0 10px $edgePadding;
   }
   .blog-base.next-area {
-
-    @include mobile {
-      margin: 0 $edgePaddingMobile 10px 0;
-    }
-    @include pad {
-      margin: 0 $edgePadding 10px 0;
-    }
-    @include desktop {
-      margin: 0 $edgePadding 10px 0;
-    }
+    margin: 0 $edgePadding 10px 0;
   }
   .blog-base.back-area svg {
     transform: rotate(180deg);
@@ -50,16 +31,7 @@ $edgePaddingMobile: 10px;
     padding: 20px 0 10px 0;
   }
   .blog-base.title-area, .blog-base.content {
-
-    @include mobile {
-      margin: 0 $edgePaddingMobile;
-    }
-    @include pad {
-      margin: 0 $edgePadding;
-    }
-    @include desktop {
-      margin: 0 $edgePadding;
-    }
+    margin: 0 $edgePadding;
   }
   .blog-base.next-area, .blog-base.back-area {
     @include flexbox();

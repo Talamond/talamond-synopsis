@@ -8,7 +8,7 @@ import cn from 'classnames';
 export class TagCloud extends React.Component {
 
   static propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.string,
     data: PropTypes.array,
     width: PropTypes.number,
     height: PropTypes.number,

@@ -121,8 +121,8 @@ $timeline-elem-padding: 300px;
     font-weight: 200;
   }
   .timeline-elem-outer {
-    padding-right: 8vw;
-    padding-left: 8vw;
+    padding-right: 6vw;
+    padding-left: 6vw;
     @include mobile {
       height: 450px;
     }
@@ -158,21 +158,23 @@ $timeline-elem-padding: 300px;
   }
 
   .timeline-elem-wrapper {
-    margin: auto;
+    @include flexboxJustify(space-around);
+    //margin: auto;
     height: 500px;
-    position: relative;
-    padding: 0;
+    //position: relative;
+    //padding: 0;
     img {
       width: 300px;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
+      margin: auto 0;
+      //margin: auto;
+      //position: absolute;
+      //top: 0;
+      //bottom: 0;
+      //left: 0;
     }
     .tabArea-root {
-      position: absolute;
-      display: inline-block;
+      //position: absolute;
+      //display: inline-block;
       @include mobile {
         width: 300px;
         height: 300px;
@@ -186,7 +188,7 @@ $timeline-elem-padding: 300px;
         height: 450px;
       }
 
-      right: 0;
+      //right: 0;
       .tab-content {
         position: relative;
         @include mobile {
