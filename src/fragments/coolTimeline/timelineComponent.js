@@ -6,7 +6,7 @@ import {TimelineElem} from './timelineElemComponent.js';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import _ from 'lodash';
 import './timeline.scss';
-import {Responsive, checkDeviceSize} from '../../components/standardQuery.js';
+import {Responsive, checkDeviceSize} from '../../components/responsiveComponent.js';
 import ProgressiveImage from 'react-progressive-image';
 import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
 import bannerHolder from '../../assets/images/Forest-in-greyscale-small.jpg';
@@ -91,26 +91,32 @@ export function createTimelineComponent(selectState, prefix, urls) {
         schoolImage = schoolImgMobile;
         schoolImageSmall = schoolHolderMobile;
       }
+      const smallEdu = (
+        <div className="timeline education-title">
+          <h1 className="job-title">Computer Science</h1>
+          <h3 className="start-end-dates">{toString(elem.startDate)} - {toString(elem.endDate)}</h3>
+          <div className="timeline education-image-container">
+            <img src={elem.image} className={cn('bigImage')} />
+          </div>
+        </div>
+      );
+      const largeEdu = (
+        <div className="timeline education-title">
+          <h1 className="job-title">{elem.title}</h1>
+          <h2 className="employer">{elem.subTitle}</h2>
+          <h2 className="employer">{elem.employer}</h2>
+          <h3 className="start-end-dates">{toString(elem.startDate)} - {toString(elem.endDate)}</h3>
+          <div className="timeline education-image-container">
+            <img src={elem.image} className={cn('bigImage')} />
+          </div>
+        </div>
+      );
       return (
-        <div className="timeline education">
+        <div key="education" className="timeline education">
           <ProgressiveImage src={schoolImage} placeholder={schoolImageSmall}>
             {(src) => <img src={src} alt='an image of UW campus'/>}
           </ProgressiveImage>
-          <Responsive className="timeline education-title" mobile={
-            <div className="timeline education-title">
-              <h1 className="job-title">Computer Science</h1>
-              <h3 className="start-end-dates">{toString(elem.startDate)} - {toString(elem.endDate)}</h3>
-              <img src={elem.image} className={cn('bigImage')} />
-            </div>
-          } desktop={
-            <div className="timeline education-title">
-              <h1 className="job-title">{elem.title}</h1>
-              <h2 className="employer">{elem.subTitle}</h2>
-              <h2 className="employer">{elem.employer}</h2>
-              <h3 className="start-end-dates">{toString(elem.startDate)} - {toString(elem.endDate)}</h3>
-              <img src={elem.image} className={cn('bigImage')} />
-            </div>
-          }/>
+          <Responsive className="timeline education-title" mobile={smallEdu} pad={smallEdu} desktop={largeEdu}/>
         </div>
       );
     }

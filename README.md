@@ -13,12 +13,12 @@
         * This website
           * Features
         * RAG
- * Review Text (job descriptions) (medium)
+ * Review Text (job descriptions, blogs, resume) (medium)
  * change main pic
   
 ## Less Important TODOs
  * Check TODOs in code
- * plug redux-fragment in (_.cloneDeep is messed up in prod build somehow...)
+ * plug redux-fragment in (_.cloneDeep is messed up in prod build somehow... doesnt like my dates)
  
 ## Bugs
  * When pressing browser back, the scroll position isn't what you would expect
@@ -27,4 +27,3 @@
  * Production build doesn't use production React
  * mobile oritention change doesnt resize tag cloud
  * landscape phone kinda messed up
- * At some widths, education doesnt look nice

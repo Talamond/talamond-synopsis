@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import cn from 'classnames';
 import {TagCloud} from '../../components/tagCloudComponent.js';
 import {TabArea} from '../../components/tabAreaComponent.js';
-import {Responsive, checkDeviceSize} from '../../components/standardQuery.js';
+import {Responsive, checkDeviceSize} from '../../components/responsiveComponent.js';
 import _ from 'lodash';
 import { toString } from '../../utils/dateHelper.js';
 import OnVisible from 'react-on-visible';
@@ -22,7 +22,7 @@ export class TimelineElem extends Component {
     if (this.props.windowWidth < NO_IMAGE_WIDTH) {
       return null;
     }
-    return <img src={timelineElem.image} className={`${this.props.className} ${this.props.timelineElem.id === 4 ? 'sql' : ''}`} />;
+    return <img key={`jobImage-${this.props.timelineElem.id}`} src={timelineElem.image} className={`${this.props.className} ${this.props.timelineElem.id === 4 ? 'sql' : ''}`} />;
   }
 
   renderDetails(timelineElem) {
@@ -78,7 +78,7 @@ export class TimelineElem extends Component {
     }
     return [
       this.renderImage(timelineElem),
-      <TabArea tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
+      <TabArea key={`tabArea-${this.props.timelineElem.id}`} tabContents={tabContents} className={className} selectedTab={selectedTab} onTabSelect={(tabIndex) => onTabSelect(timelineElem.id, tabIndex)}/>
     ];
   }
 
