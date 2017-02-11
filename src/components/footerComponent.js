@@ -44,7 +44,6 @@ export const Footer = ({footers}) =>
       </a>
     </div>
     <div className="footer about">
-      <Link to={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.SYNOPSIS.PATH}>About this site</Link>
       <Link to={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.ABOUT_ME.PATH}>About me</Link>
       <a href="/assets/JonathanSweetmanResume.pdf">View Resume</a>
     </div>

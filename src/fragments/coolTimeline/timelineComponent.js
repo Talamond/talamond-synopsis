@@ -13,9 +13,9 @@ import bannerHolder from '../../assets/images/Forest-in-greyscale-small.jpg';
 
 // TODO these are named backwards
 import schoolImg from '../../assets/images/UW_Building-full.jpg';
-import schoolHolder from '../../assets/images/UW_Building-small-full.jpg';
+import schoolHolder from '../../assets/images/UWSmall.jpg';
 import schoolImgMobile from '../../assets/images/UW_Building-mobile.jpg';
-import schoolHolderMobile from '../../assets/images/UW_Building-small-mobile.jpg';
+import schoolHolderMobile from '../../assets/images/UWsmallMobile.jpg';
 
 import jon from '../../assets/images/me.jpeg';
 import cn from 'classnames';

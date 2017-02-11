@@ -2,8 +2,7 @@
 
 ## TODOs
  * Blogs (low)
-  * fragments
-  * testing fragments   
+  * testing fragments   (samples)
   * react dos and donts
   * About me
     * Projects
@@ -19,15 +18,13 @@
   
 ## Less Important TODOs
  * Check TODOs in code
- * Contact Form (medium)
  * plug redux-fragment in (_.cloneDeep is messed up in prod build somehow...)
  
 ## Bugs
  * When pressing browser back, the scroll position isn't what you would expect
  * Content loads in undesirable order (the placeholder image is still too big?)
- * Sarah's new placeholders
  * Some React warnings
  * Production build doesn't use production React
  * mobile oritention change doesnt resize tag cloud
  * landscape phone kinda messed up
- * footer ugly on phone
+ * At some widths, education doesnt look nice
