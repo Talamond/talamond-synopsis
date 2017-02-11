@@ -25,6 +25,7 @@
 ## Bugs
  * When pressing browser back, the scroll position isn't what you would expect
  * Content loads in undesirable order (the placeholder image is still too big?)
+ * Sarah's new placeholders
  * Some React warnings
  * Production build doesn't use production React
  * job logos are not aligned

@@ -22,7 +22,7 @@ export class TimelineElem extends Component {
     if (this.props.windowWidth < NO_IMAGE_WIDTH) {
       return null;
     }
-    return <img src={timelineElem.image} className={this.props.className} />;
+    return <img src={timelineElem.image} className={`${this.props.className} ${this.props.timelineElem.id === 4 ? 'sql' : ''}`} />;
   }
 
   renderDetails(timelineElem) {

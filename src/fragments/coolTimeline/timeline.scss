@@ -123,15 +123,7 @@ $timeline-elem-padding: 300px;
   .timeline-elem-outer {
     padding-right: 6vw;
     padding-left: 6vw;
-    @include mobile {
-      height: 450px;
-    }
-    @include pad {
-      height: 550px;
-    }
-    @include desktop {
-      height: 650px;
-    }
+    padding-bottom: 40px;
     &.even {
       background-color: $backgroundEven;
     }
@@ -159,35 +151,28 @@ $timeline-elem-padding: 300px;
 
   .timeline-elem-wrapper {
     @include flexboxJustify(space-around);
-    //margin: auto;
-    height: 500px;
-    //position: relative;
-    //padding: 0;
     img {
       width: 300px;
       margin: auto 0;
-      //margin: auto;
-      //position: absolute;
-      //top: 0;
-      //bottom: 0;
-      //left: 0;
+    }
+    .sql {
+      // SQL power is id 4
+      height: 300px;
     }
     .tabArea-root {
-      //position: absolute;
-      //display: inline-block;
+
       @include mobile {
         width: 300px;
-        height: 300px;
+        height: 320px;
       }
       @include pad {
         width: 600px;
-        height: 450px;
+        height: 500px;
       }
       @include desktop {
         width: 600px;
-        height: 450px;
+        height: 500px;
       }
-
       //right: 0;
       .tab-content {
         @include flexboxJustify(space-around);
