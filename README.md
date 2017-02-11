@@ -28,9 +28,6 @@
  * Sarah's new placeholders
  * Some React warnings
  * Production build doesn't use production React
- * job logos are not aligned
- * P in sql power doesn't look quite right
- * some medium lengths the tab buttons go too far down
  * mobile oritention change doesnt resize tag cloud
  * landscape phone kinda messed up
  * footer ugly on phone
