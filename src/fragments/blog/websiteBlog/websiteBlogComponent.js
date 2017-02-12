@@ -12,7 +12,6 @@ export class WebsiteBlog extends BlogBase {
           overkill considering it is just a small site about me. I believe that this architecture is much better suited
           for large enterprise applications, but I wanted to demonstrate some techniques for creating more large scale
           applications. Let's go over the techniques used here that help create a performant and scalable website.
-          Please note, because I'm cheap, this website is just being hosted for free on github.
         </div>
 
         <div className="blog-base paragraph-title">Progressive image loading</div>
@@ -24,58 +23,48 @@ export class WebsiteBlog extends BlogBase {
           almost instantly) and then replace that image with the full resolution one when it arrives. The result is the
           users sees a blurred version of the original image for a couple seconds until the full one arrives.
           Implementing this on my website was trivial, I simply used this wonderful react progressive image loading
-          library react - progressive - image. Check it out here:
+          library <a href="https://github.com/FormidableLabs/react-progressive-image">react-progressive-image</a>.
         </div>
 
         <div className="blog-base paragraph-title">CSS Animations</div>
         <div className="blog-base paragraph">The timeline page makes use of some simple CSS animations. The trickery
           thing going on here is the animations are only being activated once they're scrolled into view (otherwise you
-          can't see them!). This library is figuring out for me when my object is bring scrolled into view, it really
+          can't see them!). This library <a href="https://github.com/dazld/react-on-visible">react-on-visible</a> is
+          figuring out for me when my object is bring scrolled into view, it really
           made it trivial for me to implement.
         </div>
 
-        <div className="blog-base paragraph-title">Tag Cloud</div>
-        <div className="blog-base paragraph">The tag clouds are drawn dynamically each time. There's some naive
-          algorithm going on behind the scenes that's calculates a font size for each word based off the total size of
-          the words. Go ahead a feel free to draw your own tag cloud below!
-        </div>
-
         <div className="blog-base paragraph-title">ES6</div>
-        <div className="blog-base paragraph">Creating a goof development environment for your company I'd key to the
-          happiness and productivity of your developers. Developers shouldn't have to be annoyed waiting long times.
-          Here we use JavaScriptECMA 6 (ES6) and jsx instead of version of 5. ES6 is not fully supported by by all
-          browsers yet (though we're getting very close! link), so during our build we have to convert our ES6 into ES5
-          using babel. Seems a bit silly at first, why would we want to do that? Using additional features from ES6 such
+        <div className="blog-base paragraph">Creating a good development environment for your company is key to the
+          happiness and productivity of your developers. Developers shouldn't have to be annoyed waiting long times and
+          painful to read code.
+          Here we use JavaScript ECMA2016 (ES6) and jsx instead of version of 5. ES6 is not fully supported by by all
+          browsers yet (though we're getting very close!), so during our build we have to convert our ES6 into ES5
+          using babel and webpack. Seems a bit silly at first, why would we want to do that? Using additional features from ES6 such
           as classes, import and export makes the code much cleaner. In my opinion this is the main reason to use ES6.
-          But now er have a problem, when we debug in the browser, our code is in that ugly ES5 state, arguably
-          unreadable! (see example)
-        </div>
-
-        <div className="blog-base paragraph">In comes webpack devtools, source mapping. simply add this one line to your
+          But now we have a problem, when we debug in the browser, our code is in that ugly ES5 state, arguably
+          unreadable! In comes webpack devtools, source mapping. Simply add this one line to your webpack
           build and you can also have source mapping which allows you to debug your code the same way you wrote it.
         </div>
 
         <div className="blog-base paragraph-title">DLLPlugin</div>
         <div className="blog-base paragraph">This is an amazing feature that I am often surprised is not included in
-          webpack boilerplates online (props to this boilerplate that helped me figure out how to do this link). Webpack
+          more webpack boilerplates. Webpack
           DLLPlugin and DLLReference can greatly improve build and rebuild performance. It works by making a separate
-          webpack build that builds just your vendors dependancies and then the main build refers to that when it
+          webpack build that builds just your vendor dependencies and then the main build refers to that when it
           builds, avoiding the huge vendor rebuild each time you run your code. Its best to your vendor build pull
-          directly from package.json dependancies object and its also convenient to run the vendor build on post install
+          directly from package.json dependencies object and its also convenient to run the vendor build on post install
           so your developers don't have to worry about it!
-        </div>
-
-        <div className="blog-base paragraph-title">Webpack Production Build</div>
-        <div className="blog-base paragraph">The production build doesn't really have any special features, though it
-          minifies the code as you'd expect.
         </div>
 
         <div className="blog-base paragraph-title">Fragments</div>
         <div className="blog-base paragraph">Finally, this website makes use of redux-fragment architecture. For more
-          information, check out my previous blog or check it out on github.
+          information, check out my previous blog or check it out on
+          <a href="https://github.com/Talamond/redux-fragments-boilerplate">github</a>.
         </div>
 
-        <div className="blog-base paragraph">Thanks for reading! If you have any questions, feel free to contact me.
+        <div className="blog-base paragraph">
+          Thanks for reading! If you have any questions, feel free to contact me.
         </div>
 
       </div>

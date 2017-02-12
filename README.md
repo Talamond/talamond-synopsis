@@ -14,9 +14,7 @@
           * Features
         * RAG
  * Review Text (blogs)
-  * fragment blog
   * fragment test blog
-  * site blog
   * about me blog
   * dos and dont blog
  * change main pic
@@ -32,3 +30,4 @@
  * Production build doesn't use production React (webpack 2 bug?)
  * mobile oritention change doesnt resize tag cloud
  * landscape phone kinda messed up
+ * prod logs?
