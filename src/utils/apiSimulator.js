@@ -243,7 +243,7 @@ export function getResumeData() {
       summary: 'IBM Canada',
       details: [
         'Responsible for designing and implementing UI Architecture in multiple projects',
-        'Lead mutliple teams up to size 20 on product implementation',
+        'Lead several teams of up to 20 developers on product implementation',
         'Worked with design to flush out application behaviour',
         'Educated developers on React/Redux practices',
         'Implemented a React component library to be used on all products'

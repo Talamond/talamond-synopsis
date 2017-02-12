@@ -41,6 +41,7 @@ $link: $carbon;
   .footer.about {
     @include flexboxJustify(center);
     flex-direction: row;
+    padding-bottom: 30px;
     >a {
       padding: 0 15px;
       font-weight: bold;

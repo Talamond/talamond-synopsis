@@ -47,5 +47,4 @@ export const Footer = ({footers}) =>
       <Link to={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.ABOUT_ME.PATH}>About me</Link>
       <a href="/assets/JonathanSweetmanResume.pdf">View Resume</a>
     </div>
-    <h3 className="footer message">Please feel free to contact me!</h3>
   </footer>;

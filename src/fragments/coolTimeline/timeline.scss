@@ -12,8 +12,11 @@ $timeline-elem-padding: 300px;
     @include flexboxJustify(space-around);
     flex-direction: column;
     height: 100%;
-    .detail:first-child {
+    .animate-detail:first-child {
       padding-top: 10px;
+    }
+    .animate-detail›:last-child {
+      padding-bottom: 20px;
     }
     .timeline.detail {
       position: relative;
@@ -69,6 +72,7 @@ $timeline-elem-padding: 300px;
 
 
   .timeline.profile {
+    height: 0px;
     position: absolute;
     left: 0;
     right: 0;

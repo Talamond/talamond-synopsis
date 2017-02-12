@@ -10,7 +10,7 @@ export const ProfileTile = ({date}) =>
     </div>
     <div className="profile-tile title-box">
       <div className="profile-tile name">Jonathan Sweetman</div>
-      <div className="profile-tile title">Front End Engineer</div>
+      <div className="profile-tile title">Front End Developer</div>
       {date && <div className="profile-tile title">{toString(date)}</div>}
     </div>
   </div>;

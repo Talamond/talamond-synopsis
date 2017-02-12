@@ -59,10 +59,11 @@ export class WebsiteBlog extends BlogBase {
 
         <div className="blog-base paragraph-title">Fragments</div>
         <div className="blog-base paragraph">Finally, this website makes use of redux-fragment architecture. For more
-          information, check out my previous blog or check it out on
-          <a href="https://github.com/Talamond/redux-fragments-boilerplate">github</a>.
+          information, check out my previous blog or check it out on <a href="https://github.com/Talamond/redux-fragments-boilerplate">github</a>.
         </div>
-
+        <br/>
+        <br/>
+        <br/>
         <div className="blog-base paragraph">
           Thanks for reading! If you have any questions, feel free to contact me.
         </div>
