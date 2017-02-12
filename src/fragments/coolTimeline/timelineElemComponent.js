@@ -39,9 +39,10 @@ export class TimelineElem extends Component {
   }
 
   renderSkills(timelineElem) {
-    const mobile = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={280} width={280} factor={1.5}/>;
-    const pad = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
-    const desktop = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={1.5}/>;
+    const factor = timelineElem.skills.length < 7 ? 1 : 1.5;
+    const mobile = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={280} width={280} factor={factor}/>;
+    const pad = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={factor}/>;
+    const desktop = <TagCloud id={'' + timelineElem.id} data={timelineElem.skills} height={425} width={425} factor={factor}/>;
     return <Responsive mobile={mobile} pad={pad} desktop={desktop} />;
   }
 

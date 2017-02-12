@@ -13,7 +13,12 @@
         * This website
           * Features
         * RAG
- * Review Text (job descriptions, blogs, resume) (medium)
+ * Review Text (blogs)
+  * fragment blog
+  * fragment test blog
+  * site blog
+  * about me blog
+  * dos and dont blog
  * change main pic
   
 ## Less Important TODOs
@@ -21,9 +26,9 @@
  * plug redux-fragment in (_.cloneDeep is messed up in prod build somehow... doesnt like my dates)
  
 ## Bugs
+ * Can't highlight work titles
  * When pressing browser back, the scroll position isn't what you would expect
  * Content loads in undesirable order (the placeholder image is still too big?)
- * Some React warnings
- * Production build doesn't use production React
+ * Production build doesn't use production React (webpack 2 bug?)
  * mobile oritention change doesnt resize tag cloud
  * landscape phone kinda messed up
