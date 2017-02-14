@@ -21,6 +21,10 @@ export const NAVIGATION = {
     ABOUT_ME: {
       TITLE: 'A little about me',
       PATH: '/about-me'
+    },
+    REACT: {
+      TITLE: 'React dos and don\'ts',
+      PATH: '/react-dos-and-donts'
     }
   }
 };

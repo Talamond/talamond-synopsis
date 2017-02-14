@@ -9,6 +9,7 @@ import {FragmentBlog} from '../fragments/blog/fragmentBlog/fragmentBlogComponent
 import {TestFragmentBlog} from '../fragments/blog/testFragmentBlog/testFragmentBlogComponent.js';
 import {AboutMeBlog} from '../fragments/blog/aboutMeBlog/aboutMeBlogComponent.js';
 import {WebsiteBlog} from '../fragments/blog/websiteBlog/websiteBlogComponent.js';
+import {ReactBlog} from '../fragments/blog/reactBlog/reactBlogComponent.js';
 import _ from 'lodash';
 
 @connect(state => ({
@@ -47,14 +48,16 @@ export class BlogContainer extends React.Component {
     if (index < blogs.length - 1) {
       prevBlog = blogs[index + 1];
     }
-    if (blog.id === blogs[3].id) {
+    if (blog.id === blogs[4].id) {
       return <FragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
-    } else if (blog.id === blogs[2].id) {
+    } else if (blog.id === blogs[3].id) {
       return <TestFragmentBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
-    } else if (blog.id === blogs[1].id) {
+    } else if (blog.id === blogs[2].id) {
       return <WebsiteBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
-    } else if (blog.id === blogs[0].id) {
+    } else if (blog.id === blogs[1].id) {
       return <AboutMeBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
+    } else if (blog.id === blogs[0].id) {
+      return <ReactBlog title={blog.title} date={blog.date} nextBlog={nextBlog} prevBlog={prevBlog}/>;
     }
     return <BlogSelectorFrag blogs={blogs}/>;
   }

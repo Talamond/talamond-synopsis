@@ -8,8 +8,8 @@ import _ from 'lodash';
 import './timeline.scss';
 import {Responsive, checkDeviceSize} from '../../components/responsiveComponent.js';
 import ProgressiveImage from 'react-progressive-image';
-import bannerImg from '../../assets/images/Forest-in-greyscale.jpg';
-import bannerHolder from '../../assets/images/Forest-in-greyscale-small.jpg';
+import bannerImg from '../../assets/images/mainpic.jpg';
+import bannerHolder from '../../assets/images/mainpicSmall.jpg';
 
 // TODO these are named backwards
 import schoolImg from '../../assets/images/UW_Building-full.jpg';

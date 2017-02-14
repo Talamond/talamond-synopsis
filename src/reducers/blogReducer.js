@@ -20,6 +20,12 @@ const state = {
   root: {
     blogs: [
       {
+        id: 'react-dos-and-donts',
+        title: NAVIGATION.BLOG.REACT.TITLE,
+        path: NAVIGATION.BLOG.REACT.PATH,
+        summary: 'React tips and tricks!',
+        date: createDate('2017-02-13')
+      }, {
         id: 'about-me',
         title: NAVIGATION.BLOG.ABOUT_ME.TITLE,
         path: NAVIGATION.BLOG.ABOUT_ME.PATH,

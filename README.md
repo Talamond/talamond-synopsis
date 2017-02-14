@@ -1,13 +1,9 @@
 # timeline
 
 ## TODOs
- * Blogs (low)
-  * testing fragments   (samples)
-  * react dos and donts
  * Review Text (blogs)
-  * fragment test blog
+  * fragment test blog (maybe review again)
   * dos and dont blog
- * change main pic
   
 ## Less Important TODOs
  * Check TODOs in code

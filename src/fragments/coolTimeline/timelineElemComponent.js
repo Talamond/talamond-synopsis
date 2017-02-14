@@ -70,7 +70,7 @@ export class TimelineElem extends Component {
     const tabContents = [
       {name: 'Details', content: this.renderDetails(timelineElem)},
       {name: 'Skills', content: this.renderSkills(timelineElem)},
-      {name: 'Desc',  content: this.renderDescription(timelineElem.description)}
+      {name: 'Info',  content: this.renderDescription(timelineElem.description)}
     ];
     if (timelineElem.descriptions) {
       _.forIn(timelineElem.descriptions, (v, k) => {

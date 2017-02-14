@@ -49,15 +49,15 @@ export function getResumeData() {
       id: 3,
       startDate: createDate('2007-09-01'),
       endDate: createDate('2007-12-31'),
-      title: 'Java Programmer',
+      title: 'Java Programmer (Coop)',
       employer: 'Ministry of Education',
       details: [
-        'Developed skills on Object Oriented programming while working on a web application',
-        'Worked with third party to implement web application AIMS',
+        'Honed skills on Object Oriented programming',
+        'Collaborated with third party to implement web application AIMS',
         'Used J2EE with IBM Rational to create Enterprise Application pages (JSP, business rules, Hibernate)'
       ],
-      description: 'The Ministry of Education provided with my first software development position. Here I contributed ' +
-      'to a Java application named AIMS. I was responsible for creating some online forms as well as a payment page. We ' +
+      description: 'The Ministry of Education provided me with my first software development position. Here I contributed ' +
+      'to a Java application named AIMS. I was responsible for creating online forms as well as a payment page. We ' +
       'used Java Server Pages (JSP) for the front-end, J2EE for the backend and Hibernate for database communication.',
       type: 'coop',
       color: '#99A3A4',
@@ -107,14 +107,15 @@ export function getResumeData() {
       color: '#D35400',
       details: [
         'Implemented enhancements and fixed bugs on flagship product ELM',
-        'Worked directly with clients to sort out application content (string management)',
-        'Part took in writing client Software Specification Document'
+        'Worked directly with clients to refine application content (string management)',
+        'Partook in writing the client Software Specification Document'
       ],
       description: 'Between Jan 1st 2009 and Aug 31st 2010, I spent 3 coop terms at N8Identity (4 months each) and worked as a full stack Java developer on a web application called ELM. ELM was a product that aided large companies with onboarding their new hires. We used Spring framework and Java for ELM\'s backend and primefaces for the user interface. The backend comprised of many Java OSGI services that ran on service mix and used Hiberate to communicate with the database. Some of my responsibilities here included: content management directly with clients, creating a client Software Specification Document for a reporting module in ELM, typical ELM enhancements and bug fixes.',
-      skills: [{label: 'Spring', weight: 7}, {label: 'JPA', weight: 7}, {label: 'Hibernate', weight: 7}, {
-        label: 'Java',
-        weight: 10
-      },
+      skills: [
+        {label: 'Spring', weight: 7},
+        {label: 'JPA', weight: 7},
+        {label: 'Hibernate', weight: 7},
+        {label: 'Java', weight: 10},
         {label: 'RichFaces', weight: 7},
         {label: 'PostgreSQL', weight: 7},
         {label: 'JUnit', weight: 7},
@@ -138,7 +139,7 @@ export function getResumeData() {
       details: [
         'Implemented enhancements and fixed bugs on flagship product ELM',
         'Created Feed Handler for loading bulk data into PostgreSQL',
-        'Involved in design strategies to develop forward thinking and efficient solutions',
+        'Design strategies to foster forward thinking and efficient solutions',
         'Developed robust JUnit test cases'
       ],
       description: 'After I graduated University, I returned to N8Identity for a year and a half. During this period, we put more ephasis on writing unit tests with our code, but other than that, we continued to working on ELM implementing new enhancements. The tech stack and my responsibilities remained the same from my coop terms.',
@@ -203,7 +204,7 @@ export function getResumeData() {
       details: [
         'Interviewed development team candidates',
         'Implemented enhancements and fixed bugs on a variety of products',
-        'Lead a team with size up to 5 on product implementation',
+        'Lead a team of developers on product implementation',
         'Responsible for creating and deploying cross platform mobile application'
       ],
       type: 'full',
@@ -234,18 +235,18 @@ export function getResumeData() {
       endDate: createDate('2017-02-01'),   // todo get current date and use that
       title: 'Lead UI Architect',
       employer: 'IBM Canada',
-      description: 'In September 2015, I started a new venture at IBM. I was given the responsibility of leading the development of ICM’s UI, a migration from windows to web app. After a successful rewrite of ICM’s UI, I was promoted to Lead UI Architect and moved onto rewriting the UI of RCA. Once the Architect, I was also responsible for educating all teams in our office on UI (React/Redux) coding best practices. After another successful rewrite of RCA’s UI, I now work on a common component library for all our products to use with the goal of making the applications more consistent and polished.',
+      description: 'In September 2015, I started a new venture at IBM. I was given the responsibility of leading the development of ICM’s UI, a migration from windows to web app. After a successful rewrite of ICM’s UI, I was promoted to Lead UI Architect and moved onto rewriting the UI of RCA. As the Architect, I was also responsible for educating all teams on UI (React/Redux) coding best practices. After another successful rewrite of RCA’s UI, I now work on a common component library for all our products to use with the goal of making the applications consistent with each other.',
       descriptions: {
-        ICM: 'Being a 10 year old application, rewriting ICM was a massive undertaking. ICM had 800 screens of content that needed to be redesigned and rewritten from C# to Web. One of the major problems we faced was that most of our office had little to no web development experience. It was up to me to choose the web tech stack and educate the rest of the office on how to develop in web. I choose React because of its simplicity and popularity as well as Redux to help support the state of our monolithic application. We started off with only 4 developers, but after a few months we had over 20 developers all working on ICM. The IBM Design team provided new interface designs of which I critiqued and implemented along with my team. The new ICM rewrite sold twice right after we released it and since then has sold several more.',
+        ICM: 'Being a 10 year old application, rewriting ICM was a massive undertaking. ICM had 800 screens of content that needed to be redesigned and rewritten from C# to Web. One of the major problems we faced was that most of our office had little to no web development experience. It was up to me to choose the web tech stack and educate the rest of the office on how to develop in web. I choose React because of its simplicity and popularity along with Redux to manage the state of our monolithic application. We started off with only 4 developers, but after a few months we had 20 developers all working on ICM. The IBM Design team provided new interface designs of which I critiqued and implemented along with my team. The new ICM rewrite sold twice right after we released it and since then has sold several more.',
         RCA: 'RCA was another product that had a lack-luster user interface and again I was tasked to rewrite the front end. Again I choose React with Redux to achieve this. It was a similar experience, but on a much smaller scale on a much smaller time frame. In the 3 months, with a team of 4, we managed to rewrite 75% the application while leaving the other 25% with the old UI contained seemless in iframes. Since I had done my job getting the ball moving, I handed off the rest of the UI to the RCA development team and they completed the rewrite a month later.',
         Library: 'While building RCA, I was also tasked of building a shared React component library. One of the problems we continually have with the designers is they keep redesigning things they’ve already done. Through out our 3 large teams, we ended up having several different looks and feels for components that should be the same. It is now my job to create a library all the teams can use and also get the design team aligned with this component library. Some of the features of the component library include: high unit test coverage, accessibility and polished looks.'
       },
       summary: 'IBM Canada',
       details: [
-        'Responsible for designing and implementing UI Architecture in multiple projects',
+        'Responsible for designing and implementing UI Architecture on several projects',
         'Lead several teams of up to 20 developers on product implementation',
-        'Worked with design to flush out application behaviour',
-        'Educated developers on React/Redux practices',
+        'Worked with design to flesh out application behaviour',
+        'Trained developers on React/Redux practices',
         'Implemented a React component library to be used on all products'
       ],
       type: 'full',

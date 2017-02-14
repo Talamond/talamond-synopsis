@@ -15,6 +15,7 @@ export default (
       <Route path={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.TESTING_FRAGMENT.PATH} component={BlogContainer}/>
       <Route path={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.ABOUT_ME.PATH} component={BlogContainer}/>
       <Route path={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.SYNOPSIS.PATH} component={BlogContainer}/>
+      <Route path={NAVIGATION.BLOG.PATH + NAVIGATION.BLOG.REACT.PATH} component={BlogContainer}/>
     </Route>
   </Route>
 );
