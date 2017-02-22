@@ -16,4 +16,4 @@
  * mobile oritention change doesnt resize tag cloud
  * landscape phone kinda messed up
  * prod logs?
- * other browsers? ff, ie
+ * doesn't look great in IE

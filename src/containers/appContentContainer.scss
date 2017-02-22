@@ -2,7 +2,6 @@
 
 .app-root {
   margin-top: $headerHeight;
-  overflow: scroll;
   max-width: 100%;
 }
 
@@ -11,9 +10,9 @@
 
 body {
   margin: 0px;
-  max-width: 100%;
   font-family: $font;
   background-color: $darkGrey;
+  overflox-x: hidden;
 }
 
 h1 {

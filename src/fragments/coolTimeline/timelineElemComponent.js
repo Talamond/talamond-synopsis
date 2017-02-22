@@ -7,6 +7,8 @@ import _ from 'lodash';
 import { toString } from '../../utils/dateHelper.js';
 import OnVisible from 'react-on-visible';
 
+const isIE = navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0;
+
 const NO_IMAGE_WIDTH = 1100;
 
 export class TimelineElem extends Component {
@@ -22,7 +24,7 @@ export class TimelineElem extends Component {
     if (this.props.windowWidth < NO_IMAGE_WIDTH) {
       return null;
     }
-    return <img key={`jobImage-${this.props.timelineElem.id}`} src={timelineElem.image} className={`${this.props.className} ${this.props.timelineElem.id === 4 ? 'sql' : ''}`} />;
+    return <img key={`jobImage-${this.props.timelineElem.id}`} src={timelineElem.image} className={`${this.props.className} id${this.props.timelineElem.id} ${isIE ? 'ie' : 'notIe'}`} />;
   }
 
   renderDetails(timelineElem) {

@@ -166,7 +166,7 @@ export function createTimelineComponent(selectState, prefix, urls) {
           <TagCloud id="resume-summary"
                     data={this.props.timeline.allSkills}
                     height={summaryHeight}
-                    width={summaryWidth}
+                    width={summaryWidth - 20}
                     degrees={0}
                     factor={2}/>
           {this.renderTimelines()}

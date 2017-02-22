@@ -35,7 +35,6 @@ $tabHeight: 27px;
       position: absolute;
       bottom: 0;
       right: 0;
-      height: $tabHeight;
       width: 100%;
     }
   }
@@ -48,7 +47,7 @@ $tabHeight: 27px;
     }
     .tab {
       display: inline-block;
-      padding: 5px;
+      padding: 2px 7px;
       color: grey;
       border: 1px solid lightgrey;
       border-radius: 6px;
@@ -58,18 +57,6 @@ $tabHeight: 27px;
       -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
       box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
       background-color: $backgroundOdd;
-      @include mobile {
-        height: 12px;
-        font-size: 10px;
-      }
-      @include pad {
-        height: 16px;
-        font-size: 14px;
-      }
-      @include desktop {
-        height: 16px;
-        font-size: 14px;
-      }
       &.selected {
         font-weight: bold;
         background-color: $backgroundEven;
