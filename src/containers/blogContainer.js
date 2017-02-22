@@ -72,7 +72,7 @@ export class BlogContainer extends React.Component {
     }
     for (let i = 0; i < blogs.length; i++) {
       const blog = blogs[i];
-      if (pathname.endsWith(blog.path)) {
+      if (pathname.includes(blog.path)) {
         return this.renderBlog(blog, blogs, i);
       }
     }

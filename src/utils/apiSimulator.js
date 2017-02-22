@@ -173,7 +173,7 @@ export function getResumeData() {
       ' I was put into a Team Lead position where I was responsible for delivering Concert\'s mobile application. Also around this ' +
       'time I became responsible for interviewing potential new hires. ' +
       ' We worked on Concert for about a year and a half and sold it to a few clients, but then I was moved onto another new venture ' +
-      'called Watson Analytics. There I was responsible for creating Watson Analytics\' "UI Core". After that we spend a few months' +
+      'called Watson Analytics. There I was responsible for creating Watson Analytics\' "UI Core". After that we spent a few months' +
       ' playing with Apache Kafka, Spark Streaming and Microservices for a new product, but that was quickly interrupted ' +
       'by ICM\'s UI rewrite.',
       descriptions: {
