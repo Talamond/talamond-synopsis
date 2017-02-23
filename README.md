@@ -10,7 +10,7 @@
  * plug redux-fragment in (_.cloneDeep is messed up in prod build somehow... doesnt like my dates)
  
 ## Bugs
- * firefox/windows does not have cloud tag font
+ * firefox/windows does not have cloud tag font (hid it in non-chrome for now)
  * IE footer is giant
  * doesn't look great in IE
  * When pressing browser back, the scroll position isn't what you would expect

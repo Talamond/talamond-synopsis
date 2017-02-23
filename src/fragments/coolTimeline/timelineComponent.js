@@ -20,7 +20,7 @@ import schoolHolderMobile from '../../assets/images/UWsmallMobile.jpg';
 import jon from '../../assets/images/me.jpeg';
 import cn from 'classnames';
 import { toString } from '../../utils/dateHelper.js';
-
+const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 export function createTimelineComponent(selectState, prefix, urls) {
   @connect(store => ({
     timeline: selectState(store)
@@ -163,12 +163,12 @@ export function createTimelineComponent(selectState, prefix, urls) {
               <div>Front-end Developer</div>
             </div>
           </div>
-          <TagCloud id="resume-summary"
+          {isChrome && <TagCloud id="resume-summary"
                     data={this.props.timeline.allSkills}
                     height={summaryHeight}
                     width={summaryWidth - 20}
                     degrees={0}
-                    factor={2}/>
+                    factor={2}/>}
           {this.renderTimelines()}
         </div>
       );
