@@ -10,7 +10,7 @@ $headerColor: lighten($carbon, 20%);
   height: $headerHeight;
   opacity: 0.93;
   background-color: $header;
-  line-height: 49px;
+  line-height: 48px;
   z-index: 100;
   svg {
     @include absoluteAuto();
@@ -51,5 +51,7 @@ $headerColor: lighten($carbon, 20%);
   &:hover {
     color: $linkHover;
     background-color: lighten($header, 10%);
+    border-bottom: none;
+    height: calc($headerHeight - 1);
   }
 }

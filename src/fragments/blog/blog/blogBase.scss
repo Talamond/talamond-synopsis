@@ -14,9 +14,6 @@ $edgePadding: 10vw;
   .blog-base.next-area {
     margin: 0 $edgePadding 10px 0;
   }
-  .blog-base.back-area svg {
-    transform: rotate(180deg);
-  }
   .blog-base.title {
     font-size: 32px;
     font-weight: bold;
@@ -54,6 +51,7 @@ $edgePadding: 10vw;
     border-radius: 3px;
     padding: 15px 5px 5px 5px;
     background-color: $backgroundOdd;
+    border: 1px solid;
     &:focus {
       outline: none;
     }

@@ -76,7 +76,6 @@ $tabHeight: 27px;
     }
     .tabs {
       @include flexboxJustify(center);
-      height: $tabHeight;
       width: 100%;
     }
   }

@@ -2,7 +2,9 @@ import React, {PropTypes} from 'react';
 import {browserHistory} from 'react-router';
 import {ProfileTile} from '../../../components/profileTile.js';
 import './blogBase.scss';
-import arrow from '../../../assets/images/arrow.svg';
+import arrowLeft from '../../../assets/images/arrow-left.svg';
+import arrowRight from '../../../assets/images/arrow-right.svg';
+//import flippedArrow from '../../../assets/images/flippedarrow.svg';
 import { NAVIGATION } from '../../../constants/navigation.js';
 
 export class BlogBase extends React.Component {
@@ -38,7 +40,7 @@ export class BlogBase extends React.Component {
     return (<div className="blog-base next-area" onClick={() => this.onNavigate(nextBlog.path)}>
       <span>{nextBlog.title}</span>
       <svg>
-        <use xlinkHref={arrow}/>
+        <use xlinkHref={arrowRight}/>
       </svg>
     </div>);
   }
@@ -49,7 +51,7 @@ export class BlogBase extends React.Component {
     }
     return (<div className="blog-base back-area" onClick={() => this.onNavigate(prevBlog.path)}>
       <svg>
-        <use xlinkHref={arrow}/>
+        <use xlinkHref={arrowLeft}/>
       </svg>
       <span>{prevBlog.title}</span>
     </div>);
