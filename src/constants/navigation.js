@@ -1,30 +1,30 @@
 export const NAVIGATION = {
 	TIMELINE: {
 	  TITLE: 'Timeline',
-		PATH: '/timeline'
+		PATH: '/jsweetman/timeline'
 	},
   BLOG: {
 	  TITLE: 'Blog',
-	  PATH: '/blog',
+	  PATH: '/jsweetman/blog',
     FRAGMENT: {
       TITLE: 'Introduction to redux-fragments',
-      PATH: '/redux-fragments'
+      PATH: '/jsweetman/redux-fragments'
     },
     TESTING_FRAGMENT: {
       TITLE: 'Testing redux-fragments',
-      PATH: '/testing-redux-fragments'
+      PATH: '/jsweetman/testing-redux-fragments'
     },
     SYNOPSIS: {
 	    TITLE: 'Creating talamond-synopsis',
-      PATH: '/talamond-synopsis'
+      PATH: '/jsweetman/talamond-synopsis'
     },
     ABOUT_ME: {
       TITLE: 'A little about me',
-      PATH: '/about-me'
+      PATH: '/jsweetman/about-me'
     },
     REACT: {
       TITLE: 'React dos and don\'ts',
-      PATH: '/react-dos-and-donts'
+      PATH: '/jsweetman/react-dos-and-donts'
     }
   }
 };
