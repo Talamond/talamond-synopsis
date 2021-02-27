@@ -1,0 +1,46 @@
+@import '../../constants.css';
+
+.blogEntry {
+  display: flex;
+  border: 1px solid var(--carbon);
+  background-color: var(--backgroundEven);
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 600px;
+  max-width: calc(100% - 50px);
+}
+
+.blogEntry__title {
+  color: var(--mainText);
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.blogEntry__summary {
+  color: var(--maintText);
+}
+
+.blogEntry__showMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  color: var(--mainText);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.blogEntry__showMore:hover {
+  color: var(--watermelon);
+  fill: var(--watermelon);
+}
+
+/*
+svg {
+  width: 22px;
+  height: 22px;
+}
+*/

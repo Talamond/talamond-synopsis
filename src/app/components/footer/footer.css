@@ -1,0 +1,62 @@
+@import '../../constants.css';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  background-color: var(--darkGrey);
+  height: var(--footerHeight);
+}
+
+.footer h4 {
+  color: #cfcfcf;
+  text-align: center;
+}
+
+.footer__info {
+  padding-top: 40px;
+}
+
+.footer__socialArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__socialArea a {
+  margin: 0 3px;
+}
+
+.footer__about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+
+.footer__resumeLink {
+  padding: 0 15px;
+  font-weight: bold;
+  color: var(--carbon);
+  text-decoration: none;
+}
+
+.footer__resumeLink:hover {
+  color: var(--linkHover);
+  cursor: pointer;
+}
+
+.footer__socialLink svg {
+    height: 32px;
+    width: 32px;
+    color: var(--carbon)
+}
+
+.footer__socialLink svg:hover {
+  color: var(--linkHover);
+  cursor: pointer;
+}

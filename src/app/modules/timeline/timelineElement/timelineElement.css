@@ -1,0 +1,107 @@
+
+/* .timeline-elem-outer { */
+.timelineElement {
+  padding-right: 6vw;
+  padding-left: 6vw;
+  padding-bottom: 40px;
+}
+
+.timelineElement.even {
+  background-color: var(--backgroundEven);
+}
+.timelineElement.odd {
+  background-color: var(--backgroundOdd);
+}
+.timelineElement.education {
+  background-color: var(--backgroundEducation);
+}
+
+
+.timelineElement__jobTitle {
+  padding-top: 30px;
+  text-align: center;
+}
+.timelineElement__employer {
+  text-align: center;
+}
+.timelineElement__startEndDates {
+  text-align: center;
+}
+
+.timelineElement__contentWrapper {
+  display: flex;
+  justify-content: space-around;
+  /*
+  img.notIe {
+    width: 300px;
+    margin: auto 0;
+  }
+  img.id4.notIe {
+    height: 300px;
+  }
+  img.id10.ie, img.id9.ie {
+    transform: scale(0.33);
+    margin: auto 0;
+  }
+  img.id8.ie, img.id5.ie {
+    transform: scale(0.33);
+    margin: auto 0;
+  }
+  img.id4.ie {
+    height: 300px;
+    width: 300px;
+    margin: auto 0;
+  }
+  img.id3.ie {
+    transform: scale(1, 0.5);
+    margin: auto 0;
+  }
+
+  .tabArea-root {
+
+    @include mobile {
+      width: 300px;
+      height: 320px;
+    }
+    @include pad {
+      width: 600px;
+      height: 500px;
+    }
+    @include desktop {
+      width: 600px;
+      height: 500px;
+    }
+    //right: 0;
+    .tab-content {
+      @include flexboxJustify(space-around);
+      position: relative;
+      @include mobile {
+        height: 280px;
+      }
+      .description {
+        color: $mainText;
+        font-style: italic;
+        text-align: center;
+      }
+    }
+    .tagcloud-root {
+      margin: 0 auto;
+      width: 400px;
+    }
+  }
+  &.education {
+    @include mobile {
+      margin-top: 10px;
+      height: 200px;
+    }
+    @include pad {
+      margin-top: 15px;
+      height: 350px;
+    }
+    @include desktop {
+      margin-top: 20px;
+      height: 350px;
+    }
+  }
+  */
+}

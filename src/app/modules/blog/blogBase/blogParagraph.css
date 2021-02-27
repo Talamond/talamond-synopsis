@@ -1,0 +1,5 @@
+@import '../../../constants.css';
+
+.blogParagraph {
+  color: var(--mainText);
+}

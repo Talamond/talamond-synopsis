@@ -1,0 +1,87 @@
+.tabArea {
+  position: relative;
+  width: 600px;
+  height: 500px;
+}
+
+@media only screen and (max-width: 479px) {
+  .tabArea {
+    width: 300px;
+    height: 320px;
+  }
+}
+
+.tabArea > .animate-tabs {
+  animation-name: grow;
+  animation-duration: .5s;
+}
+
+.tabArea__content {
+  display: flex;
+  justify-content: center;
+  height: calc(100% - var(--tabHeight));
+  flex-direction: column;
+}
+
+.tabArea__tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tabArea__tab {
+  display: inline-block;
+  padding: 2px 7px;
+  color: grey;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 3px;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+  background-color: var(--backgroundOdd);
+  outline: none;
+}
+
+@media only screen and (max-width: 479px) {
+  .tabArea__tab {
+    font-size: 11px;
+  }
+}
+
+.tabArea__tab.selected {
+  font-weight: bold;
+  background-color: var(--backgroundEven);
+  border-color: var(--watermelon);
+  color: var(--watermelon);
+  padding-bottom: 1px;
+}
+
+.tabArea__selectedLine {
+  width: 100%;
+  border-bottom: none;
+  padding-top: 2px;
+}
+
+
+/*
+.tabArea-root {
+  .tab-content {
+    @include flexboxJustify(space-around);
+    position: relative;
+    @include mobile {
+      height: 280px;
+    }
+    .description {
+      color: $mainText;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+  .tagcloud-root {
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+*/

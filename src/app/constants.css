@@ -1,0 +1,38 @@
+:root {
+  --sky: #caebf2;
+  --carbon: #a9a9a9;
+  --watermelon: #ff3b3f;
+  --neutral: #efefef;
+  --almostWhite: #fafafa;
+  --fresh: #4abdac;
+  --niceGrey: #edeeef;
+  --darkGrey: #222222;
+  --whiteFont: #dcdcdc;
+  --hoverGrey: #3c3c3c;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Open Sans", "Helvetica Neue", "Ubuntu", sans-serif;
+
+  --linkHover: #ffffff;
+
+  --headerHeight: 50px;
+  --footerHeight: 350px;
+  --tabHeight: 27px;
+
+  --backgroundOdd: var(--niceGrey);
+  --backgroundEven: white;
+  --backgroundEducation: lighten($darkGrey, 5%);
+  /* TODO: redo the main text color */
+  --mainText: #5d5d5d;
+  --mainLighterText: #5d5d5d;
+  --mainLightestText: #5d5d5d;
+  --subText: var(--carbon);
+  --phoneMinWidth: 320px;
+  --phoneMaxWidth: 479px;
+  --padMinWidth: 480px;
+  --padMaxWidth: 767px;
+  --desktopMinWidth: 768px;
+}
+
+/* Todo: fix postcss custom media and use this */
+@custom-media --mobile (max-width: 479px);
+@custom-media --pad (min-width: 480px) and (max-width: 767px);
+@custom-media --desktop (min-width: 768px);

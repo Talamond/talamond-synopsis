@@ -1,0 +1,28 @@
+.educationElementContent__title {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.educationElementContent__jobTitle, .educationElementContent__subtitle, .educationElementContent__employer {
+  color: var(--niceGrey);
+  font-weight: 200;
+  text-align: center;
+}
+
+.educationElementContent__imageContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.educationElementContent__image {
+  padding-top: 10px;
+  height: 23vw;
+  width: 23vw;
+}

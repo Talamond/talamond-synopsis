@@ -1,0 +1,16 @@
+@import '../../constants.css';
+
+.timeline {
+  position: relative;
+  width: 100%;
+}
+
+.timeline__tagCloudWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 75vh;
+  background-color: var(--backgroundOdd);
+  padding-top: 30px;
+}
