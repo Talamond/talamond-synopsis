@@ -14,7 +14,7 @@ export const ProfileArea = () => {
       </div>
       <div className="profileArea__title">
         <h1>Jonathan Sweetman</h1>
-        <h2>Front-end Developer</h2>
+        <h2>UI Architect</h2>
       </div>
     </div>
   </div>
