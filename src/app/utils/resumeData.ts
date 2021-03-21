@@ -324,7 +324,7 @@ export function getResumeData(): TimelineElementI[] {
       id: 13,
       startDate: createDate('2020-01-01'),
       endDate: createDate('2021-03-01'),   // todo get current date and use that
-      title: 'Senior UI Developer',
+      title: 'UI Architect',
       employer: 'Varicent',
       description: `After the acquisition by Varicent, I continued to work on Symon.AI's UI. We scaled up in size and I led the new frontend developers as they became up to speed on Symon.AI. We succeeded our goals in getting at least 10 clients for Symon.AI by the end of our first year. Our team supports our clients on a daily basis using various integrations I am responsible for setting up (e.g. Sentry, Logrocket, Intercom, Upscope and WalkMe). Sentry lets us know when clients encounter bugs. Logrocket helps developers reproduce bugs found by QA/clients. Intercom and Upscope are used as a way for clients to contact support and WalkMe provides education and tutorials on how to use Symon.AI. Symon.AI continues to grow as we're finding new ways to attract clients.`,
       descriptions: {
