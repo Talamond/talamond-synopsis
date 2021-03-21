@@ -1,4 +1,3 @@
-import { TagCloud } from 'app/components/tagCloud/tagCloud';
 import { getResumeData } from 'app/utils/resumeData';
 import React, { FunctionComponent, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";

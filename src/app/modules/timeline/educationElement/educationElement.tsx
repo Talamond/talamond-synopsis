@@ -12,6 +12,7 @@ export interface Props {
 }
 
 export const EducationElement: FunctionComponent<Props> = (props: Props) => {
+  // @ts-ignore
   const {width} = useWindowSize();
   let schoolImage = '/jsweetman/assets/images/UW_Building-mobile.jpg';
   let schoolImageSmall = '/jsweetman/assets/images/UWsmallMobile.jpg';
